@@ -1,0 +1,143 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client"
+  output   = "../generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+enum astroType {
+  MILKYWAY
+  DEEPSKY
+  PLANETS
+  LUNAR
+}
+
+enum Mount {
+  NIKONF
+  CANONEF
+  SONYE
+}
+
+enum ExperienceLevel {
+  BEGINNER
+  INTERMEDIATE
+}
+
+enum Sources {
+  REDDIT
+  ASTROBACKYARD
+  REVIEW_SITE
+}
+
+model Session {
+  id        String   @id @default(cuid())
+  sid       String   @unique
+  data      String
+  expiresAt DateTime
+}
+
+model Customer {
+  id String @id @default(cuid())
+  email String @unique
+  username String @unique
+  password String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  searchSessions SearchSession[]
+}
+
+model SearchSession {
+  id String @id @default(cuid())
+  preferredType astroType?
+  preferredMount Mount?
+  maxBudget Float
+  experienceLevel ExperienceLevel?
+
+  customerId String
+  customer Customer @relation(fields: [customerId], references: [id])
+
+  createdAt DateTime @default(now())
+  recommendations Recommendation[]
+}
+
+model Recommendation {
+  id              String        @id @default(cuid())
+  searchId        String
+  searchSession   SearchSession @relation(fields: [searchId], references: [id])
+  
+  lensRecommendations   LensRecommendation[]
+  
+  rank            Int
+  aiExplain       String
+  createdAt       DateTime      @default(now())
+}
+
+model Lens {
+  id             String        @id @default(cuid())
+  name           String
+  brand          String
+  lensMount      String        // Must match Camera.lensMount for a valid kit recommendation
+  focalLength    String        // e.g., "50mm" or "24-70mm"
+  maxAperture    Float         // e.g., 1.4, 2.8 (Crucial for Low-Light/Astro grading!)
+  price          Float
+  imageUrl       String?
+
+  comaRating Int                 // NEW - how bad is edge distortion? (1-5)
+  cornerSharpness Int            // NEW - stars at edges (1-5)
+  manualFocusQuality String      // NEW - how easy to focus manually?
+  idealUseCase String[]          // NEW - ["Milky Way", "Deep Sky", "Planetary"]
+
+  // Community credibility (NEW - CRITICAL):
+  redditConsensusUrl String[]    // Links to actual Reddit threads recommending it
+  averageReviewScore Float       // Aggregate from reviews
+  commonMistakes String[]        // "Don't use autofocus", "Needs tripod"
+  comparisonNotes String         // "6x cost of Samyang but better coma"
+
+  createdAt      DateTime      @default(now())
+  updatedAt      DateTime      @updatedAt
+  recommendations LensRecommendation[]
+  reviews Review[]
+  primaryComparisons   LensComparison[] @relation("primary")
+  secondaryComparisons LensComparison[] @relation("secondary")
+}
+model Review {
+  id String @id @default(cuid())
+  lensId String
+  lens Lens @relation(fields: [lensId], references: [id])
+  
+  source Sources?
+  sourceUrl String
+  quote String                    // Real review text
+  authorReputation String?        // "r/astrophotography mod" or "verified reviewer"
+  rating Int                      // 1-5 stars
+  useCaseMatch astroType? // Which astro type is this review for?
+  
+  createdAt DateTime @default(now())
+}
+
+model LensComparison {
+  id String @id @default(cuid())
+  primaryLensId String
+  primaryLens Lens @relation("primary", fields: [primaryLensId], references: [id])
+  secondaryLensId String
+  secondaryLens Lens @relation("secondary", fields: [secondaryLensId], references: [id])
+  
+  comparison String              // "Same quality, 1/4 the price" or "Better coma, but $300 more"
+}
+model LensRecommendation {
+  id               String         @id @default(cuid())
+  recommendationId String
+  recommendation   Recommendation @relation(fields: [recommendationId], references: [id], onDelete: Cascade)
+  lensId           String
+  lens             Lens           @relation(fields: [lensId], references: [id])
+
+  @@unique([recommendationId, lensId])
+}

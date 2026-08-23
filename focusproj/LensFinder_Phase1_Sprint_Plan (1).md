@@ -43,12 +43,12 @@
   - [✅ ] Run `prisma migrate` with new schema
   - [✅ ] Seed database with ~40 lens records (from Week 1 curated list)
   - [✅ ] Seed 5-10 test Review records (Reddit quotes + links)
-- [ ] Set up Next.js backend structure:
-  - [ ] Routes folder (questionnaire, recommendations, lenses)
-  - [ ] Services folder (recommendation engine, lens query)
-  - [ ] Utils folder (scoring logic, constants)
-- [ ] Configure Claude API integration (basic setup, test connection)
-- [ ] Deliverable: Database seeded, backend skeleton ready
+- [ ✅] Set up Next.js backend structure:
+  - [✅ ] Routes folder (questionnaire, recommendations, lenses)
+  - [✅ ] Services folder (recommendation engine, lens query)
+  - [✅ ] Utils folder (scoring logic, constants)
+- [✅ ] Configure Claude API integration (basic setup, test connection)
+- [✅ ] Deliverable: Database seeded, backend skeleton ready
 
 **Wednesday-Thursday: Recommendation Engine (Core Logic)**
 - [ ] Build scoring service:

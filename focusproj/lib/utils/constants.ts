@@ -1,3 +1,5 @@
+import { astroType } from "../../generated/prisma/enums";
+
 // Shared constants for the recommendation engine.
 // Scoring weights come from Week 1's algorithm spec:
 // Budget x 0.35 + AstroFit x 0.30 + Experience x 0.20 + Credibility x 0.15
@@ -18,6 +20,17 @@ export const MAX_SCORE = {
 } as const;
 
 export const TOP_N_RECOMMENDATIONS = 5;
+
+// Lens.idealUseCase is stored as free-text labels (e.g. "Milky Way"), while
+// user preference comes in as the astroType enum. This maps enum -> label so
+// scoring can compare the two. Adjust if lens data ends up using different
+// wording (worth double-checking against prisma/lenses.json).
+export const ASTRO_TYPE_LABELS: Record<astroType, string> = {
+  [astroType.MILKYWAY]: "Milky Way",
+  [astroType.DEEPSKY]: "Deep Sky",
+  [astroType.PLANETS]: "Planetary",
+  [astroType.LUNAR]: "Lunar",
+};
 
 // Budget bucket boundaries used by the questionnaire form (Week 4).
 export const BUDGET_TIERS = {

@@ -20,10 +20,8 @@ export interface RankedLens {
 
 /**
  * Core recommendation engine (Week 2, Wed-Thu). Filters candidate lenses,
- * scores each one, and returns the top N ranked by score.
- *
- * Currently returns zero-score stubs until lib/utils/scoring.ts is filled
- * in from the algorithm spec.
+ * scores each one via the weighted model in lib/utils/scoring.ts, and
+ * returns the top N ranked by score.
  */
 export async function rankLenses(
   input: Omit<RecommendationRequest, "customerId">

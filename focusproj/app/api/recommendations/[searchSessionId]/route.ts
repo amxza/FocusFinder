@@ -1,29 +1,36 @@
 import { NextResponse } from "next/server";
-import { prisma } from "../../../../lib/prisma";
+import { getSearchSessionById } from "../../../../lib/services/recommendationEngine";
+import { validateSearchSessionId } from "../../../../lib/utils/validation";
 
 // GET /api/recommendations/:searchSessionId
-// Returns: list of lenses ranked by score with explanations.
-//
-// Full implementation is a Week 2 Friday task; this is the route skeleton.
+// Returns: list of lenses ranked by score (rank) with explanations.
 export async function GET(
   _request: Request,
   ctx: RouteContext<"/api/recommendations/[searchSessionId]">
 ) {
   const { searchSessionId } = await ctx.params;
 
-  const searchSession = await prisma.searchSession.findUnique({
-    where: { id: searchSessionId },
-    include: {
-      recommendations: {
-        orderBy: { rank: "asc" },
-        include: { lensRecommendations: { include: { lens: true } } },
-      },
-    },
-  });
-
-  if (!searchSession) {
-    return NextResponse.json({ error: "Not found" }, { status: 404 });
+  const validation = validateSearchSessionId(searchSessionId);
+  if (!validation.valid) {
+    return NextResponse.json({ error: validation.errors }, { status: 400 });
   }
 
-  return NextResponse.json(searchSession);
+  try {
+    const result = await getSearchSessionById(validation.data);
+
+    if (!result) {
+      return NextResponse.json(
+        { error: `No search session found for id "${validation.data}"` },
+        { status: 404 }
+      );
+    }
+
+    return NextResponse.json(result);
+  } catch (error) {
+    console.error("GET /api/recommendations/[searchSessionId] failed:", error);
+    return NextResponse.json(
+      { error: "Failed to fetch recommendations" },
+      { status: 500 }
+    );
+  }
 }

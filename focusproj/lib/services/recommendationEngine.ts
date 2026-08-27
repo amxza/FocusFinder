@@ -81,3 +81,47 @@ export async function generateRecommendations(input: RecommendationRequest) {
 
   return searchSession;
 }
+
+export interface RankedRecommendation {
+  rank: number;
+  aiExplain: string;
+  lens: Awaited<ReturnType<typeof findCandidateLenses>>[number] | null;
+}
+
+export interface SearchSessionResult {
+  searchSessionId: string;
+  recommendations: RankedRecommendation[];
+}
+
+/**
+ * Fetches a persisted SearchSession and shapes it into the
+ * { searchSessionId, recommendations: [...] } contract shared with
+ * POST /api/questionnaire, for GET /api/recommendations/:searchSessionId
+ * (Week 2 Friday). Returns null if no session matches the id.
+ */
+export async function getSearchSessionById(
+  searchSessionId: string
+): Promise<SearchSessionResult | null> {
+  const searchSession = await prisma.searchSession.findUnique({
+    where: { id: searchSessionId },
+    include: {
+      recommendations: {
+        orderBy: { rank: "asc" },
+        include: { lensRecommendations: { include: { lens: true } } },
+      },
+    },
+  });
+
+  if (!searchSession) {
+    return null;
+  }
+
+  return {
+    searchSessionId: searchSession.id,
+    recommendations: searchSession.recommendations.map((rec) => ({
+      rank: rec.rank,
+      aiExplain: rec.aiExplain,
+      lens: rec.lensRecommendations[0]?.lens ?? null,
+    })),
+  };
+}

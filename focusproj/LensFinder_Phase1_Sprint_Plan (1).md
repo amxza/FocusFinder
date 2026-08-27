@@ -51,17 +51,17 @@
 - [✅ ] Deliverable: Database seeded, backend skeleton ready
 
 **Wednesday-Thursday: Recommendation Engine (Core Logic)**
-- [ ] Build scoring service:
-  - [ ] Budget match calculator (0-35 points)
-  - [ ] Astro type fit scorer (0-30 points)
-  - [ ] Experience appropriateness scorer (0-20 points)
-  - [ ] Community credibility scorer (0-15 points)
-- [ ] Build lens ranking algorithm:
-  - [ ] Filter lenses by mount + budget
-  - [ ] Calculate scores for each lens
-  - [ ] Sort by score, return top 5
-- [ ] Write unit tests for scoring (5-10 test cases per scorer)
-- [ ] Deliverable: Recommendation engine working, unit tests passing
+- [✅ ] Build scoring service:
+  - [✅ ] Budget match calculator (0-35 points)
+  - [ ✅] Astro type fit scorer (0-30 points)
+  - [✅ ] Experience appropriateness scorer (0-20 points)
+  - [✅ ] Community credibility scorer (0-15 points)
+- [✅ ] Build lens ranking algorithm:
+  - [✅ ] Filter lenses by mount + budget
+  - [✅ ] Calculate scores for each lens
+  - [✅ ] Sort by score, return top 5
+- [✅ ] Write unit tests for scoring (5-10 test cases per scorer)
+- [✅ ] Deliverable: Recommendation engine working, unit tests passing
 
 **Friday: API Routes (Questionnaire)**
 - [ ] POST `/api/questionnaire`

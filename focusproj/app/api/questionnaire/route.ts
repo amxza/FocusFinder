@@ -1,42 +1,53 @@
 import { NextResponse } from "next/server";
 import { generateRecommendations } from "../../../lib/services/recommendationEngine";
-import type { astroType, ExperienceLevel, Mount } from "../../../generated/prisma/enums";
+import { validateQuestionnaireInput } from "../../../lib/utils/validation";
+import { Prisma } from "../../../generated/prisma/client";
 
 // POST /api/questionnaire
 // Input:  { customerId, mount, astroType, budget, experienceLevel }
 // Output: { searchSessionId, recommendations: [...] }
-//
-// Full implementation (validation, error handling) is a Week 2 Friday task.
-// This is the route skeleton so the folder structure exists.
 export async function POST(request: Request) {
-  const body = await request.json();
-
-  const { customerId, mount, astroType, budget, experienceLevel } = body as {
-    customerId: string;
-    mount?: Mount;
-    astroType?: astroType;
-    budget: number;
-    experienceLevel?: ExperienceLevel;
-  };
-
-  // TODO (Week 2 Friday): validate input, return 400 on bad payloads
-  if (!customerId || !budget) {
+  let body: unknown;
+  try {
+    body = await request.json();
+  } catch {
     return NextResponse.json(
-      { error: "customerId and budget are required" },
+      { error: "Request body must be valid JSON" },
       { status: 400 }
     );
   }
 
-  const searchSession = await generateRecommendations({
-    customerId,
-    mount,
-    astroType,
-    budget,
-    experienceLevel,
-  });
+  const validation = validateQuestionnaireInput(body);
+  if (!validation.valid) {
+    return NextResponse.json({ error: validation.errors }, { status: 400 });
+  }
 
-  return NextResponse.json({
-    searchSessionId: searchSession.id,
-    recommendations: searchSession.recommendations,
-  });
+  try {
+    const searchSession = await generateRecommendations(validation.data);
+
+    return NextResponse.json(
+      {
+        searchSessionId: searchSession.id,
+        recommendations: searchSession.recommendations,
+      },
+      { status: 201 }
+    );
+  } catch (error) {
+    // Foreign key violation -> the given customerId doesn't exist.
+    if (
+      error instanceof Prisma.PrismaClientKnownRequestError &&
+      error.code === "P2003"
+    ) {
+      return NextResponse.json(
+        { error: "customerId does not match an existing customer" },
+        { status: 404 }
+      );
+    }
+
+    console.error("POST /api/questionnaire failed:", error);
+    return NextResponse.json(
+      { error: "Failed to generate recommendations" },
+      { status: 500 }
+    );
+  }
 }

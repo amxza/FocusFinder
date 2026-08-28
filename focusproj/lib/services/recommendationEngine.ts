@@ -1,5 +1,6 @@
 import { prisma } from "../prisma";
 import { findCandidateLenses } from "./lensQuery";
+import { generateExplanation } from "./explanationGenerator";
 import { scoreLens } from "../utils/scoring";
 import { TOP_N_RECOMMENDATIONS } from "../utils/constants";
 import type { astroType, ExperienceLevel, Mount } from "../../generated/prisma/enums";
@@ -12,10 +13,13 @@ export interface RecommendationRequest {
   experienceLevel?: ExperienceLevel;
 }
 
+type CandidateLens = Awaited<ReturnType<typeof findCandidateLenses>>[number];
+
 export interface RankedLens {
   lensId: string;
   score: number;
   breakdown: ReturnType<typeof scoreLens>;
+  lens: CandidateLens;
 }
 
 /**
@@ -39,7 +43,7 @@ export async function rankLenses(
       preferredType: input.astroType,
       experienceLevel: input.experienceLevel,
     });
-    return { lensId: lens.id, score: breakdown.total, breakdown };
+    return { lensId: lens.id, score: breakdown.total, breakdown, lens };
   });
 
   return ranked
@@ -48,11 +52,26 @@ export async function rankLenses(
 }
 
 /**
- * Runs the ranking, then persists a SearchSession + Recommendation records
+ * Runs the ranking, generates a Claude explanation per recommended lens
+ * (Week 3, Mon-Tue), then persists a SearchSession + Recommendation records
  * so the results can be fetched later via GET /api/recommendations/:id.
  */
 export async function generateRecommendations(input: RecommendationRequest) {
   const ranked = await rankLenses(input);
+
+  // Explanations run in parallel and never throw (see explanationGenerator),
+  // so a slow/failed Claude call for one lens can't block the others or the
+  // whole questionnaire request.
+  const aiExplanations = await Promise.all(
+    ranked.map((r) =>
+      generateExplanation({
+        lens: r.lens,
+        budget: input.budget,
+        astroType: input.astroType,
+        experienceLevel: input.experienceLevel,
+      })
+    )
+  );
 
   const searchSession = await prisma.searchSession.create({
     data: {
@@ -64,8 +83,7 @@ export async function generateRecommendations(input: RecommendationRequest) {
       recommendations: {
         create: ranked.map((r, index) => ({
           rank: index + 1,
-          // TODO (Week 3): replace with Claude-generated explanation
-          aiExplain: "",
+          aiExplain: aiExplanations[index],
           lensRecommendations: {
             create: [{ lensId: r.lensId }],
           },

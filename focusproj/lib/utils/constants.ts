@@ -39,3 +39,15 @@ export const BUDGET_TIERS = {
   "600_1000": { min: 600, max: 1000 },
   OVER_1000: { min: 1000, max: Number.POSITIVE_INFINITY },
 } as const;
+
+// Buckets a raw budget number into the same tiers the questionnaire form
+// uses (Week 3, Claude explanation generator). Used both in the prompt text
+// and as part of the explanation cache key -- bucketing (instead of the raw
+// dollar amount) is what makes the cache actually hit across users with
+// similar-but-not-identical budgets.
+export function getBudgetTierLabel(budget: number): string {
+  if (budget <= BUDGET_TIERS.UNDER_300.max) return "under $300";
+  if (budget <= BUDGET_TIERS["300_600"].max) return "$300-600";
+  if (budget <= BUDGET_TIERS["600_1000"].max) return "$600-1000";
+  return "$1000+";
+}

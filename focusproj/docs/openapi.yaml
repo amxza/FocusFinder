@@ -1,0 +1,326 @@
+openapi: 3.1.0
+info:
+  title: LensFinder API
+  description: >
+    Backend API for LensFinder -- an astrophotography lens recommendation
+    tool. A user answers a short questionnaire (mount, astro type, budget,
+    experience level); the API scores the lens catalog with a weighted
+    model, generates a short Claude-written explanation per pick, and
+    persists the results for later retrieval.
+  version: "1.0.0"
+servers:
+  - url: http://localhost:3000
+    description: Local dev (Next.js dev server)
+
+tags:
+  - name: Questionnaire
+    description: Submit answers, get ranked lens recommendations back.
+  - name: Recommendations
+    description: Retrieve a previously generated set of recommendations.
+  - name: Lenses
+    description: Read-only access to the lens catalog.
+  - name: Internal
+    description: Dev-only routes, not part of the public frontend contract.
+
+paths:
+  /api/questionnaire:
+    post:
+      tags: [Questionnaire]
+      summary: Submit questionnaire answers and generate ranked recommendations
+      description: >
+        Filters the lens catalog by mount + budget, scores each candidate with
+        the weighted model (Budget 35% / Astro fit 30% / Experience 20% /
+        Credibility 15%), takes the top 5, generates a Claude explanation for
+        each (cached per lens/astro-type/budget-tier/experience-level
+        bucket), and persists a SearchSession + Recommendation record per
+        pick.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/QuestionnaireInput"
+            examples:
+              full:
+                summary: All fields provided
+                value:
+                  customerId: "cus_abc123"
+                  mount: NIKONF
+                  astroType: DEEPSKY
+                  budget: 600
+                  experienceLevel: BEGINNER
+              minimal:
+                summary: Only the required fields
+                value:
+                  customerId: "cus_abc123"
+                  budget: 300
+      responses:
+        "201":
+          description: Recommendations generated and persisted.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/QuestionnaireResult"
+        "400":
+          description: >
+            Malformed JSON body, or a body that failed field validation
+            (missing/invalid customerId, budget, mount, astroType, or
+            experienceLevel). See `ErrorResponse` -- the `error` field is a
+            single string for a JSON-parse failure, or a string array when
+            one or more fields failed validation.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+              examples:
+                badJson:
+                  summary: Body was not valid JSON
+                  value: { error: "Request body must be valid JSON" }
+                validation:
+                  summary: One or more fields failed validation
+                  value:
+                    error:
+                      - "customerId is required and must be a non-empty string"
+                      - "budget is required and must be a positive number"
+        "404":
+          description: customerId does not reference an existing Customer row.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+        "500":
+          description: Unexpected server error (database, etc).
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+
+  /api/recommendations/{searchSessionId}:
+    get:
+      tags: [Recommendations]
+      summary: Fetch a previously generated set of recommendations
+      parameters:
+        - name: searchSessionId
+          in: path
+          required: true
+          description: The `searchSessionId` returned by POST /api/questionnaire.
+          schema:
+            type: string
+          example: "cksession_abc123"
+      responses:
+        "200":
+          description: The persisted recommendations for this session, ranked.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/QuestionnaireResult"
+        "400":
+          description: The searchSessionId path segment was blank.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+        "404":
+          description: No SearchSession exists for the given id.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+        "500":
+          description: Unexpected server error.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+
+  /api/lenses:
+    get:
+      tags: [Lenses]
+      summary: List the full lens catalog
+      description: >
+        Returns every seeded lens, alphabetical by name. No filtering/paging
+        yet -- mainly used by the Week 4-5 frontend lens database views and
+        for sanity-checking seed data.
+      responses:
+        "200":
+          description: The full lens catalog.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Lens"
+        "500":
+          description: Unexpected server error.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+
+  /api/claude/test:
+    get:
+      tags: [Internal]
+      summary: Sanity-check the Claude API connection (dev only)
+      description: >
+        Sends a trivial "reply with pong" request to confirm ANTHROPIC_API_KEY
+        is configured correctly. Not called by the frontend -- for use while
+        setting up a local environment.
+      responses:
+        "200":
+          description: Claude responded successfully.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ClaudeTestResult"
+        "500":
+          description: Authentication failed, or another API error occurred.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ClaudeTestResult"
+
+components:
+  schemas:
+    Mount:
+      type: string
+      enum: [NIKONF, CANONEF, SONYE]
+      description: Camera mount. Canon RF is grouped under CANONEF (matches the questionnaire form's "Canon EF/RF" option).
+
+    AstroType:
+      type: string
+      enum: [MILKYWAY, DEEPSKY, PLANETS, LUNAR]
+
+    ExperienceLevel:
+      type: string
+      enum: [BEGINNER, INTERMEDIATE]
+      description: No EXPERIENCED tier exists yet -- the closest current value is INTERMEDIATE.
+
+    QuestionnaireInput:
+      type: object
+      required: [customerId, budget]
+      properties:
+        customerId:
+          type: string
+          description: Must reference an existing Customer row.
+          example: "cus_abc123"
+        mount:
+          $ref: "#/components/schemas/Mount"
+        astroType:
+          $ref: "#/components/schemas/AstroType"
+        budget:
+          type: number
+          exclusiveMinimum: 0
+          description: Dollar amount. Bucketed internally into 4 tiers (under $300 / $300-600 / $600-1000 / $1000+) for scoring and Claude-prompt caching.
+          example: 600
+        experienceLevel:
+          $ref: "#/components/schemas/ExperienceLevel"
+
+    ScoreBreakdown:
+      type: object
+      description: Internal only -- not returned by the API today, documented here because it drives the ranking.
+      properties:
+        budget: { type: number, description: "0-35" }
+        astroFit: { type: number, description: "0-30" }
+        experience: { type: number, description: "0-20" }
+        credibility: { type: number, description: "0-15" }
+        total: { type: number, description: "0-100" }
+
+    Review:
+      type: object
+      properties:
+        id: { type: string }
+        lensId: { type: string }
+        source: { type: string, enum: [REDDIT, ASTROBACKYARD, REVIEW_SITE], nullable: true }
+        sourceUrl: { type: string }
+        quote: { type: string }
+        authorReputation: { type: string, nullable: true }
+        rating: { type: integer, minimum: 1, maximum: 5 }
+        useCaseMatch:
+          allOf: [{ $ref: "#/components/schemas/AstroType" }]
+          nullable: true
+        createdAt: { type: string, format: date-time }
+
+    Lens:
+      type: object
+      properties:
+        id: { type: string }
+        name: { type: string }
+        brand: { type: string }
+        lensMount: { $ref: "#/components/schemas/Mount" }
+        focalLength: { type: string, example: "24-70mm" }
+        maxAperture: { type: number, example: 2.8 }
+        price: { type: number }
+        imageUrl: { type: string, nullable: true }
+        comaRating: { type: integer, minimum: 1, maximum: 5 }
+        cornerSharpness: { type: integer, minimum: 1, maximum: 5 }
+        manualFocusQuality: { type: string }
+        idealUseCase:
+          type: array
+          items: { type: string }
+          description: Human-readable labels (e.g. "Deep Sky"), not raw enum values.
+        redditConsensusUrl:
+          type: array
+          items: { type: string }
+        averageReviewScore: { type: number }
+        commonMistakes:
+          type: array
+          items: { type: string }
+        comparisonNotes: { type: string }
+        createdAt: { type: string, format: date-time }
+        updatedAt: { type: string, format: date-time }
+        reviews:
+          type: array
+          items: { $ref: "#/components/schemas/Review" }
+
+    LensRecommendation:
+      type: object
+      properties:
+        id: { type: string }
+        recommendationId: { type: string }
+        lensId: { type: string }
+        lens: { $ref: "#/components/schemas/Lens" }
+
+    Recommendation:
+      type: object
+      properties:
+        id: { type: string }
+        searchId: { type: string }
+        rank:
+          type: integer
+          description: 1 = top pick. Capped at 5 recommendations per session.
+        aiExplain:
+          type: string
+          description: 1-2 sentence Claude-generated explanation. Falls back to a deterministic non-AI sentence if Claude times out, is rate-limited, or errors -- never empty.
+        createdAt: { type: string, format: date-time }
+        lensRecommendations:
+          type: array
+          items: { $ref: "#/components/schemas/LensRecommendation" }
+
+    # GET /api/recommendations/:id returns a lighter shape (rank/aiExplain/lens
+    # flattened, no wrapper ids) than the raw POST /api/questionnaire response
+    # (full Recommendation + LensRecommendation rows). Both are valid under
+    # this same schema name for documentation purposes; see the route
+    # implementations (lib/services/recommendationEngine.ts) for the exact
+    # per-endpoint shape.
+    QuestionnaireResult:
+      type: object
+      properties:
+        searchSessionId: { type: string }
+        recommendations:
+          type: array
+          items: { $ref: "#/components/schemas/Recommendation" }
+
+    ErrorResponse:
+      type: object
+      properties:
+        error:
+          oneOf:
+            - type: string
+            - type: array
+              items: { type: string }
+
+    ClaudeTestResult:
+      type: object
+      properties:
+        ok: { type: boolean }
+        message: { type: string }

@@ -23,14 +23,32 @@ export interface ScoringInput {
   experienceLevel?: ExperienceLevel | null;
 }
 
+// Pre-weight range for an in-budget lens: 70 (priced right at the ceiling)
+// to 100 (free). See the comment in scoreBudgetMatch for why this is a
+// narrow band rather than the full 0-100 range.
+const IN_BUDGET_SCORE_FLOOR = 70;
+const IN_BUDGET_SCORE_CEILING = 100;
+
 /** 0-35 points: how well the lens price fits the user's budget. */
 export function scoreBudgetMatch({ lens, maxBudget }: ScoringInput): number {
   if (maxBudget <= 0) return 0;
 
   let rawScore: number; // 0-100 scale before weighting
   if (lens.price <= maxBudget) {
-    // Closer to (but under) budget = higher score.
-    rawScore = (1 - lens.price / maxBudget) * 100;
+    // Mildly reward staying under budget -- this used to be a straight
+    // (1 - price/maxBudget) line spanning the full 0-100 range, which let
+    // "leftover budget" alone swing the full 35-point BUDGET weight
+    // between two otherwise-identical lenses. Since BUDGET is the largest
+    // of the four weights, that dominated astroFit/experience/credibility
+    // combined, and a query like "experienced, $1500 budget" always
+    // surfaced the cheapest catalog lens instead of a premium one (see the
+    // Week 3 Wed-Thu validation report). Compressing the in-budget range
+    // to 70-100 keeps a gentle preference for affordability as a
+    // tiebreaker without letting it override real fit/quality
+    // differences elsewhere.
+    const headroomFraction = 1 - lens.price / maxBudget; // 0 (at budget) .. 1 (free)
+    rawScore =
+      IN_BUDGET_SCORE_FLOOR + headroomFraction * (IN_BUDGET_SCORE_CEILING - IN_BUDGET_SCORE_FLOOR);
   } else {
     // Over budget: half credit, scaled by how far over.
     rawScore = (maxBudget / lens.price) * 100 * 0.5;
@@ -51,7 +69,16 @@ export function scoreAstroFit({ lens, preferredType }: ScoringInput): number {
 
   let rawScore: number; // 0-100 scale before weighting
   if (isDirectMatch) {
-    rawScore = 100;
+    // Among lenses that already match the requested astro type, reward
+    // better optical quality for astro use. comaRating/cornerSharpness are
+    // seeded per-lens (1-5) but previously went unused entirely, so two
+    // lenses with the same tag always tied here -- "Deep Sky should
+    // prioritize lower coma" only appeared to work because the catalog has
+    // just one Deep-Sky lens per mount (Week 3 Wed-Thu report). Mapped onto
+    // a 76-100 band so a direct match still always beats the "versatile"
+    // (70) and "unrelated" (20) tiers below, even at the worst rating.
+    const qualityRating = (lens.comaRating + lens.cornerSharpness) / 2; // 1-5
+    rawScore = 70 + qualityRating * 6; // 76 (rating 1) .. 100 (rating 5)
   } else if (lens.idealUseCase.length > 1) {
     // Lens is versatile across multiple use cases -> can still work.
     rawScore = 70;

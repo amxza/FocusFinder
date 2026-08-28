@@ -64,44 +64,44 @@
 - [✅ ] Deliverable: Recommendation engine working, unit tests passing
 
 **Friday: API Routes (Questionnaire)**
-- [ ] POST `/api/questionnaire`
+- [✅ ] POST `/api/questionnaire`
   - Input: { mount, astroType, budget, experienceLevel }
   - Output: { searchSessionId, recommendations: [...] }
-- [ ] GET `/api/recommendations/:searchSessionId`
+- [✅ ] GET `/api/recommendations/:searchSessionId`
   - Returns: List of lenses ranked by score with explanations
-- [ ] Error handling + validation
-- [ ] Deliverable: Questionnaire API tested, returns ranked lenses
+- [✅ ] Error handling + validation
+- [✅ ] Deliverable: Questionnaire API tested, returns ranked lenses
 
 ### Week 3: AI Explanations & Testing
 
 **Monday-Tuesday: Claude API Integration**
-- [ ] Build explanation generator using Claude:
-  - [ ] Prompt: "Explain why [lens] is good for [astro type] with [budget]"
-  - [ ] Returns: aiExplain field (1-2 sentences, conversational)
-  - [ ] Cache common prompts to avoid API calls
-- [ ] Integrate into `/api/recommendations` response
-- [ ] Add error handling (Claude timeout, rate limit)
-- [ ] Deliverable: Each recommendation includes Claude-generated explanation
+- [✅ ] Build explanation generator using Claude:
+  - [✅] Prompt: "Explain why [lens] is good for [astro type] with [budget]"
+  - [✅ ] Returns: aiExplain field (1-2 sentences, conversational)
+  - [✅ ] Cache common prompts to avoid API calls
+- [✅ ] Integrate into `/api/recommendations` response
+- [✅ ] Add error handling (Claude timeout, rate limit)
+- [✅ ] Deliverable: Each recommendation includes Claude-generated explanation
 
 **Wednesday-Thursday: Data Validation & Edge Cases**
-- [ ] Test all questionnaire combinations (4 × 5 × 4 × 3 = 240 combinations)
+- [✅] Test all questionnaire combinations (4 × 5 × 4 × 3 = 240 combinations)
   - Does each combo return 3-5 lenses?
   - Are lenses relevant to astro type?
   - Is scoring reasonable?
-- [ ] Edge cases:
+- [✅] Edge cases:
   - Beginner + $300 budget: should see Rokinon 14mm (best value)
   - Experienced + $1000+ budget: should see premium options
   - Deep Sky focus: should prioritize wider lenses, lower coma
   - Planetary focus: should prioritize longer focal length
-- [ ] Create test dataset (10 realistic user personas)
-- [ ] Deliverable: All edge cases validated, test report
+- [✅] Create test dataset (10 realistic user personas)
+- [✅] Deliverable: All edge cases validated, test report
 
 **Friday: Documentation & Review**
-- [ ] API documentation (Postman collection or OpenAPI spec)
-- [ ] Database schema diagram
-- [ ] Recommendation algorithm flowchart
-- [ ] Setup GitHub branch protection + PR review process
-- [ ] Deliverable: Complete backend documentation
+- [✅ ] API documentation (Postman collection or OpenAPI spec)
+- [✅ ] Database schema diagram
+- [ ✅] Recommendation algorithm flowchart
+- [✅ ] Setup GitHub branch protection + PR review process
+- [ ✅] Deliverable: Complete backend documentation
 
 ### Sprint 1 Deliverables
 ✅ PostgreSQL database with 40+ lenses + reviews  

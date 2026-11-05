@@ -4,7 +4,7 @@ import * as path from "path";
 import { fileURLToPath } from "url";
 import { prisma } from "../lib/prisma";
 import { rankLenses } from "../lib/services/recommendationEngine";
-import { ASTRO_TYPE_LABELS } from "../lib/utils/constants";
+import { ASTRO_TYPE_LABELS, MAX_SCORE } from "../lib/utils/constants";
 import type { astroType, ExperienceLevel, Mount } from "../generated/prisma/enums";
 
 // Week 3, Wed-Thu (per the sprint plan): sweep every questionnaire
@@ -14,9 +14,8 @@ import type { astroType, ExperienceLevel, Mount } from "../generated/prisma/enum
 //
 // The plan's 4x5x4x3=240 count assumed 4 mount options / 5 astro options
 // (the extra one in each being the form's "Other"/"Unsure" -> unspecified).
-// The schema only has 3 real mounts and 4 real astro types, so "unspecified"
-// (undefined) is modeled here as the 4th mount / 5th astro bucket -- same
-// total, same intent.
+// With Nikon Z and Canon RF added there are 5 real mounts, so "unspecified"
+// (undefined) makes this 6x5x4x3=360.
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
@@ -92,14 +91,14 @@ async function main() {
 
           const scoreBoundsOk = ranked.every(
             (r) =>
-              r.breakdown.budget >= 0 &&
-              r.breakdown.budget <= 35 &&
-              r.breakdown.astroFit >= 0 &&
-              r.breakdown.astroFit <= 30 &&
+              r.breakdown.fieldQuality >= 0 &&
+              r.breakdown.fieldQuality <= MAX_SCORE.FIELD_QUALITY &&
               r.breakdown.experience >= 0 &&
-              r.breakdown.experience <= 20 &&
+              r.breakdown.experience <= MAX_SCORE.EXPERIENCE &&
+              r.breakdown.budget >= 0 &&
+              r.breakdown.budget <= MAX_SCORE.BUDGET &&
               r.breakdown.credibility >= 0 &&
-              r.breakdown.credibility <= 15 &&
+              r.breakdown.credibility <= MAX_SCORE.CREDIBILITY &&
               r.score >= 0 &&
               r.score <= 100
           );

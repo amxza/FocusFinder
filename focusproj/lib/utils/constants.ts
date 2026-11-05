@@ -1,21 +1,22 @@
 import { astroType } from "../../generated/prisma/enums";
 
 // Shared constants for the recommendation engine.
-// Scoring weights come from Week 1's algorithm spec:
-// Budget x 0.35 + AstroFit x 0.30 + Experience x 0.20 + Credibility x 0.15
+// Scoring weights, revised from Week 1's spec so a lens's quality for the
+// user's field outranks its price:
+// Field quality x 0.50 + Experience x 0.20 + Budget x 0.15 + Credibility x 0.15
 
 export const SCORING_WEIGHTS = {
-  BUDGET: 0.35,
-  ASTRO_FIT: 0.3,
+  FIELD_QUALITY: 0.5,
   EXPERIENCE: 0.2,
+  BUDGET: 0.15,
   CREDIBILITY: 0.15,
 } as const;
 
-// Max raw points per scorer before weighting (per the spec doc).
+// Max points per scorer after weighting.
 export const MAX_SCORE = {
-  BUDGET: 35,
-  ASTRO_FIT: 30,
+  FIELD_QUALITY: 50,
   EXPERIENCE: 20,
+  BUDGET: 15,
   CREDIBILITY: 15,
 } as const;
 
@@ -31,6 +32,17 @@ export const ASTRO_TYPE_LABELS: Record<astroType, string> = {
   [astroType.PLANETS]: "Planetary",
   [astroType.LUNAR]: "Lunar",
 };
+
+/**
+ * Whether a lens is tagged for the requested astro type. Null when no astro
+ * type was requested, since there's nothing to match against.
+ */
+export function lensMatchesAstroType(
+  idealUseCase: string[],
+  type: astroType | null | undefined
+): boolean | null {
+  return type ? idealUseCase.includes(ASTRO_TYPE_LABELS[type]) : null;
+}
 
 // Budget bucket boundaries used by the questionnaire form (Week 4).
 export const BUDGET_TIERS = {

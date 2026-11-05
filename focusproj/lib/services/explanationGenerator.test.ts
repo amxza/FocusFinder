@@ -15,7 +15,13 @@ const {
 } = await import("./explanationGenerator");
 const Anthropic = (await import("@anthropic-ai/sdk")).default;
 
-const rokinon = { id: "lens_1", name: "14mm f/2.8", brand: "Rokinon", price: 349 };
+const rokinon = {
+  id: "lens_1",
+  name: "14mm f/2.8",
+  brand: "Rokinon",
+  price: 349,
+  idealUseCase: ["Deep Sky"],
+};
 
 const baseInput = {
   lens: rokinon,
@@ -60,6 +66,18 @@ describe("buildExplanationPrompt", () => {
     expect(prompt).toContain("Rokinon 14mm f/2.8");
     expect(prompt).toContain("Deep Sky");
     expect(prompt).toContain("$300-600");
+    expect(prompt).toContain("good choice");
+  });
+
+  it("asks for an honest answer instead of a sales pitch when the lens isn't tagged for the type", () => {
+    const prompt = buildExplanationPrompt({ ...baseInput, astroType: "LUNAR" });
+    expect(prompt).toContain("not a dedicated Lunar lens");
+    expect(prompt).not.toContain("good choice");
+  });
+
+  it("treats a request with no astro type as a normal match", () => {
+    const prompt = buildExplanationPrompt({ ...baseInput, astroType: undefined });
+    expect(prompt).toContain("good choice");
   });
 });
 
@@ -105,6 +123,15 @@ describe("generateExplanation", () => {
 
     expect(result).toContain("Rokinon 14mm f/2.8");
     expect(result).toContain("$300-600");
+  });
+
+  it("doesn't claim the lens suits the astro type in the fallback when it isn't tagged for it", async () => {
+    createMock.mockRejectedValue(new Error("network blip"));
+
+    const result = await generateExplanation({ ...baseInput, astroType: "LUNAR" });
+
+    expect(result).toContain("isn't a dedicated Lunar lens");
+    expect(result).not.toContain("suits");
   });
 
   it("falls back to a deterministic explanation on a timeout", async () => {

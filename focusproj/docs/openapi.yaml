@@ -219,9 +219,9 @@ components:
       type: object
       description: Internal only -- not returned by the API today, documented here because it drives the ranking.
       properties:
-        budget: { type: number, description: "0-35" }
-        astroFit: { type: number, description: "0-30" }
+        fieldQuality: { type: number, description: "0-50" }
         experience: { type: number, description: "0-20" }
+        budget: { type: number, description: "0-15" }
         credibility: { type: number, description: "0-15" }
         total: { type: number, description: "0-100" }
 
@@ -291,6 +291,10 @@ components:
         aiExplain:
           type: string
           description: 1-2 sentence Claude-generated explanation. Falls back to a deterministic non-AI sentence if Claude times out, is rate-limited, or errors -- never empty.
+        matchesAstroType:
+          type: boolean
+          nullable: true
+          description: False when the lens isn't tagged for the requested astro type (it's the best available, not a dedicated lens). Null when no astro type was requested.
         createdAt: { type: string, format: date-time }
         lensRecommendations:
           type: array

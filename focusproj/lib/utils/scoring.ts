@@ -1,6 +1,6 @@
 import type { astroType, ExperienceLevel } from "../../generated/prisma/enums";
 import type { findCandidateLenses } from "../services/lensQuery";
-import { ASTRO_TYPE_LABELS, MAX_SCORE, SCORING_WEIGHTS } from "./constants";
+import { lensMatchesAstroType, MAX_SCORE, SCORING_WEIGHTS } from "./constants";
 
 // The base generated `Lens` model type doesn't include relations, but
 // scoreCredibility needs `reviews` -- and every caller (via
@@ -9,11 +9,12 @@ import { ASTRO_TYPE_LABELS, MAX_SCORE, SCORING_WEIGHTS } from "./constants";
 type Lens = Awaited<ReturnType<typeof findCandidateLenses>>[number];
 
 // Scoring logic lives here (Week 2, Wed-Thu per the sprint plan).
-// Implements the weighted model from the algorithm spec:
-// Budget x 0.35 + AstroFit x 0.30 + Experience x 0.20 + Credibility x 0.15
+// Weighted model, revised so a lens's quality for the user's field outranks
+// its price:
+// Field quality x 0.50 + Experience x 0.20 + Budget x 0.15 + Credibility x 0.15
 //
 // Each scorer below returns points already on its final weighted scale
-// (e.g. scoreBudgetMatch returns 0-35, not 0-100), since scoreLens() clamps
+// (e.g. scoreFieldQuality returns 0-50, not 0-100), since scoreLens() clamps
 // each result against MAX_SCORE directly.
 
 export interface ScoringInput {
@@ -23,71 +24,124 @@ export interface ScoringInput {
   experienceLevel?: ExperienceLevel | null;
 }
 
-// Pre-weight range for an in-budget lens: 70 (priced right at the ceiling)
-// to 100 (free). See the comment in scoreBudgetMatch for why this is a
-// narrow band rather than the full 0-100 range.
-const IN_BUDGET_SCORE_FLOOR = 70;
-const IN_BUDGET_SCORE_CEILING = 100;
+// The candidate query already drops lenses more than 10% over budget, so
+// budget is a light preference here, not what drives the ranking. A lens
+// using at least half the budget gets full credit. Cheaper lenses lose a
+// little, since a big budget suggests the user wants better glass, and
+// lenses over budget lose more.
+const FULL_CREDIT_BUDGET_SHARE = 0.5;
+const FREE_LENS_BUDGET_SCORE = 70; // pre-weight score at 0% of budget
+const OVER_BUDGET_SCORE = 30; // pre-weight score above the budget
 
-/** 0-35 points: how well the lens price fits the user's budget. */
+/** 0-15 points: how well the lens price fits the user's budget. */
 export function scoreBudgetMatch({ lens, maxBudget }: ScoringInput): number {
   if (maxBudget <= 0) return 0;
 
   let rawScore: number; // 0-100 scale before weighting
-  if (lens.price <= maxBudget) {
-    // Mildly reward staying under budget -- this used to be a straight
-    // (1 - price/maxBudget) line spanning the full 0-100 range, which let
-    // "leftover budget" alone swing the full 35-point BUDGET weight
-    // between two otherwise-identical lenses. Since BUDGET is the largest
-    // of the four weights, that dominated astroFit/experience/credibility
-    // combined, and a query like "experienced, $1500 budget" always
-    // surfaced the cheapest catalog lens instead of a premium one (see the
-    // Week 3 Wed-Thu validation report). Compressing the in-budget range
-    // to 70-100 keeps a gentle preference for affordability as a
-    // tiebreaker without letting it override real fit/quality
-    // differences elsewhere.
-    const headroomFraction = 1 - lens.price / maxBudget; // 0 (at budget) .. 1 (free)
-    rawScore =
-      IN_BUDGET_SCORE_FLOOR + headroomFraction * (IN_BUDGET_SCORE_CEILING - IN_BUDGET_SCORE_FLOOR);
+  if (lens.price > maxBudget) {
+    rawScore = OVER_BUDGET_SCORE;
   } else {
-    // Over budget: half credit, scaled by how far over.
-    rawScore = (maxBudget / lens.price) * 100 * 0.5;
+    const share = Math.min(1, lens.price / maxBudget / FULL_CREDIT_BUDGET_SHARE);
+    rawScore = FREE_LENS_BUDGET_SCORE + share * (100 - FREE_LENS_BUDGET_SCORE);
   }
 
   return rawScore * SCORING_WEIGHTS.BUDGET;
 }
 
-/** 0-30 points: how well the lens suits the requested astro type. */
-export function scoreAstroFit({ lens, preferredType }: ScoringInput): number {
-  // No preference given -> don't penalize, treat as a full match.
-  if (!preferredType) {
-    return MAX_SCORE.ASTRO_FIT;
-  }
+// ---- Lens properties, each rated 0 (worst) to 1 (best) ----
 
-  const preferredLabel = ASTRO_TYPE_LABELS[preferredType];
-  const isDirectMatch = lens.idealUseCase.includes(preferredLabel);
+function clamp01(value: number): number {
+  return Math.min(1, Math.max(0, value));
+}
 
+function focalLengthsMm(focalLength: string): number[] {
+  return focalLength.match(/\d+(\.\d+)?/g)?.map(Number) ?? [];
+}
+
+/** Longest focal length in mm, e.g. "150-600mm" -> 600. */
+export function longestFocalLengthMm(focalLength: string): number {
+  const lengths = focalLengthsMm(focalLength);
+  return lengths.length > 0 ? Math.max(...lengths) : 0;
+}
+
+// Log scale, because each doubling of focal length or aperture matters about
+// equally.
+function logRating(value: number, worst: number, best: number): number {
+  return clamp01(Math.log(value / worst) / Math.log(best / worst));
+}
+
+/** Light gathering: f/5.6 or slower is 0, f/1.4 or faster is 1. */
+function apertureRating(lens: Lens): number {
+  return logRating(1 / lens.maxAperture, 1 / 5.6, 1 / 1.4);
+}
+
+function comaRating(lens: Lens): number {
+  return clamp01((lens.comaRating - 1) / 4);
+}
+
+function sharpnessRating(lens: Lens): number {
+  return clamp01((lens.cornerSharpness - 1) / 4);
+}
+
+/** Field of view for Milky Way shots: 35mm or longer is 0, 14mm or wider is 1. */
+function wideRating(lens: Lens): number {
+  const lengths = focalLengthsMm(lens.focalLength);
+  if (lengths.length === 0) return 0;
+  return clamp01((35 - Math.min(...lengths)) / (35 - 14));
+}
+
+/** Reach for planets and the Moon: 50mm or shorter is 0, 800mm or longer is 1. */
+function reachRating(lens: Lens): number {
+  return logRating(longestFocalLengthMm(lens.focalLength), 50, 800);
+}
+
+/** Reach for deep-sky targets, which need less: 50mm is 0, 300mm or longer is 1. */
+function deepSkyReachRating(lens: Lens): number {
+  return logRating(longestFocalLengthMm(lens.focalLength), 50, 300);
+}
+
+// What makes a lens good in each field, as weights that sum to 1.
+const FIELD_QUALITY: Record<astroType, (lens: Lens) => number> = {
+  MILKYWAY: (lens) =>
+    0.35 * apertureRating(lens) +
+    0.25 * comaRating(lens) +
+    0.25 * wideRating(lens) +
+    0.15 * sharpnessRating(lens),
+  DEEPSKY: (lens) =>
+    0.25 * apertureRating(lens) +
+    0.25 * comaRating(lens) +
+    0.25 * sharpnessRating(lens) +
+    0.25 * deepSkyReachRating(lens),
+  PLANETS: (lens) =>
+    0.65 * reachRating(lens) + 0.25 * sharpnessRating(lens) + 0.1 * apertureRating(lens),
+  LUNAR: (lens) =>
+    0.55 * reachRating(lens) + 0.35 * sharpnessRating(lens) + 0.1 * apertureRating(lens),
+};
+
+/** Used when no field was requested: general astro optics. */
+function generalQuality(lens: Lens): number {
+  return 0.4 * apertureRating(lens) + 0.3 * comaRating(lens) + 0.3 * sharpnessRating(lens);
+}
+
+// Pre-weight bands. The best untagged lens (45) still scores below the
+// worst tagged one (50), so a lens tagged for the field always ranks first.
+const TAGGED_FLOOR = 50;
+const UNTAGGED_CEILING = 45;
+
+/** 0-50 points: how well the lens's qualities serve the requested field. */
+export function scoreFieldQuality({ lens, preferredType }: ScoringInput): number {
   let rawScore: number; // 0-100 scale before weighting
-  if (isDirectMatch) {
-    // Among lenses that already match the requested astro type, reward
-    // better optical quality for astro use. comaRating/cornerSharpness are
-    // seeded per-lens (1-5) but previously went unused entirely, so two
-    // lenses with the same tag always tied here -- "Deep Sky should
-    // prioritize lower coma" only appeared to work because the catalog has
-    // just one Deep-Sky lens per mount (Week 3 Wed-Thu report). Mapped onto
-    // a 76-100 band so a direct match still always beats the "versatile"
-    // (70) and "unrelated" (20) tiers below, even at the worst rating.
-    const qualityRating = (lens.comaRating + lens.cornerSharpness) / 2; // 1-5
-    rawScore = 70 + qualityRating * 6; // 76 (rating 1) .. 100 (rating 5)
-  } else if (lens.idealUseCase.length > 1) {
-    // Lens is versatile across multiple use cases -> can still work.
-    rawScore = 70;
+  if (!preferredType) {
+    rawScore = TAGGED_FLOOR + (100 - TAGGED_FLOOR) * generalQuality(lens);
   } else {
-    // Lens is specialized for something else entirely.
-    rawScore = 20;
+    const quality = FIELD_QUALITY[preferredType](lens);
+    rawScore =
+      lensMatchesAstroType(lens.idealUseCase, preferredType) === true
+        ? TAGGED_FLOOR + (100 - TAGGED_FLOOR) * quality
+        : UNTAGGED_CEILING * quality;
   }
 
-  return rawScore * SCORING_WEIGHTS.ASTRO_FIT;
+  return rawScore * SCORING_WEIGHTS.FIELD_QUALITY;
 }
 
 // Heuristics for reading beginner-friendliness out of the current Lens
@@ -154,25 +208,25 @@ export function scoreCredibility({ lens }: ScoringInput): number {
 }
 
 export interface ScoreBreakdown {
-  budget: number;
-  astroFit: number;
+  fieldQuality: number;
   experience: number;
+  budget: number;
   credibility: number;
   total: number;
 }
 
 export function scoreLens(input: ScoringInput): ScoreBreakdown {
-  const budget = clamp(scoreBudgetMatch(input), 0, MAX_SCORE.BUDGET);
-  const astroFit = clamp(scoreAstroFit(input), 0, MAX_SCORE.ASTRO_FIT);
+  const fieldQuality = clamp(scoreFieldQuality(input), 0, MAX_SCORE.FIELD_QUALITY);
   const experience = clamp(scoreExperience(input), 0, MAX_SCORE.EXPERIENCE);
+  const budget = clamp(scoreBudgetMatch(input), 0, MAX_SCORE.BUDGET);
   const credibility = clamp(scoreCredibility(input), 0, MAX_SCORE.CREDIBILITY);
 
   return {
-    budget,
-    astroFit,
+    fieldQuality,
     experience,
+    budget,
     credibility,
-    total: budget + astroFit + experience + credibility,
+    total: fieldQuality + experience + budget + credibility,
   };
 }
 

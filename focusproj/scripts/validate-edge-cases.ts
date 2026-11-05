@@ -34,10 +34,12 @@ function fmt(ranked: RankedLens[]) {
     comaRating: r.lens.comaRating,
     focalLength: r.lens.focalLength,
     score: Math.round(r.score * 10) / 10,
+    maxAperture: r.lens.maxAperture,
+    cornerSharpness: r.lens.cornerSharpness,
     breakdown: {
-      budget: Math.round(r.breakdown.budget * 10) / 10,
-      astroFit: Math.round(r.breakdown.astroFit * 10) / 10,
+      fieldQuality: Math.round(r.breakdown.fieldQuality * 10) / 10,
       experience: Math.round(r.breakdown.experience * 10) / 10,
+      budget: Math.round(r.breakdown.budget * 10) / 10,
       credibility: Math.round(r.breakdown.credibility * 10) / 10,
     },
   }));
@@ -59,9 +61,10 @@ async function run(scenarios: Scenario[]) {
     }
     for (const r of fmt(ranked)) {
       console.log(
-        `   #${r.rank} ${r.name} (${r.mount}, $${r.price}, coma ${r.comaRating}, ${r.focalLength}) ` +
-          `-> score ${r.score} [budget ${r.breakdown.budget} / astroFit ${r.breakdown.astroFit} / ` +
-          `exp ${r.breakdown.experience} / cred ${r.breakdown.credibility}] tags=${r.idealUseCase.join(", ")}`
+        `   #${r.rank} ${r.name} (${r.mount}, $${r.price}, ${r.focalLength} f/${r.maxAperture}, ` +
+          `coma ${r.comaRating}, sharpness ${r.cornerSharpness}) -> score ${r.score} ` +
+          `[field ${r.breakdown.fieldQuality} / exp ${r.breakdown.experience} / ` +
+          `budget ${r.breakdown.budget} / cred ${r.breakdown.credibility}] tags=${r.idealUseCase.join(", ")}`
       );
     }
   }
@@ -73,7 +76,7 @@ const EDGE_CASES: Scenario[] = [
   {
     name: "Edge case 1: Beginner + $300 budget",
     note:
-      "Plan expects the best-value pick to surface (e.g. a Rokinon prime). No mount filter, so this is across all 3 mounts.",
+      "Plan expects the best-value pick to surface (e.g. a Rokinon prime). No mount filter, so this is across all mounts.",
     input: { budget: 300, experienceLevel: "BEGINNER" },
   },
   {
@@ -85,13 +88,13 @@ const EDGE_CASES: Scenario[] = [
   {
     name: "Edge case 3: Deep Sky focus",
     note:
-      "Plan expects wide/low-coma lenses to be prioritized. Catalog only has 1 distinct Deep-Sky-tagged lens (seeded per-mount), so this mostly checks it correctly outranks non-Deep-Sky lenses rather than testing a real ranking among several.",
+      "Plan expects wide/low-coma lenses to be prioritized. Deep Sky field quality weighs aperture, coma, corner sharpness and reach (50-300mm) equally.",
     input: { astroType: "DEEPSKY", budget: 1000 },
   },
   {
     name: "Edge case 4: Planetary focus",
     note:
-      "Plan expects longer focal length to be prioritized. IMPORTANT: the current 28-lens catalog has ZERO lenses tagged Planetary -- this checks the engine degrades gracefully (still returns budget/mount-filtered results) rather than validating planetary-specific ranking, which isn't possible with this data yet.",
+      "Plan expects longer focal length to be prioritized. Lenses reaching 400mm+ are tagged Planetary.",
     input: { astroType: "PLANETS", budget: 1000 },
   },
 ];
@@ -125,7 +128,7 @@ const PERSONAS: Scenario[] = [
   },
   {
     name: "Persona 6: Planetary imager, high budget",
-    note: "Willing to spend big on reach -- exercises the zero-Planetary-lens data gap under real budget pressure.",
+    note: "Willing to spend big on reach. Canon EF has no lens tagged Planetary, so this checks that the longest untagged lens wins.",
     input: { mount: "CANONEF", astroType: "PLANETS", budget: 1500, experienceLevel: "INTERMEDIATE" },
   },
   {

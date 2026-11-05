@@ -2,7 +2,7 @@
   "edgeCases": [
     {
       "name": "Edge case 1: Beginner + $300 budget",
-      "note": "Plan expects the best-value pick to surface (e.g. a Rokinon prime). No mount filter, so this is across all 3 mounts.",
+      "note": "Plan expects the best-value pick to surface (e.g. a Rokinon prime). No mount filter, so this is across all mounts.",
       "input": {
         "budget": 300,
         "experienceLevel": "BEGINNER"
@@ -10,7 +10,7 @@
       "results": [
         {
           "rank": 1,
-          "name": "Samyang/Rokinon 12mm f/2",
+          "name": "Samyang/Rokinon 12mm f/2.0 NCS CS",
           "mount": "SONYE",
           "price": 200,
           "idealUseCase": [
@@ -18,11 +18,13 @@
           ],
           "comaRating": 4,
           "focalLength": "12mm",
-          "score": 85,
+          "score": 83.8,
+          "maxAperture": 2,
+          "cornerSharpness": 3,
           "breakdown": {
-            "budget": 28,
-            "astroFit": 30,
+            "fieldQuality": 41.8,
             "experience": 12,
+            "budget": 15,
             "credibility": 15
           }
         },
@@ -36,34 +38,18 @@
           ],
           "comaRating": 4,
           "focalLength": "14mm",
-          "score": 84.5,
+          "score": 83.6,
+          "maxAperture": 2.8,
+          "cornerSharpness": 3,
           "breakdown": {
-            "budget": 25.2,
-            "astroFit": 30,
+            "fieldQuality": 39.4,
             "experience": 15,
+            "budget": 15,
             "credibility": 14.3
           }
         },
         {
           "rank": 3,
-          "name": "Samyang/Rokinon 12mm f/2.0 NCS CS",
-          "mount": "SONYE",
-          "price": 200,
-          "idealUseCase": [
-            "Milky Way"
-          ],
-          "comaRating": 4,
-          "focalLength": "12mm",
-          "score": 84.3,
-          "breakdown": {
-            "budget": 28,
-            "astroFit": 30,
-            "experience": 12,
-            "credibility": 14.3
-          }
-        },
-        {
-          "rank": 4,
           "name": "Canon RF 16mm f/2.8 STM",
           "mount": "CANONRF",
           "price": 299,
@@ -72,11 +58,13 @@
           ],
           "comaRating": 3,
           "focalLength": "16mm",
-          "score": 79.8,
+          "score": 77.8,
+          "maxAperture": 2.8,
+          "cornerSharpness": 3,
           "breakdown": {
-            "budget": 24.5,
-            "astroFit": 30,
+            "fieldQuality": 37.5,
             "experience": 11,
+            "budget": 15,
             "credibility": 14.3
           }
         }
@@ -92,91 +80,102 @@
       "results": [
         {
           "rank": 1,
-          "name": "Samyang/Rokinon 12mm f/2",
+          "name": "Sigma 20mm f/1.4 DG DN Art",
           "mount": "SONYE",
-          "price": 200,
+          "price": 899,
           "idealUseCase": [
             "Milky Way"
           ],
-          "comaRating": 4,
-          "focalLength": "12mm",
-          "score": 98.6,
+          "comaRating": 5,
+          "focalLength": "20mm",
+          "score": 100,
+          "maxAperture": 1.4,
+          "cornerSharpness": 5,
           "breakdown": {
-            "budget": 33.6,
-            "astroFit": 30,
+            "fieldQuality": 50,
             "experience": 20,
+            "budget": 15,
             "credibility": 15
           }
         },
         {
           "rank": 2,
-          "name": "Samyang/Rokinon 12mm f/2.0 NCS CS",
+          "name": "Sigma 85mm f/1.4 DG DN Art",
           "mount": "SONYE",
-          "price": 200,
+          "price": 1199,
           "idealUseCase": [
+            "Deep Sky",
             "Milky Way"
           ],
-          "comaRating": 4,
-          "focalLength": "12mm",
-          "score": 97.9,
+          "comaRating": 5,
+          "focalLength": "85mm",
+          "score": 100,
+          "maxAperture": 1.4,
+          "cornerSharpness": 5,
           "breakdown": {
-            "budget": 33.6,
-            "astroFit": 30,
+            "fieldQuality": 50,
             "experience": 20,
-            "credibility": 14.3
+            "budget": 15,
+            "credibility": 15
           }
         },
         {
           "rank": 3,
-          "name": "Samyang/Rokinon 14mm f/2.8 ED AS IF UMC",
-          "mount": "CANONEF",
-          "price": 279,
+          "name": "Sony FE 24mm f/1.4 GM",
+          "mount": "SONYE",
+          "price": 1298,
           "idealUseCase": [
             "Milky Way"
           ],
-          "comaRating": 4,
-          "focalLength": "14mm",
-          "score": 97.3,
+          "comaRating": 5,
+          "focalLength": "24mm",
+          "score": 100,
+          "maxAperture": 1.4,
+          "cornerSharpness": 5,
           "breakdown": {
-            "budget": 33,
-            "astroFit": 30,
+            "fieldQuality": 50,
             "experience": 20,
-            "credibility": 14.3
+            "budget": 15,
+            "credibility": 15
           }
         },
         {
           "rank": 4,
-          "name": "Sigma 16mm f/1.4 DC DN Contemporary",
-          "mount": "SONYE",
-          "price": 389,
+          "name": "Nikon NIKKOR Z 20mm f/1.8 S",
+          "mount": "NIKONZ",
+          "price": 946,
           "idealUseCase": [
             "Milky Way"
           ],
-          "comaRating": 4,
-          "focalLength": "16mm",
-          "score": 97.3,
+          "comaRating": 5,
+          "focalLength": "20mm",
+          "score": 98.2,
+          "maxAperture": 1.8,
+          "cornerSharpness": 5,
           "breakdown": {
-            "budget": 32.3,
-            "astroFit": 30,
+            "fieldQuality": 48.2,
             "experience": 20,
+            "budget": 15,
             "credibility": 15
           }
         },
         {
           "rank": 5,
-          "name": "Samyang/Rokinon AF 24mm f/1.8 FE",
+          "name": "Viltrox AF 16mm f/1.8",
           "mount": "SONYE",
-          "price": 399,
+          "price": 549,
           "idealUseCase": [
             "Milky Way"
           ],
-          "comaRating": 4,
-          "focalLength": "24mm",
-          "score": 97.2,
+          "comaRating": 5,
+          "focalLength": "16mm",
+          "score": 97,
+          "maxAperture": 1.8,
+          "cornerSharpness": 5,
           "breakdown": {
-            "budget": 32.2,
-            "astroFit": 30,
+            "fieldQuality": 48.2,
             "experience": 20,
+            "budget": 13.8,
             "credibility": 15
           }
         }
@@ -184,7 +183,7 @@
     },
     {
       "name": "Edge case 3: Deep Sky focus",
-      "note": "Plan expects wide/low-coma lenses to be prioritized. Catalog only has 1 distinct Deep-Sky-tagged lens (seeded per-mount), so this mostly checks it correctly outranks non-Deep-Sky lenses rather than testing a real ranking among several.",
+      "note": "Plan expects wide/low-coma lenses to be prioritized. Coma and corner sharpness are scored; focal length isn't for Deep Sky.",
       "input": {
         "astroType": "DEEPSKY",
         "budget": 1000
@@ -200,11 +199,13 @@
           ],
           "comaRating": 5,
           "focalLength": "135mm",
-          "score": 95.3,
+          "score": 95.1,
+          "maxAperture": 2,
+          "cornerSharpness": 5,
           "breakdown": {
-            "budget": 30.3,
-            "astroFit": 30,
+            "fieldQuality": 45.6,
             "experience": 20,
+            "budget": 14.5,
             "credibility": 15
           }
         },
@@ -218,11 +219,13 @@
           ],
           "comaRating": 4,
           "focalLength": "200mm",
-          "score": 90.3,
+          "score": 92.3,
+          "maxAperture": 2.8,
+          "cornerSharpness": 4,
           "breakdown": {
-            "budget": 27.1,
-            "astroFit": 28.2,
+            "fieldQuality": 42.3,
             "experience": 20,
+            "budget": 15,
             "credibility": 15
           }
         },
@@ -232,16 +235,19 @@
           "mount": "CANONRF",
           "price": 699,
           "idealUseCase": [
+            "Planetary",
             "Lunar",
             "Deep Sky"
           ],
           "comaRating": 3,
           "focalLength": "600mm",
-          "score": 89.8,
+          "score": 88.9,
+          "maxAperture": 11,
+          "cornerSharpness": 4,
           "breakdown": {
-            "budget": 27.7,
-            "astroFit": 27.3,
+            "fieldQuality": 39.1,
             "experience": 20,
+            "budget": 15,
             "credibility": 14.9
           }
         },
@@ -251,34 +257,39 @@
           "mount": "CANONRF",
           "price": 999,
           "idealUseCase": [
+            "Planetary",
             "Lunar",
             "Deep Sky"
           ],
           "comaRating": 3,
           "focalLength": "800mm",
-          "score": 85.2,
+          "score": 86.8,
+          "maxAperture": 11,
+          "cornerSharpness": 3,
           "breakdown": {
-            "budget": 24.5,
-            "astroFit": 26.4,
+            "fieldQuality": 37.5,
             "experience": 20,
+            "budget": 15,
             "credibility": 14.3
           }
         },
         {
           "rank": 5,
-          "name": "Samyang/Rokinon 12mm f/2",
+          "name": "Sigma 20mm f/1.4 DG DN Art",
           "mount": "SONYE",
-          "price": 200,
+          "price": 899,
           "idealUseCase": [
             "Milky Way"
           ],
-          "comaRating": 4,
-          "focalLength": "12mm",
-          "score": 73.9,
+          "comaRating": 5,
+          "focalLength": "20mm",
+          "score": 66.9,
+          "maxAperture": 1.4,
+          "cornerSharpness": 5,
           "breakdown": {
-            "budget": 32.9,
-            "astroFit": 6,
+            "fieldQuality": 16.9,
             "experience": 20,
+            "budget": 15,
             "credibility": 15
           }
         }
@@ -286,7 +297,7 @@
     },
     {
       "name": "Edge case 4: Planetary focus",
-      "note": "Plan expects longer focal length to be prioritized. IMPORTANT: the current 28-lens catalog has ZERO lenses tagged Planetary -- this checks the engine degrades gracefully (still returns budget/mount-filtered results) rather than validating planetary-specific ranking, which isn't possible with this data yet.",
+      "note": "Plan expects longer focal length to be prioritized. Lenses reaching 400mm+ are tagged Planetary.",
       "input": {
         "astroType": "PLANETS",
         "budget": 1000
@@ -298,16 +309,19 @@
           "mount": "CANONRF",
           "price": 699,
           "idealUseCase": [
+            "Planetary",
             "Lunar",
             "Deep Sky"
           ],
           "comaRating": 3,
           "focalLength": "600mm",
-          "score": 83.5,
+          "score": 94.1,
+          "maxAperture": 11,
+          "cornerSharpness": 4,
           "breakdown": {
-            "budget": 27.7,
-            "astroFit": 21,
+            "fieldQuality": 44.3,
             "experience": 20,
+            "budget": 15,
             "credibility": 14.9
           }
         },
@@ -317,71 +331,80 @@
           "mount": "CANONRF",
           "price": 999,
           "idealUseCase": [
+            "Planetary",
             "Lunar",
             "Deep Sky"
           ],
           "comaRating": 3,
           "focalLength": "800mm",
-          "score": 79.8,
+          "score": 93.6,
+          "maxAperture": 11,
+          "cornerSharpness": 3,
           "breakdown": {
-            "budget": 24.5,
-            "astroFit": 21,
+            "fieldQuality": 44.4,
             "experience": 20,
+            "budget": 15,
             "credibility": 14.3
           }
         },
         {
           "rank": 3,
-          "name": "Samyang/Rokinon 12mm f/2",
-          "mount": "SONYE",
-          "price": 200,
+          "name": "Canon EF 200mm f/2.8L II USM",
+          "mount": "CANONEF",
+          "price": 750,
           "idealUseCase": [
-            "Milky Way"
+            "Deep Sky"
           ],
           "comaRating": 4,
-          "focalLength": "12mm",
-          "score": 73.9,
+          "focalLength": "200mm",
+          "score": 62.7,
+          "maxAperture": 2.8,
+          "cornerSharpness": 4,
           "breakdown": {
-            "budget": 32.9,
-            "astroFit": 6,
+            "fieldQuality": 12.7,
             "experience": 20,
+            "budget": 15,
             "credibility": 15
           }
         },
         {
           "rank": 4,
-          "name": "Samyang/Rokinon 12mm f/2.0 NCS CS",
-          "mount": "SONYE",
-          "price": 200,
+          "name": "Samyang/Rokinon 135mm f/2.0 ED UMC",
+          "mount": "CANONEF",
+          "price": 449,
           "idealUseCase": [
-            "Milky Way"
+            "Deep Sky"
           ],
-          "comaRating": 4,
-          "focalLength": "12mm",
-          "score": 73.2,
+          "comaRating": 5,
+          "focalLength": "135mm",
+          "score": 62.1,
+          "maxAperture": 2,
+          "cornerSharpness": 5,
           "breakdown": {
-            "budget": 32.9,
-            "astroFit": 6,
+            "fieldQuality": 12.5,
             "experience": 20,
-            "credibility": 14.3
+            "budget": 14.5,
+            "credibility": 15
           }
         },
         {
           "rank": 5,
-          "name": "Samyang/Rokinon 14mm f/2.8 ED AS IF UMC",
-          "mount": "CANONEF",
-          "price": 279,
+          "name": "Sigma 20mm f/1.4 DG DN Art",
+          "mount": "SONYE",
+          "price": 899,
           "idealUseCase": [
             "Milky Way"
           ],
-          "comaRating": 4,
-          "focalLength": "14mm",
-          "score": 72.3,
+          "comaRating": 5,
+          "focalLength": "20mm",
+          "score": 57.9,
+          "maxAperture": 1.4,
+          "cornerSharpness": 5,
           "breakdown": {
-            "budget": 32.1,
-            "astroFit": 6,
+            "fieldQuality": 7.9,
             "experience": 20,
-            "credibility": 14.3
+            "budget": 15,
+            "credibility": 15
           }
         }
       ]
@@ -408,11 +431,13 @@
           ],
           "comaRating": 4,
           "focalLength": "14mm",
-          "score": 81.8,
+          "score": 86.4,
+          "maxAperture": 2.8,
+          "cornerSharpness": 3,
           "breakdown": {
-            "budget": 25.2,
-            "astroFit": 27.3,
+            "fieldQuality": 42.2,
             "experience": 15,
+            "budget": 15,
             "credibility": 14.3
           }
         }
@@ -430,38 +455,42 @@
       "results": [
         {
           "rank": 1,
-          "name": "Samyang/Rokinon 12mm f/2",
+          "name": "Viltrox AF 16mm f/1.8",
           "mount": "SONYE",
-          "price": 200,
+          "price": 549,
           "idealUseCase": [
             "Milky Way"
           ],
-          "comaRating": 4,
-          "focalLength": "12mm",
-          "score": 94.7,
+          "comaRating": 5,
+          "focalLength": "16mm",
+          "score": 97.8,
+          "maxAperture": 1.8,
+          "cornerSharpness": 5,
           "breakdown": {
-            "budget": 32.4,
-            "astroFit": 27.3,
+            "fieldQuality": 47.8,
             "experience": 20,
+            "budget": 15,
             "credibility": 15
           }
         },
         {
           "rank": 2,
-          "name": "Samyang/Rokinon 12mm f/2.0 NCS CS",
+          "name": "Viltrox AF 13mm f/1.4",
           "mount": "SONYE",
-          "price": 200,
+          "price": 429,
           "idealUseCase": [
             "Milky Way"
           ],
           "comaRating": 4,
-          "focalLength": "12mm",
-          "score": 93.9,
+          "focalLength": "13mm",
+          "score": 97.5,
+          "maxAperture": 1.4,
+          "cornerSharpness": 4,
           "breakdown": {
-            "budget": 32.4,
-            "astroFit": 27.3,
+            "fieldQuality": 47.5,
             "experience": 20,
-            "credibility": 14.3
+            "budget": 15,
+            "credibility": 15
           }
         },
         {
@@ -474,16 +503,38 @@
           ],
           "comaRating": 4,
           "focalLength": "16mm",
-          "score": 93.1,
+          "score": 96.8,
+          "maxAperture": 1.4,
+          "cornerSharpness": 4,
           "breakdown": {
-            "budget": 29.9,
-            "astroFit": 28.2,
+            "fieldQuality": 46.9,
             "experience": 20,
+            "budget": 14.9,
             "credibility": 15
           }
         },
         {
           "rank": 4,
+          "name": "Venus Laowa 15mm f/2 Zero-D",
+          "mount": "SONYE",
+          "price": 699,
+          "idealUseCase": [
+            "Milky Way"
+          ],
+          "comaRating": 4,
+          "focalLength": "15mm",
+          "score": 95,
+          "maxAperture": 2,
+          "cornerSharpness": 4,
+          "breakdown": {
+            "fieldQuality": 45,
+            "experience": 20,
+            "budget": 15,
+            "credibility": 15
+          }
+        },
+        {
+          "rank": 5,
           "name": "Samyang/Rokinon AF 24mm f/1.8 FE",
           "mount": "SONYE",
           "price": 399,
@@ -492,30 +543,14 @@
           ],
           "comaRating": 4,
           "focalLength": "24mm",
-          "score": 93,
-          "breakdown": {
-            "budget": 29.8,
-            "astroFit": 28.2,
-            "experience": 20,
-            "credibility": 15
-          }
-        },
-        {
-          "rank": 5,
-          "name": "Samyang/Rokinon 14mm f/2.8 ED AS IF UMC",
-          "mount": "SONYE",
-          "price": 279,
-          "idealUseCase": [
-            "Milky Way"
-          ],
-          "comaRating": 4,
-          "focalLength": "14mm",
           "score": 92.9,
+          "maxAperture": 1.8,
+          "cornerSharpness": 4,
           "breakdown": {
-            "budget": 31.3,
-            "astroFit": 27.3,
+            "fieldQuality": 42.9,
             "experience": 20,
-            "credibility": 14.3
+            "budget": 15,
+            "credibility": 15
           }
         }
       ]
@@ -540,11 +575,13 @@
           ],
           "comaRating": 5,
           "focalLength": "135mm",
-          "score": 96.9,
+          "score": 93.8,
+          "maxAperture": 2,
+          "cornerSharpness": 5,
           "breakdown": {
-            "budget": 31.9,
-            "astroFit": 30,
+            "fieldQuality": 45.6,
             "experience": 20,
+            "budget": 13.2,
             "credibility": 15
           }
         },
@@ -558,11 +595,13 @@
           ],
           "comaRating": 4,
           "focalLength": "200mm",
-          "score": 92.9,
+          "score": 92.3,
+          "maxAperture": 2.8,
+          "cornerSharpness": 4,
           "breakdown": {
-            "budget": 29.7,
-            "astroFit": 28.2,
+            "fieldQuality": 42.3,
             "experience": 20,
+            "budget": 15,
             "credibility": 15
           }
         },
@@ -576,34 +615,18 @@
           ],
           "comaRating": 5,
           "focalLength": "105mm",
-          "score": 81.4,
+          "score": 85.8,
+          "maxAperture": 1.4,
+          "cornerSharpness": 5,
           "breakdown": {
-            "budget": 16.4,
-            "astroFit": 30,
+            "fieldQuality": 46.3,
             "experience": 20,
+            "budget": 4.5,
             "credibility": 15
           }
         },
         {
           "rank": 4,
-          "name": "Samyang/Rokinon 14mm f/2.8 ED AS IF UMC",
-          "mount": "CANONEF",
-          "price": 279,
-          "idealUseCase": [
-            "Milky Way"
-          ],
-          "comaRating": 4,
-          "focalLength": "14mm",
-          "score": 73.3,
-          "breakdown": {
-            "budget": 33,
-            "astroFit": 6,
-            "experience": 20,
-            "credibility": 14.3
-          }
-        },
-        {
-          "rank": 5,
           "name": "Tamron SP 15-30mm f/2.8 Di VC USD (Model A012)",
           "mount": "CANONEF",
           "price": 499,
@@ -612,12 +635,34 @@
           ],
           "comaRating": 4,
           "focalLength": "15-30mm",
-          "score": 72.5,
+          "score": 59.7,
+          "maxAperture": 2.8,
+          "cornerSharpness": 4,
           "breakdown": {
-            "budget": 31.5,
-            "astroFit": 6,
+            "fieldQuality": 11.3,
             "experience": 20,
+            "budget": 13.5,
             "credibility": 15
+          }
+        },
+        {
+          "rank": 5,
+          "name": "Samyang/Rokinon 14mm f/2.8 ED AS IF UMC",
+          "mount": "CANONEF",
+          "price": 279,
+          "idealUseCase": [
+            "Milky Way"
+          ],
+          "comaRating": 4,
+          "focalLength": "14mm",
+          "score": 56.3,
+          "maxAperture": 2.8,
+          "cornerSharpness": 3,
+          "breakdown": {
+            "fieldQuality": 9.8,
+            "experience": 20,
+            "budget": 12.2,
+            "credibility": 14.3
           }
         }
       ]
@@ -632,7 +677,7 @@
       "results": [
         {
           "rank": 1,
-          "name": "Samyang/Rokinon 12mm f/2",
+          "name": "Samyang/Rokinon 12mm f/2.0 NCS CS",
           "mount": "SONYE",
           "price": 200,
           "idealUseCase": [
@@ -640,11 +685,13 @@
           ],
           "comaRating": 4,
           "focalLength": "12mm",
-          "score": 85,
+          "score": 83.8,
+          "maxAperture": 2,
+          "cornerSharpness": 3,
           "breakdown": {
-            "budget": 28,
-            "astroFit": 30,
+            "fieldQuality": 41.8,
             "experience": 12,
+            "budget": 15,
             "credibility": 15
           }
         },
@@ -658,34 +705,18 @@
           ],
           "comaRating": 4,
           "focalLength": "14mm",
-          "score": 84.5,
+          "score": 83.6,
+          "maxAperture": 2.8,
+          "cornerSharpness": 3,
           "breakdown": {
-            "budget": 25.2,
-            "astroFit": 30,
+            "fieldQuality": 39.4,
             "experience": 15,
+            "budget": 15,
             "credibility": 14.3
           }
         },
         {
           "rank": 3,
-          "name": "Samyang/Rokinon 12mm f/2.0 NCS CS",
-          "mount": "SONYE",
-          "price": 200,
-          "idealUseCase": [
-            "Milky Way"
-          ],
-          "comaRating": 4,
-          "focalLength": "12mm",
-          "score": 84.3,
-          "breakdown": {
-            "budget": 28,
-            "astroFit": 30,
-            "experience": 12,
-            "credibility": 14.3
-          }
-        },
-        {
-          "rank": 4,
           "name": "Canon RF 16mm f/2.8 STM",
           "mount": "CANONRF",
           "price": 299,
@@ -694,11 +725,13 @@
           ],
           "comaRating": 3,
           "focalLength": "16mm",
-          "score": 79.8,
+          "score": 77.8,
+          "maxAperture": 2.8,
+          "cornerSharpness": 3,
           "breakdown": {
-            "budget": 24.5,
-            "astroFit": 30,
+            "fieldQuality": 37.5,
             "experience": 11,
+            "budget": 15,
             "credibility": 14.3
           }
         }
@@ -716,60 +749,26 @@
       "results": [
         {
           "rank": 1,
-          "name": "Samyang/Rokinon 14mm f/2.8 ED AS IF UMC",
+          "name": "Samyang/Rokinon 135mm f/2.0 ED UMC",
           "mount": "SONYE",
-          "price": 279,
+          "price": 449,
           "idealUseCase": [
-            "Milky Way"
+            "Deep Sky"
           ],
-          "comaRating": 4,
-          "focalLength": "14mm",
-          "score": 64.4,
+          "comaRating": 5,
+          "focalLength": "135mm",
+          "score": 56,
+          "maxAperture": 2,
+          "cornerSharpness": 5,
           "breakdown": {
-            "budget": 29.1,
-            "astroFit": 6,
-            "experience": 15,
-            "credibility": 14.3
-          }
-        },
-        {
-          "rank": 2,
-          "name": "Samyang/Rokinon 12mm f/2",
-          "mount": "SONYE",
-          "price": 200,
-          "idealUseCase": [
-            "Milky Way"
-          ],
-          "comaRating": 4,
-          "focalLength": "12mm",
-          "score": 63.8,
-          "breakdown": {
-            "budget": 30.8,
-            "astroFit": 6,
+            "fieldQuality": 14,
             "experience": 12,
+            "budget": 15,
             "credibility": 15
           }
         },
         {
-          "rank": 3,
-          "name": "Samyang/Rokinon 12mm f/2.0 NCS CS",
-          "mount": "SONYE",
-          "price": 200,
-          "idealUseCase": [
-            "Milky Way"
-          ],
-          "comaRating": 4,
-          "focalLength": "12mm",
-          "score": 63.1,
-          "breakdown": {
-            "budget": 30.8,
-            "astroFit": 6,
-            "experience": 12,
-            "credibility": 14.3
-          }
-        },
-        {
-          "rank": 4,
+          "rank": 2,
           "name": "Sigma 16mm f/1.4 DC DN Contemporary",
           "mount": "SONYE",
           "price": 389,
@@ -778,16 +777,18 @@
           ],
           "comaRating": 4,
           "focalLength": "16mm",
-          "score": 59.8,
+          "score": 50.2,
+          "maxAperture": 1.4,
+          "cornerSharpness": 4,
           "breakdown": {
-            "budget": 26.8,
-            "astroFit": 6,
+            "fieldQuality": 8.2,
             "experience": 12,
+            "budget": 15,
             "credibility": 15
           }
         },
         {
-          "rank": 5,
+          "rank": 3,
           "name": "Viltrox AF 13mm f/1.4",
           "mount": "SONYE",
           "price": 429,
@@ -796,11 +797,53 @@
           ],
           "comaRating": 4,
           "focalLength": "13mm",
-          "score": 59,
+          "score": 50.2,
+          "maxAperture": 1.4,
+          "cornerSharpness": 4,
           "breakdown": {
-            "budget": 26,
-            "astroFit": 6,
+            "fieldQuality": 8.2,
             "experience": 12,
+            "budget": 15,
+            "credibility": 15
+          }
+        },
+        {
+          "rank": 4,
+          "name": "Samyang/Rokinon 14mm f/2.8 ED AS IF UMC",
+          "mount": "SONYE",
+          "price": 279,
+          "idealUseCase": [
+            "Milky Way"
+          ],
+          "comaRating": 4,
+          "focalLength": "14mm",
+          "score": 49.3,
+          "maxAperture": 2.8,
+          "cornerSharpness": 3,
+          "breakdown": {
+            "fieldQuality": 5.1,
+            "experience": 15,
+            "budget": 15,
+            "credibility": 14.3
+          }
+        },
+        {
+          "rank": 5,
+          "name": "Samyang/Rokinon 12mm f/2.0 NCS CS",
+          "mount": "SONYE",
+          "price": 200,
+          "idealUseCase": [
+            "Milky Way"
+          ],
+          "comaRating": 4,
+          "focalLength": "12mm",
+          "score": 46.7,
+          "maxAperture": 2,
+          "cornerSharpness": 3,
+          "breakdown": {
+            "fieldQuality": 5.6,
+            "experience": 12,
+            "budget": 14.1,
             "credibility": 15
           }
         }
@@ -808,7 +851,7 @@
     },
     {
       "name": "Persona 6: Planetary imager, high budget",
-      "note": "Willing to spend big on reach -- exercises the zero-Planetary-lens data gap under real budget pressure.",
+      "note": "Willing to spend big on reach. Canon EF has no lens tagged Planetary, so this checks that the longest untagged lens wins.",
       "input": {
         "mount": "CANONEF",
         "astroType": "PLANETS",
@@ -818,20 +861,22 @@
       "results": [
         {
           "rank": 1,
-          "name": "Samyang/Rokinon 14mm f/2.8 ED AS IF UMC",
+          "name": "Canon EF 200mm f/2.8L II USM",
           "mount": "CANONEF",
-          "price": 279,
+          "price": 750,
           "idealUseCase": [
-            "Milky Way"
+            "Deep Sky"
           ],
           "comaRating": 4,
-          "focalLength": "14mm",
-          "score": 73.3,
+          "focalLength": "200mm",
+          "score": 62.7,
+          "maxAperture": 2.8,
+          "cornerSharpness": 4,
           "breakdown": {
-            "budget": 33,
-            "astroFit": 6,
+            "fieldQuality": 12.7,
             "experience": 20,
-            "credibility": 14.3
+            "budget": 15,
+            "credibility": 15
           }
         },
         {
@@ -844,11 +889,13 @@
           ],
           "comaRating": 5,
           "focalLength": "135mm",
-          "score": 72.9,
+          "score": 60.7,
+          "maxAperture": 2,
+          "cornerSharpness": 5,
           "breakdown": {
-            "budget": 31.9,
-            "astroFit": 6,
+            "fieldQuality": 12.5,
             "experience": 20,
+            "budget": 13.2,
             "credibility": 15
           }
         },
@@ -862,48 +909,54 @@
           ],
           "comaRating": 4,
           "focalLength": "15-30mm",
-          "score": 72.5,
+          "score": 53.8,
+          "maxAperture": 2.8,
+          "cornerSharpness": 4,
           "breakdown": {
-            "budget": 31.5,
-            "astroFit": 6,
+            "fieldQuality": 5.3,
             "experience": 20,
+            "budget": 13.5,
             "credibility": 15
           }
         },
         {
           "rank": 4,
-          "name": "Canon EF 200mm f/2.8L II USM",
+          "name": "Sigma 105mm f/1.4 DG HSM Art",
           "mount": "CANONEF",
-          "price": 750,
+          "price": 1599,
           "idealUseCase": [
             "Deep Sky"
           ],
-          "comaRating": 4,
-          "focalLength": "200mm",
-          "score": 70.8,
+          "comaRating": 5,
+          "focalLength": "105mm",
+          "score": 51.3,
+          "maxAperture": 1.4,
+          "cornerSharpness": 5,
           "breakdown": {
-            "budget": 29.7,
-            "astroFit": 6,
+            "fieldQuality": 11.8,
             "experience": 20,
+            "budget": 4.5,
             "credibility": 15
           }
         },
         {
           "rank": 5,
-          "name": "Sigma 14mm f/1.8 DG HSM Art",
+          "name": "Samyang/Rokinon 14mm f/2.8 ED AS IF UMC",
           "mount": "CANONEF",
-          "price": 1599,
+          "price": 279,
           "idealUseCase": [
             "Milky Way"
           ],
           "comaRating": 4,
           "focalLength": "14mm",
-          "score": 57.4,
+          "score": 50.4,
+          "maxAperture": 2.8,
+          "cornerSharpness": 3,
           "breakdown": {
-            "budget": 16.4,
-            "astroFit": 6,
+            "fieldQuality": 3.9,
             "experience": 20,
-            "credibility": 15
+            "budget": 12.2,
+            "credibility": 14.3
           }
         }
       ]
@@ -917,78 +970,66 @@
       "results": [
         {
           "rank": 1,
-          "name": "Samyang/Rokinon 12mm f/2",
+          "name": "Viltrox AF 16mm f/1.8",
           "mount": "SONYE",
-          "price": 200,
+          "price": 549,
           "idealUseCase": [
             "Milky Way"
           ],
-          "comaRating": 4,
-          "focalLength": "12mm",
-          "score": 97.4,
+          "comaRating": 5,
+          "focalLength": "16mm",
+          "score": 98.2,
+          "maxAperture": 1.8,
+          "cornerSharpness": 5,
           "breakdown": {
-            "budget": 32.4,
-            "astroFit": 30,
+            "fieldQuality": 48.2,
             "experience": 20,
+            "budget": 15,
             "credibility": 15
           }
         },
         {
           "rank": 2,
-          "name": "Samyang/Rokinon 12mm f/2.0 NCS CS",
-          "mount": "SONYE",
-          "price": 200,
+          "name": "Samyang/Rokinon 135mm f/2.0 ED UMC",
+          "mount": "CANONEF",
+          "price": 449,
           "idealUseCase": [
-            "Milky Way"
+            "Deep Sky"
           ],
-          "comaRating": 4,
-          "focalLength": "12mm",
-          "score": 96.6,
+          "comaRating": 5,
+          "focalLength": "135mm",
+          "score": 97.4,
+          "maxAperture": 2,
+          "cornerSharpness": 5,
           "breakdown": {
-            "budget": 32.4,
-            "astroFit": 30,
+            "fieldQuality": 47.4,
             "experience": 20,
-            "credibility": 14.3
+            "budget": 15,
+            "credibility": 15
           }
         },
         {
           "rank": 3,
-          "name": "Samyang/Rokinon 14mm f/2.8 ED AS IF UMC",
-          "mount": "CANONEF",
-          "price": 279,
+          "name": "Viltrox AF 13mm f/1.4",
+          "mount": "SONYE",
+          "price": 429,
           "idealUseCase": [
             "Milky Way"
           ],
           "comaRating": 4,
-          "focalLength": "14mm",
-          "score": 95.6,
+          "focalLength": "13mm",
+          "score": 96.3,
+          "maxAperture": 1.4,
+          "cornerSharpness": 4,
           "breakdown": {
-            "budget": 31.3,
-            "astroFit": 30,
+            "fieldQuality": 46.3,
             "experience": 20,
-            "credibility": 14.3
+            "budget": 15,
+            "credibility": 15
           }
         },
         {
           "rank": 4,
-          "name": "Canon RF 16mm f/2.8 STM",
-          "mount": "CANONRF",
-          "price": 299,
-          "idealUseCase": [
-            "Milky Way"
-          ],
-          "comaRating": 3,
-          "focalLength": "16mm",
-          "score": 95.3,
-          "breakdown": {
-            "budget": 31.1,
-            "astroFit": 30,
-            "experience": 20,
-            "credibility": 14.3
-          }
-        },
-        {
-          "rank": 5,
           "name": "Sigma 16mm f/1.4 DC DN Contemporary",
           "mount": "SONYE",
           "price": 389,
@@ -997,11 +1038,33 @@
           ],
           "comaRating": 4,
           "focalLength": "16mm",
-          "score": 94.9,
+          "score": 96.1,
+          "maxAperture": 1.4,
+          "cornerSharpness": 4,
           "breakdown": {
-            "budget": 29.9,
-            "astroFit": 30,
+            "fieldQuality": 46.3,
             "experience": 20,
+            "budget": 14.9,
+            "credibility": 15
+          }
+        },
+        {
+          "rank": 5,
+          "name": "Nikon AF-S NIKKOR 20mm f/1.8G ED",
+          "mount": "NIKONF",
+          "price": 746,
+          "idealUseCase": [
+            "Milky Way"
+          ],
+          "comaRating": 4,
+          "focalLength": "20mm",
+          "score": 94.4,
+          "maxAperture": 1.8,
+          "cornerSharpness": 4,
+          "breakdown": {
+            "fieldQuality": 44.4,
+            "experience": 20,
+            "budget": 15,
             "credibility": 15
           }
         }
@@ -1026,11 +1089,13 @@
           ],
           "comaRating": 4,
           "focalLength": "14mm",
-          "score": 88.8,
+          "score": 88.6,
+          "maxAperture": 2.8,
+          "cornerSharpness": 3,
           "breakdown": {
-            "budget": 24.5,
-            "astroFit": 30,
+            "fieldQuality": 39.4,
             "experience": 20,
+            "budget": 15,
             "credibility": 14.3
           }
         }
@@ -1056,70 +1121,38 @@
           ],
           "comaRating": 5,
           "focalLength": "135mm",
-          "score": 86.1,
+          "score": 87.6,
+          "maxAperture": 2,
+          "cornerSharpness": 5,
           "breakdown": {
-            "budget": 29.1,
-            "astroFit": 30,
+            "fieldQuality": 45.6,
             "experience": 12,
+            "budget": 15,
             "credibility": 15
           }
         },
         {
           "rank": 2,
-          "name": "Samyang/Rokinon 14mm f/2.8 ED AS IF UMC",
+          "name": "Viltrox AF 13mm f/1.4",
           "mount": "SONYE",
-          "price": 279,
+          "price": 429,
           "idealUseCase": [
             "Milky Way"
           ],
           "comaRating": 4,
-          "focalLength": "14mm",
-          "score": 66.6,
+          "focalLength": "13mm",
+          "score": 56.1,
+          "maxAperture": 1.4,
+          "cornerSharpness": 4,
           "breakdown": {
-            "budget": 31.3,
-            "astroFit": 6,
-            "experience": 15,
-            "credibility": 14.3
-          }
-        },
-        {
-          "rank": 3,
-          "name": "Samyang/Rokinon 12mm f/2",
-          "mount": "SONYE",
-          "price": 200,
-          "idealUseCase": [
-            "Milky Way"
-          ],
-          "comaRating": 4,
-          "focalLength": "12mm",
-          "score": 65.4,
-          "breakdown": {
-            "budget": 32.4,
-            "astroFit": 6,
+            "fieldQuality": 14.1,
             "experience": 12,
+            "budget": 15,
             "credibility": 15
           }
         },
         {
-          "rank": 4,
-          "name": "Samyang/Rokinon 12mm f/2.0 NCS CS",
-          "mount": "SONYE",
-          "price": 200,
-          "idealUseCase": [
-            "Milky Way"
-          ],
-          "comaRating": 4,
-          "focalLength": "12mm",
-          "score": 64.6,
-          "breakdown": {
-            "budget": 32.4,
-            "astroFit": 6,
-            "experience": 12,
-            "credibility": 14.3
-          }
-        },
-        {
-          "rank": 5,
+          "rank": 3,
           "name": "Sigma 16mm f/1.4 DC DN Contemporary",
           "mount": "SONYE",
           "price": 389,
@@ -1128,11 +1161,53 @@
           ],
           "comaRating": 4,
           "focalLength": "16mm",
-          "score": 62.9,
+          "score": 55.9,
+          "maxAperture": 1.4,
+          "cornerSharpness": 4,
           "breakdown": {
-            "budget": 29.9,
-            "astroFit": 6,
+            "fieldQuality": 14.1,
             "experience": 12,
+            "budget": 14.9,
+            "credibility": 15
+          }
+        },
+        {
+          "rank": 4,
+          "name": "Venus Laowa 15mm f/2 Zero-D",
+          "mount": "SONYE",
+          "price": 699,
+          "idealUseCase": [
+            "Milky Way"
+          ],
+          "comaRating": 4,
+          "focalLength": "15mm",
+          "score": 54.6,
+          "maxAperture": 2,
+          "cornerSharpness": 4,
+          "breakdown": {
+            "fieldQuality": 12.6,
+            "experience": 12,
+            "budget": 15,
+            "credibility": 15
+          }
+        },
+        {
+          "rank": 5,
+          "name": "Viltrox AF 16mm f/1.8",
+          "mount": "SONYE",
+          "price": 549,
+          "idealUseCase": [
+            "Milky Way"
+          ],
+          "comaRating": 5,
+          "focalLength": "16mm",
+          "score": 53.9,
+          "maxAperture": 1.8,
+          "cornerSharpness": 5,
+          "breakdown": {
+            "fieldQuality": 15.9,
+            "experience": 8,
+            "budget": 15,
             "credibility": 15
           }
         }
@@ -1150,6 +1225,66 @@
       "results": [
         {
           "rank": 1,
+          "name": "Sigma 20mm f/1.4 DG DN Art",
+          "mount": "SONYE",
+          "price": 899,
+          "idealUseCase": [
+            "Milky Way"
+          ],
+          "comaRating": 5,
+          "focalLength": "20mm",
+          "score": 97.4,
+          "maxAperture": 1.4,
+          "cornerSharpness": 5,
+          "breakdown": {
+            "fieldQuality": 48.2,
+            "experience": 20,
+            "budget": 14.2,
+            "credibility": 15
+          }
+        },
+        {
+          "rank": 2,
+          "name": "Sony FE 24mm f/1.4 GM",
+          "mount": "SONYE",
+          "price": 1298,
+          "idealUseCase": [
+            "Milky Way"
+          ],
+          "comaRating": 5,
+          "focalLength": "24mm",
+          "score": 97,
+          "maxAperture": 1.4,
+          "cornerSharpness": 5,
+          "breakdown": {
+            "fieldQuality": 47,
+            "experience": 20,
+            "budget": 15,
+            "credibility": 15
+          }
+        },
+        {
+          "rank": 3,
+          "name": "Sigma 14mm f/1.8 DG HSM Art",
+          "mount": "SONYE",
+          "price": 1599,
+          "idealUseCase": [
+            "Milky Way"
+          ],
+          "comaRating": 4,
+          "focalLength": "14mm",
+          "score": 95.9,
+          "maxAperture": 1.8,
+          "cornerSharpness": 4,
+          "breakdown": {
+            "fieldQuality": 45.9,
+            "experience": 20,
+            "budget": 15,
+            "credibility": 15
+          }
+        },
+        {
+          "rank": 4,
           "name": "Viltrox AF 16mm f/1.8",
           "mount": "SONYE",
           "price": 549,
@@ -1158,65 +1293,13 @@
           ],
           "comaRating": 5,
           "focalLength": "16mm",
-          "score": 97.4,
+          "score": 95.6,
+          "maxAperture": 1.8,
+          "cornerSharpness": 5,
           "breakdown": {
-            "budget": 32.4,
-            "astroFit": 30,
+            "fieldQuality": 47.8,
             "experience": 20,
-            "credibility": 15
-          }
-        },
-        {
-          "rank": 2,
-          "name": "Samyang/Rokinon 12mm f/2",
-          "mount": "SONYE",
-          "price": 200,
-          "idealUseCase": [
-            "Milky Way"
-          ],
-          "comaRating": 4,
-          "focalLength": "12mm",
-          "score": 96.3,
-          "breakdown": {
-            "budget": 34,
-            "astroFit": 27.3,
-            "experience": 20,
-            "credibility": 15
-          }
-        },
-        {
-          "rank": 3,
-          "name": "Sigma 16mm f/1.4 DC DN Contemporary",
-          "mount": "SONYE",
-          "price": 389,
-          "idealUseCase": [
-            "Milky Way"
-          ],
-          "comaRating": 4,
-          "focalLength": "16mm",
-          "score": 96.3,
-          "breakdown": {
-            "budget": 33.1,
-            "astroFit": 28.2,
-            "experience": 20,
-            "credibility": 15
-          }
-        },
-        {
-          "rank": 4,
-          "name": "Samyang/Rokinon AF 24mm f/1.8 FE",
-          "mount": "SONYE",
-          "price": 399,
-          "idealUseCase": [
-            "Milky Way"
-          ],
-          "comaRating": 4,
-          "focalLength": "24mm",
-          "score": 96.3,
-          "breakdown": {
-            "budget": 33.1,
-            "astroFit": 28.2,
-            "experience": 20,
+            "budget": 12.7,
             "credibility": 15
           }
         },
@@ -1230,11 +1313,13 @@
           ],
           "comaRating": 4,
           "focalLength": "13mm",
-          "score": 96.2,
+          "score": 94.8,
+          "maxAperture": 1.4,
+          "cornerSharpness": 4,
           "breakdown": {
-            "budget": 33,
-            "astroFit": 28.2,
+            "fieldQuality": 47.5,
             "experience": 20,
+            "budget": 12.3,
             "credibility": 15
           }
         }

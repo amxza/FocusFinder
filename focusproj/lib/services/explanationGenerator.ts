@@ -1,6 +1,6 @@
 import Anthropic from "@anthropic-ai/sdk";
 import { claude, CLAUDE_MODEL } from "../claude/client";
-import { ASTRO_TYPE_LABELS, getBudgetTierLabel } from "../utils/constants";
+import { ASTRO_TYPE_LABELS, getBudgetTierLabel, lensMatchesAstroType } from "../utils/constants";
 import type { astroType, ExperienceLevel } from "../../generated/prisma/enums";
 
 // Claude-generated recommendation explanations (Week 3, Mon-Tue per the
@@ -14,6 +14,7 @@ export interface ExplanationLens {
   name: string;
   brand: string;
   price: number;
+  idealUseCase: string[];
 }
 
 export interface ExplanationInput {
@@ -33,8 +34,10 @@ const CLAUDE_REQUEST_TIMEOUT_MS = 10_000;
 
 const EXPLANATION_SYSTEM_PROMPT =
   "You are an astrophotography gear advisor. Reply with exactly 1-2 short, " +
-  "conversational sentences explaining why the lens is a good fit. Speak " +
-  "directly to the user (\"you\"). No markdown, no spec-sheet dumps, no preamble.";
+  "conversational sentences explaining how the lens fits what the user wants. " +
+  "If you're told it isn't a dedicated lens for their goal, say so plainly and " +
+  "don't oversell it. Speak directly to the user (\"you\"). No markdown, no " +
+  "spec-sheet dumps, no preamble.";
 
 // Common prompts repeat a lot -- a small lens catalog x a handful of astro
 // types/budget tiers/experience levels is a bounded combination space, so an
@@ -65,6 +68,15 @@ export function buildExplanationCacheKey(input: ExplanationInput): string {
 }
 
 export function buildExplanationPrompt(input: ExplanationInput): string {
+  if (lensMatchesAstroType(input.lens.idealUseCase, input.astroType) === false) {
+    return (
+      `The ${input.lens.brand} ${input.lens.name} (around $${input.lens.price}) is not a ` +
+      `dedicated ${astroLabel(input.astroType)} lens, but it ranked among the best options for ` +
+      `${experienceLabel(input.experienceLevel)} on a ${getBudgetTierLabel(input.budget)} budget. ` +
+      `Explain honestly what it can and can't do for ${astroLabel(input.astroType)}.`
+    );
+  }
+
   return (
     `Explain why the ${input.lens.brand} ${input.lens.name} ` +
     `(around $${input.lens.price}) is a good choice for ${experienceLabel(input.experienceLevel)} ` +
@@ -73,6 +85,13 @@ export function buildExplanationPrompt(input: ExplanationInput): string {
 }
 
 function fallbackExplanation(input: ExplanationInput): string {
+  if (lensMatchesAstroType(input.lens.idealUseCase, input.astroType) === false) {
+    return (
+      `The ${input.lens.brand} ${input.lens.name} fits your ${getBudgetTierLabel(input.budget)} ` +
+      `budget, but it isn't a dedicated ${astroLabel(input.astroType)} lens, so expect some compromises.`
+    );
+  }
+
   return (
     `The ${input.lens.brand} ${input.lens.name} fits your ${getBudgetTierLabel(input.budget)} ` +
     `budget and suits ${astroLabel(input.astroType)}.`

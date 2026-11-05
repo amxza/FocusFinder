@@ -1,6 +1,8 @@
 import { describe, expect, it } from "vitest";
+import { MAX_SCORE } from "./constants";
 import {
-  scoreAstroFit,
+  longestFocalLengthMm,
+  scoreFieldQuality,
   scoreBudgetMatch,
   scoreCredibility,
   scoreExperience,
@@ -10,7 +12,7 @@ import {
 
 // Week 2 Wed-Thu's plan checkbox claimed these existed; they never actually
 // landed in the repo. Added now (Week 3 Wed-Thu follow-up) alongside the
-// budget/astro-fit rework described in the data validation report, so the
+// budget and astro-fit rework described in the data validation report, so the
 // fix has regression coverage from the start.
 
 type TestLens = ScoringInput["lens"];
@@ -46,105 +48,133 @@ describe("scoreBudgetMatch", () => {
     expect(scoreBudgetMatch({ lens: makeLens(), maxBudget: -100 })).toBe(0);
   });
 
-  it("gives the maximum score to a free lens", () => {
-    const score = scoreBudgetMatch({ lens: makeLens({ price: 0 }), maxBudget: 1000 });
-    expect(score).toBeCloseTo(35, 5); // 100 * 0.35
-  });
-
-  it("gives the compressed floor score to a lens priced exactly at the budget", () => {
-    const score = scoreBudgetMatch({ lens: makeLens({ price: 1000 }), maxBudget: 1000 });
-    expect(score).toBeCloseTo(24.5, 5); // 70 * 0.35
-  });
-
-  it("keeps the in-budget range within [70, 100] pre-weight (i.e. [24.5, 35] weighted)", () => {
-    for (const price of [1, 100, 500, 999, 1000]) {
+  it("gives full credit to any lens using at least half the budget", () => {
+    for (const price of [500, 750, 1000]) {
       const score = scoreBudgetMatch({ lens: makeLens({ price }), maxBudget: 1000 });
-      expect(score).toBeGreaterThanOrEqual(24.5 - 1e-9);
-      expect(score).toBeLessThanOrEqual(35 + 1e-9);
+      expect(score).toBeCloseTo(MAX_SCORE.BUDGET, 5);
     }
   });
 
-  it("still gives cheaper lenses a higher score than pricier ones (mild tiebreaker, not dominant)", () => {
-    const cheap = scoreBudgetMatch({ lens: makeLens({ price: 200 }), maxBudget: 1500 });
-    const pricey = scoreBudgetMatch({ lens: makeLens({ price: 999 }), maxBudget: 1500 });
-    expect(cheap).toBeGreaterThan(pricey);
-    // The whole point of the rework: this gap should be small enough for
-    // astro-fit/experience/credibility to realistically overcome it, not
-    // the ~18.6-point gap the old (1 - price/maxBudget) formula produced.
-    expect(cheap - pricey).toBeLessThan(10);
+  it("gives a free lens 70% credit", () => {
+    const score = scoreBudgetMatch({ lens: makeLens({ price: 0 }), maxBudget: 1000 });
+    expect(score).toBeCloseTo(10.5, 5); // 70 * 0.15
   });
 
-  it("gives half credit (scaled down) for a lens over budget", () => {
-    const justOver = scoreBudgetMatch({ lens: makeLens({ price: 1100 }), maxBudget: 1000 });
-    const wayOver = scoreBudgetMatch({ lens: makeLens({ price: 2000 }), maxBudget: 1000 });
-    expect(justOver).toBeGreaterThan(0);
-    expect(justOver).toBeLessThan(wayOver === 0 ? Infinity : 35);
-    expect(wayOver).toBeLessThan(justOver);
+  it("raises the score steadily up to half the budget", () => {
+    const scores = [0, 250, 500].map((price) =>
+      scoreBudgetMatch({ lens: makeLens({ price }), maxBudget: 1000 })
+    );
+    expect(scores[1]).toBeGreaterThan(scores[0]);
+    expect(scores[2]).toBeGreaterThan(scores[1]);
   });
 
-  it("scores an at-budget lens higher than one priced just over budget", () => {
-    const atBudget = scoreBudgetMatch({ lens: makeLens({ price: 1000 }), maxBudget: 1000 });
-    const justOver = scoreBudgetMatch({ lens: makeLens({ price: 1001 }), maxBudget: 1000 });
-    expect(atBudget).toBeGreaterThan(justOver);
+  it("scores a lens over budget below every lens within budget", () => {
+    const over = scoreBudgetMatch({ lens: makeLens({ price: 1001 }), maxBudget: 1000 });
+    const free = scoreBudgetMatch({ lens: makeLens({ price: 0 }), maxBudget: 1000 });
+    expect(over).toBeCloseTo(4.5, 5); // 30 * 0.15
+    expect(over).toBeLessThan(free);
+  });
+
+  it("never separates two in-budget lenses by more than 4.5 points", () => {
+    const free = scoreBudgetMatch({ lens: makeLens({ price: 0 }), maxBudget: 1000 });
+    const full = scoreBudgetMatch({ lens: makeLens({ price: 1000 }), maxBudget: 1000 });
+    expect(full - free).toBeCloseTo(4.5, 5);
   });
 });
 
-describe("scoreAstroFit", () => {
-  it("returns the max score when no astro type is preferred", () => {
-    const score = scoreAstroFit({
-      lens: makeLens({ idealUseCase: ["Lunar"] }),
-      maxBudget: 1000,
-      preferredType: undefined,
-    });
-    expect(score).toBe(30);
+describe("scoreFieldQuality", () => {
+  const field = (preferredType: ScoringInput["preferredType"], overrides: Partial<TestLens>) =>
+    scoreFieldQuality({ lens: makeLens(overrides), maxBudget: 1000, preferredType });
+
+  const bestOptics = { maxAperture: 1.4, comaRating: 5, cornerSharpness: 5 };
+  const worstOptics = { maxAperture: 11, comaRating: 1, cornerSharpness: 1 };
+
+  it("gives the full 50 points to an ideal Milky Way lens", () => {
+    expect(field("MILKYWAY", { ...bestOptics, focalLength: "14mm" })).toBeCloseTo(
+      MAX_SCORE.FIELD_QUALITY,
+      5
+    );
   });
 
-  it("rewards better coma/corner-sharpness among direct matches", () => {
-    const bestQuality = scoreAstroFit({
-      lens: makeLens({ idealUseCase: ["Deep Sky"], comaRating: 5, cornerSharpness: 5 }),
-      maxBudget: 1000,
-      preferredType: "DEEPSKY",
-    });
-    const worstQuality = scoreAstroFit({
-      lens: makeLens({ idealUseCase: ["Deep Sky"], comaRating: 1, cornerSharpness: 1 }),
-      maxBudget: 1000,
-      preferredType: "DEEPSKY",
-    });
-    expect(bestQuality).toBeCloseTo(30, 5); // (70 + 5*6) * 0.3
-    expect(worstQuality).toBeCloseTo(22.8, 5); // (70 + 1*6) * 0.3
-    expect(bestQuality).toBeGreaterThan(worstQuality);
+  it("rates lenses on general optics when no field is requested", () => {
+    const sharpFast = field(undefined, { ...bestOptics, idealUseCase: ["Lunar"] });
+    const softSlow = field(undefined, { ...worstOptics, idealUseCase: ["Lunar"] });
+    expect(sharpFast).toBeCloseTo(MAX_SCORE.FIELD_QUALITY, 5);
+    expect(softSlow).toBeCloseTo(25, 5); // the tagged floor
   });
 
-  it("still ranks a direct match above a versatile match even at the worst quality rating", () => {
-    const worstDirectMatch = scoreAstroFit({
-      lens: makeLens({ idealUseCase: ["Deep Sky"], comaRating: 1, cornerSharpness: 1 }),
-      maxBudget: 1000,
-      preferredType: "DEEPSKY",
+  for (const [preferredType, label] of [
+    ["MILKYWAY", "Milky Way"],
+    ["DEEPSKY", "Deep Sky"],
+    ["PLANETS", "Planetary"],
+    ["LUNAR", "Lunar"],
+  ] as const) {
+    it(`ranks any lens tagged ${label} above any untagged lens`, () => {
+      const worstTagged = field(preferredType, { ...worstOptics, focalLength: "50mm", idealUseCase: [label] });
+      const bestUntagged = field(preferredType, { ...bestOptics, focalLength: "14-800mm", idealUseCase: ["Other"] });
+      expect(worstTagged).toBeGreaterThan(bestUntagged);
     });
-    const versatile = scoreAstroFit({
-      lens: makeLens({ idealUseCase: ["Milky Way", "Deep Sky adjacent"] }),
-      maxBudget: 1000,
-      preferredType: "LUNAR",
-    });
-    expect(worstDirectMatch).toBeGreaterThan(versatile);
+  }
+
+  it("favors faster, wider lenses for Milky Way", () => {
+    const fastWide = field("MILKYWAY", { maxAperture: 1.4, focalLength: "14mm" });
+    const slowNormal = field("MILKYWAY", { maxAperture: 2.8, focalLength: "24mm" });
+    expect(fastWide).toBeGreaterThan(slowNormal);
   });
 
-  it("gives partial credit to a versatile (multi-tag, non-matching) lens", () => {
-    const score = scoreAstroFit({
-      lens: makeLens({ idealUseCase: ["Milky Way", "Lunar"] }),
-      maxBudget: 1000,
-      preferredType: "DEEPSKY",
-    });
-    expect(score).toBeCloseTo(21, 5); // 70 * 0.3
+  it("favors lower coma for Milky Way", () => {
+    expect(field("MILKYWAY", { comaRating: 5 })).toBeGreaterThan(field("MILKYWAY", { comaRating: 3 }));
   });
 
-  it("gives low credit to a lens specialized for something else entirely", () => {
-    const score = scoreAstroFit({
-      lens: makeLens({ idealUseCase: ["Milky Way"] }),
-      maxBudget: 1000,
-      preferredType: "PLANETS",
+  it("ranks a sharp, low-coma 135mm f/2 above a 200mm f/2.8 for Deep Sky", () => {
+    const rokinon135 = field("DEEPSKY", {
+      idealUseCase: ["Deep Sky"],
+      focalLength: "135mm",
+      maxAperture: 2,
+      comaRating: 5,
+      cornerSharpness: 5,
     });
-    expect(score).toBeCloseTo(6, 5); // 20 * 0.3
+    const canon200 = field("DEEPSKY", {
+      idealUseCase: ["Deep Sky"],
+      focalLength: "200mm",
+      maxAperture: 2.8,
+      comaRating: 4,
+      cornerSharpness: 4,
+    });
+    expect(rokinon135).toBeGreaterThan(canon200);
+  });
+
+  for (const [preferredType, label] of [
+    ["PLANETS", "Planetary"],
+    ["LUNAR", "Lunar"],
+  ] as const) {
+    describe(`reach for ${preferredType}`, () => {
+      const score = (focalLength: string, idealUseCase: string[]) =>
+        field(preferredType, { focalLength, idealUseCase });
+
+      it("ranks longer tagged lenses higher", () => {
+        expect(score("150-600mm", [label])).toBeGreaterThan(score("100-400mm", [label]));
+      });
+
+      it("ranks longer untagged lenses higher when nothing tagged is available", () => {
+        expect(score("200mm", ["Deep Sky"])).toBeGreaterThan(score("14mm", ["Milky Way"]));
+      });
+
+      it("gives no credit for having several unrelated tags", () => {
+        expect(score("85mm", ["Deep Sky", "Milky Way"])).toBe(score("85mm", ["Deep Sky"]));
+      });
+    });
+  }
+});
+
+describe("longestFocalLengthMm", () => {
+  it("reads primes and zooms", () => {
+    expect(longestFocalLengthMm("14mm")).toBe(14);
+    expect(longestFocalLengthMm("150-600mm")).toBe(600);
+  });
+
+  it("returns 0 when there is no number to read", () => {
+    expect(longestFocalLengthMm("unknown")).toBe(0);
   });
 });
 
@@ -252,7 +282,7 @@ describe("scoreLens", () => {
     };
     const breakdown = scoreLens(input);
     expect(breakdown.total).toBeCloseTo(
-      breakdown.budget + breakdown.astroFit + breakdown.experience + breakdown.credibility,
+      breakdown.fieldQuality + breakdown.experience + breakdown.budget + breakdown.credibility,
       5
     );
   });
@@ -265,8 +295,8 @@ describe("scoreLens", () => {
       experienceLevel: "INTERMEDIATE",
     };
     const breakdown = scoreLens(input);
-    expect(breakdown.budget).toBeLessThanOrEqual(35);
-    expect(breakdown.astroFit).toBeLessThanOrEqual(30);
+    expect(breakdown.budget).toBeLessThanOrEqual(MAX_SCORE.BUDGET);
+    expect(breakdown.fieldQuality).toBeLessThanOrEqual(MAX_SCORE.FIELD_QUALITY);
     expect(breakdown.experience).toBeLessThanOrEqual(20);
     expect(breakdown.credibility).toBeLessThanOrEqual(15);
     expect(breakdown.total).toBeLessThanOrEqual(100);

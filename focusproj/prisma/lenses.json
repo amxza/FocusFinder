@@ -59,36 +59,6 @@
     ]
   },
   {
-    "name": "Samyang/Rokinon 12mm f/2",
-    "brand": "Rokinon",
-    "mount": [
-      "SonyE"
-    ],
-    "focalLength": "12mm",
-    "maxAperture": 2,
-    "price": 200,
-    "comaRating": 4,
-    "cornerSharpness": 3,
-    "manualFocusQuality": "The physical ring turns with a fluid, consistent resistance that makes micro-adjustments easy",
-    "idealUseCase": [
-      "Milky Way",
-      "Night Sky"
-    ],
-    "commonMistakes": [
-      "Even at 12mm, f/2 is very fast. If you have a foreground element (like a rock or tree) very close to the lens, it can be blurry if you focus strictly on the stars.",
-      "Because this is an APS-C lens, try not to use a high ISO to compensate for the \"darkness,\" which can lead to excessive digital noise that ruins the detail in the Milky Way's dust lanes."
-    ],
-    "reviews": [
-      {
-        "source": ["EXPERT", "REDDIT"],
-        "sourceUrl": ["https://www.ianmorison.com/the-samyangrokinon-12mm-f2-0-lens-for-astrophotography/", "https://www.reddit.com/r/SonyAlpha/comments/zz5z5u/which_20mm_lens_would_you_recommend_for/#:~:text=Which%2020mm%20lens%20would%20you%20recommend%20for,it%3F%20Not%20even%20GM.%20%E2%80%A2%204y%20ago."],
-        "quote": ["For astrophotography use, I have stopped the lens down to f/4 which gives reasonable corner sharpness. Many wide angle lenses give stars angel-like wings in the corners", "Reddit astrophotographers often note the 12mm f/2 has a more pleasing bokeh and better overall image quality compared to other wide-angle lenses in its class."],
-        "useCaseMatch": "Night Sky",
-        "rating": 4
-      }
-    ]
-  },
-  {
     "name": "Sigma 16mm f/1.4 DC DN Contemporary",
     "brand": "Sigma",
     "mount": [
@@ -580,7 +550,8 @@
     "cornerSharpness": 3,
     "manualFocusQuality": "The physical ring turns with a fluid, consistent resistance that makes micro-adjustments easy.",
     "idealUseCase": [
-      "Milky Way"
+      "Milky Way",
+      "Night Sky"
     ],
     "commonMistakes": [
       "Even at 12mm, f/2 is very fast. If you have a foreground element (like a rock or tree) very close to the lens, it can be blurry if you focus strictly on the stars.",
@@ -588,9 +559,18 @@
     ],
     "reviews": [
       {
-        "source": "EXPERT",
-        "sourceUrl": "https://www.ianmorison.com/the-samyangrokinon-12mm-f2-0-lens-for-astrophotography/",
-        "quote": "For astrophotography use, I have stopped the lens down to f/4 which gives reasonable corner sharpness. Many wide angle lenses give stars angel-like wings in the corners.",
+        "source": [
+          "EXPERT",
+          "REDDIT"
+        ],
+        "sourceUrl": [
+          "https://www.ianmorison.com/the-samyangrokinon-12mm-f2-0-lens-for-astrophotography/",
+          "https://www.reddit.com/r/SonyAlpha/comments/zz5z5u/which_20mm_lens_would_you_recommend_for/#:~:text=Which%2020mm%20lens%20would%20you%20recommend%20for,it%3F%20Not%20even%20GM.%20%E2%80%A2%204y%20ago."
+        ],
+        "quote": [
+          "For astrophotography use, I have stopped the lens down to f/4 which gives reasonable corner sharpness. Many wide angle lenses give stars angel-like wings in the corners",
+          "Reddit astrophotographers often note the 12mm f/2 has a more pleasing bokeh and better overall image quality compared to other wide-angle lenses in its class."
+        ],
         "useCaseMatch": "Night Sky",
         "rating": 4
       }
@@ -740,6 +720,7 @@
     "cornerSharpness": 4,
     "manualFocusQuality": "Smooth focus-by-wire manual focus ring with linear responsiveness, supplemented by a dual-action zoom barrel that allows both rotational and push-pull operation.",
     "idealUseCase": [
+      "Planetary",
       "Deep-Sky",
       "Lunar"
     ],
@@ -770,6 +751,7 @@
     "cornerSharpness": 3,
     "manualFocusQuality": "Focus-by-wire electronic focus ring with smooth resistance, requiring careful micro-adjustments in electronic manual focus mode.",
     "idealUseCase": [
+      "Planetary",
       "Lunar",
       "Deep-Sky"
     ],
@@ -801,6 +783,7 @@
     "cornerSharpness": 4,
     "manualFocusQuality": "Smooth focus-by-wire manual focus ring with linear resistance, complemented by a Dual Action Zoom design allowing both push-pull and ring rotation.",
     "idealUseCase": [
+      "Planetary",
       "Lunar",
       "Deep-Sky"
     ],
@@ -831,6 +814,7 @@
     "cornerSharpness": 4,
     "manualFocusQuality": "Smooth focus-by-wire manual focus ring with linear response, complemented by an internal zoom mechanism that maintains fixed physical lens length during operation.",
     "idealUseCase": [
+      "Planetary",
       "Lunar",
       "Wildlife",
       "Sports",
@@ -962,6 +946,7 @@
     "cornerSharpness": 4,
     "manualFocusQuality": "Smooth focus/control ring with electronic resistance, complemented by two customizable barrel-mounted lens function buttons.",
     "idealUseCase": [
+      "Planetary",
       "Lunar",
       "Deep-Sky"
     ],
@@ -992,6 +977,7 @@
     "cornerSharpness": 4,
     "manualFocusQuality": "Smooth focus-by-wire manual focus ring with linear responsiveness, complemented by a non-extending internal zoom mechanism with a short 70° throw.",
     "idealUseCase": [
+      "Planetary",
       "Lunar",
       "Wildlife",
       "Sports",
@@ -1024,6 +1010,7 @@
     "cornerSharpness": 5,
     "manualFocusQuality": "Smooth focus-by-wire manual focus ring with configurable linear rotation angles, accompanied by programmable L-Fn buttons and a dedicated memory-set button to instantly recall exact focus distances.",
     "idealUseCase": [
+      "Planetary",
       "Lunar",
       "Wildlife",
       "Sports",
@@ -1058,6 +1045,7 @@
     "cornerSharpness": 4,
     "manualFocusQuality": "Smooth focus-by-wire manual focus ring with linear damping, complemented by the Flex Zoom Lock mechanism that enables locking at any focal length position by pushing the zoom ring forward.",
     "idealUseCase": [
+      "Planetary",
       "Lunar",
       "Wildlife",
       "Sports",
@@ -1090,6 +1078,7 @@
     "cornerSharpness": 4,
     "manualFocusQuality": "Smooth focus-by-wire manual focus ring with good mechanical resistance, paired with a customizable control ring for exposure adjustments.",
     "idealUseCase": [
+      "Planetary",
       "Lunar",
       "Wildlife",
       "Large Celestial Conjunctions",
@@ -1122,6 +1111,7 @@
     "cornerSharpness": 5,
     "manualFocusQuality": "Smooth Linear Response manual focus ring with precise, tactile mechanical feel, paired with an adjustable zoom torque ring (Smooth/Tight) to eliminate zoom creep.",
     "idealUseCase": [
+      "Planetary",
       "Lunar",
       "Wildlife",
       "Sports",

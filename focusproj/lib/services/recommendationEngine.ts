@@ -2,7 +2,7 @@ import { prisma } from "../prisma";
 import { findCandidateLenses } from "./lensQuery";
 import { generateExplanation } from "./explanationGenerator";
 import { scoreLens } from "../utils/scoring";
-import { TOP_N_RECOMMENDATIONS } from "../utils/constants";
+import { lensMatchesAstroType, TOP_N_RECOMMENDATIONS } from "../utils/constants";
 import type { astroType, ExperienceLevel, Mount } from "../../generated/prisma/enums";
 
 export interface RecommendationRequest {
@@ -49,9 +49,10 @@ export async function rankLenses(
   // A lens sold in several mounts is one row per mount, so a query with no
   // mount filter would otherwise fill the top 5 with the same physical lens.
   // Sorting first means the row kept for each lens is its best-scoring one.
+  // On a tied score the cheaper lens ranks first, so the order is predictable.
   const seenLensNames = new Set<string>();
   return ranked
-    .sort((a, b) => b.score - a.score)
+    .sort((a, b) => b.score - a.score || a.lens.price - b.lens.price)
     .filter((r) => {
       if (seenLensNames.has(r.lens.name)) return false;
       seenLensNames.add(r.lens.name);
@@ -109,12 +110,24 @@ export async function generateRecommendations(input: RecommendationRequest) {
     },
   });
 
-  return searchSession;
+  return {
+    ...searchSession,
+    recommendations: searchSession.recommendations.map((rec) => ({
+      ...rec,
+      matchesAstroType: lensMatchesAstroType(
+        rec.lensRecommendations[0]?.lens.idealUseCase ?? [],
+        input.astroType
+      ),
+    })),
+  };
 }
 
 export interface RankedRecommendation {
   rank: number;
   aiExplain: string;
+  // False means the best available pick isn't tagged for the requested astro
+  // type; null means no astro type was requested.
+  matchesAstroType: boolean | null;
   lens: CandidateLens | null;
 }
 
@@ -153,6 +166,10 @@ export async function getSearchSessionById(
     recommendations: searchSession.recommendations.map((rec) => ({
       rank: rec.rank,
       aiExplain: rec.aiExplain,
+      matchesAstroType: lensMatchesAstroType(
+        rec.lensRecommendations[0]?.lens.idealUseCase ?? [],
+        searchSession.preferredType
+      ),
       lens: rec.lensRecommendations[0]?.lens ?? null,
     })),
   };

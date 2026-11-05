@@ -270,6 +270,41 @@ describe("scoreCredibility", () => {
     const score = scoreCredibility({ lens, maxBudget: 1000 });
     expect(score).toBeCloseTo(15, 5); // still capped at MAX_SCORE.CREDIBILITY
   });
+
+  const credibility = (averageReviewScore: number, sources: (string | null)[]) =>
+    scoreCredibility({
+      lens: makeLens({
+        averageReviewScore,
+        reviews: sources.map((source) => ({ source }) as never),
+      }),
+      maxBudget: 1000,
+    });
+
+  it("scores the average rating on its own at 20 raw points per star", () => {
+    expect(credibility(3, [])).toBeCloseTo(9, 5); // 3*20 = 60, * 0.15
+  });
+
+  it("adds 10 raw points for each review", () => {
+    const one = credibility(2, ["REDDIT"]); // 40 + 10 + 5 = 55
+    const two = credibility(2, ["REDDIT", "REDDIT"]); // 40 + 20 + 5 = 65
+    expect(two - one).toBeCloseTo(1.5, 5); // 10 * 0.15
+  });
+
+  it("counts each distinct source once, so a second outlet beats a second review from the same one", () => {
+    const sameSource = credibility(2, ["REDDIT", "REDDIT"]); // 40 + 20 + 5 = 65
+    const twoSources = credibility(2, ["REDDIT", "ASTROBACKYARD"]); // 40 + 20 + 10 = 70
+    expect(sameSource).toBeCloseTo(9.75, 5);
+    expect(twoSources).toBeCloseTo(10.5, 5);
+  });
+
+  it("counts a review with no source as a review but not as a source", () => {
+    expect(credibility(2, [null])).toBeCloseTo(7.5, 5); // 40 + 10 + 0 = 50
+  });
+
+  it("treats a lens with no reviews loaded as having none", () => {
+    const lens = makeLens({ averageReviewScore: 3, reviews: undefined as never });
+    expect(scoreCredibility({ lens, maxBudget: 1000 })).toBeCloseTo(9, 5);
+  });
 });
 
 describe("scoreLens", () => {

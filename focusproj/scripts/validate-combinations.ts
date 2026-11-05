@@ -20,7 +20,7 @@ import type { astroType, ExperienceLevel, Mount } from "../generated/prisma/enum
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
-const MOUNTS: (Mount | undefined)[] = [undefined, "NIKONF", "NIKONZ", "CANONEF", "SONYE"];
+const MOUNTS: (Mount | undefined)[] = [undefined, "NIKONF", "NIKONZ", "CANONEF", "CANONRF", "SONYE"];
 const ASTRO_TYPES: (astroType | undefined)[] = [
   undefined,
   "MILKYWAY",

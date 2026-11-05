@@ -12,7 +12,7 @@ const connectionString = `${process.env.DATABASE_URL}`;
 const adapter = new PrismaPg({ connectionString });
 const prisma = new PrismaClient({ adapter });
 
-type Mount = "NIKONF" | "NIKONZ" | "CANONEF" | "SONYE";
+type Mount = "NIKONF" | "NIKONZ" | "CANONEF" | "CANONRF" | "SONYE";
 type AstroType = "MILKYWAY" | "DEEPSKY" | "PLANETS" | "LUNAR";
 type Source = "REDDIT" | "ASTROBACKYARD" | "REVIEW_SITE";
 
@@ -40,9 +40,9 @@ interface LensData {
   reviews: LensReview[];
 }
 
-// Phase 1 supports these four mounts (the questionnaire form's "Nikon F /
-// Canon EF/RF / Sony E" options from the sprint plan, Week 4, plus Nikon Z).
-// prisma/lenses.json also lists real mounts we don't model yet (Fujifilm X,
+// Phase 1 supports these five mounts (the sprint plan's Week 4 form options,
+// plus Nikon Z, with Canon EF and RF kept separate because an RF lens can't
+// physically mount on an EF camera). prisma/lenses.json also lists real mounts we don't model yet (Fujifilm X,
 // Sony A, Leica L, Micro Four Thirds, Pentax K) -- rather than silently
 // mislabeling those as one we do support, lenses with no supported mount are
 // skipped. Telescope astrographs (M48 thread) live in
@@ -54,8 +54,8 @@ const MOUNT_MAP: Record<string, Mount> = {
   nikonz: "NIKONZ",
   "canon ef": "CANONEF",
   canonef: "CANONEF",
-  "canon rf": "CANONEF", // grouped with EF per the app's own "Canon EF/RF" dropdown option
-  canonrf: "CANONEF",
+  "canon rf": "CANONRF",
+  canonrf: "CANONRF",
   "sony e": "SONYE",
   sonye: "SONYE",
 };

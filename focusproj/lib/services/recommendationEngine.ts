@@ -46,8 +46,17 @@ export async function rankLenses(
     return { lensId: lens.id, score: breakdown.total, breakdown, lens };
   });
 
+  // A lens sold in several mounts is one row per mount, so a query with no
+  // mount filter would otherwise fill the top 5 with the same physical lens.
+  // Sorting first means the row kept for each lens is its best-scoring one.
+  const seenLensNames = new Set<string>();
   return ranked
     .sort((a, b) => b.score - a.score)
+    .filter((r) => {
+      if (seenLensNames.has(r.lens.name)) return false;
+      seenLensNames.add(r.lens.name);
+      return true;
+    })
     .slice(0, TOP_N_RECOMMENDATIONS);
 }
 
@@ -92,7 +101,10 @@ export async function generateRecommendations(input: RecommendationRequest) {
     },
     include: {
       recommendations: {
-        include: { lensRecommendations: { include: { lens: true } } },
+        orderBy: { rank: "asc" },
+        include: {
+          lensRecommendations: { include: { lens: { include: { reviews: true } } } },
+        },
       },
     },
   });
@@ -103,7 +115,7 @@ export async function generateRecommendations(input: RecommendationRequest) {
 export interface RankedRecommendation {
   rank: number;
   aiExplain: string;
-  lens: Awaited<ReturnType<typeof findCandidateLenses>>[number] | null;
+  lens: CandidateLens | null;
 }
 
 export interface SearchSessionResult {
@@ -125,7 +137,9 @@ export async function getSearchSessionById(
     include: {
       recommendations: {
         orderBy: { rank: "asc" },
-        include: { lensRecommendations: { include: { lens: true } } },
+        include: {
+          lensRecommendations: { include: { lens: { include: { reviews: true } } } },
+        },
       },
     },
   });

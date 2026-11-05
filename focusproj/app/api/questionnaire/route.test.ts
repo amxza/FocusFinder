@@ -11,7 +11,7 @@ vi.mock("../../../lib/services/recommendationEngine", () => ({
 vi.mock("../../../generated/prisma/client", () => {
   class PrismaClientKnownRequestError extends Error {
     code: string;
-    constructor(message: string, code: string) {
+    constructor(message: string, { code }: { code: string }) {
       super(message);
       this.code = code;
     }
@@ -87,7 +87,10 @@ describe("POST /api/questionnaire", () => {
 
   it("returns 404 when customerId does not reference an existing customer", async () => {
     generateRecommendations.mockRejectedValue(
-      new Prisma.PrismaClientKnownRequestError("FK violation", "P2003")
+      new Prisma.PrismaClientKnownRequestError("FK violation", {
+        code: "P2003",
+        clientVersion: "test",
+      })
     );
 
     const response = await POST(

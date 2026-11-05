@@ -62,11 +62,7 @@
     "name": "Samyang/Rokinon 12mm f/2",
     "brand": "Rokinon",
     "mount": [
-      "SonyE",
-      "NikonF",
-      "NikonZ",
-      "CanonEF",
-      "CanonRF"
+      "SonyE"
     ],
     "focalLength": "12mm",
     "maxAperture": 2,

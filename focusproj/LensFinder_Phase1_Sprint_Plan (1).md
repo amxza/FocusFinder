@@ -5,7 +5,6 @@
 **Tech Stack:** React + Node.js + PostgreSQL + Prisma + Claude API
 
 ---
-
 ## Week 1: Design Sprint (1 Week - Not a Standard Sprint)
 
 **Duration:** Mon-Fri (5 days)  

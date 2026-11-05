@@ -183,7 +183,7 @@ components:
   schemas:
     Mount:
       type: string
-      enum: [NIKONF, CANONEF, SONYE]
+      enum: [NIKONF, NIKONZ, CANONEF, SONYE]
       description: Camera mount. Canon RF is grouped under CANONEF (matches the questionnaire form's "Canon EF/RF" option).
 
     AstroType:

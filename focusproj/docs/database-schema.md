@@ -49,7 +49,7 @@ erDiagram
         string id PK
         string name
         string brand
-        string lensMount "NIKONF / CANONEF / SONYE"
+        string lensMount "NIKONF / NIKONZ / CANONEF / SONYE"
         string focalLength
         float maxAperture
         float price

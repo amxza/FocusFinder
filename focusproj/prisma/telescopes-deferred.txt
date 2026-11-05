@@ -1,0 +1,130 @@
+Telescope astrographs deferred from Phase 1 (removed from prisma/lenses.json).
+These mount via M48/M68 thread + T-ring rather than a camera lens mount, so they
+don't fit the Lens model yet. Each entry below is the original JSON object; to
+restore one, paste it back into the prisma/lenses.json array.
+
+{
+    "name": "William Optics RedCat 51 III 250mm f/4.9 WIFD",
+    "brand": "William Optics",
+    "mount": [
+      "M48 Thread Adapter (Fits DSLR/Mirrorless with T-Ring, Dedicated Astronomy Cameras)"
+    ],
+    "focalLength": "250mm",
+    "maxAperture": 4.9,
+    "price": 798,
+    "comaRating": 5,
+    "cornerSharpness": 5,
+    "manualFocusQuality": "Features the WIFD internal rack-and-pinion focusing system with a dual-speed knob, providing ultra-smooth internal glass movement with no image shift or barrel tilt.",
+    "idealUseCase": [
+      "Deep-Sky",
+      "Large Nebulae",
+      "Milky Way Mosaics"
+    ],
+    "commonMistakes": [
+      "Expecting to shoot planets or distant small galaxies; a 250mm focal length is designed for widefield deep-sky targets like the Orion or North America Nebula.",
+      "Pairing with small-pixel sensors without enabling dithering during capture, which can cause undersampling and blocky stars in raw stacked data."
+    ],
+    "reviews": [
+      {
+        "source": "AstroBackyard",
+        "sourceUrl": "https://astrobackyard.com/william-optics-redcat-51/",
+        "quote": "The Petzval quadruplet lens design is well-corrected and incredibly sharp. You can expect pinpoint stars to the edges of your image with a completely flat field natively.",
+        "useCaseMatch": "Deep-Sky",
+        "rating": 4.9
+      }
+    ]
+  },
+{
+    "name": "Askar FMA180 Pro 180mm f/4.5 Sextuplet APO",
+    "mount": [
+      "M48 Thread Adapter (Fits DSLR/Mirrorless with T-Ring, Dedicated Astronomy Cameras)"
+    ],
+    "focalLength": "180mm",
+    "maxAperture": 4.5,
+    "price": 439,
+    "comaRating": 5,
+    "cornerSharpness": 5,
+    "manualFocusQuality": "Internal helical focusing mechanism with smooth rotational resistance and an integrated lock screw to eliminate image shift and maintain focus through temperature swings.",
+    "idealUseCase": [
+      "Deep-Sky",
+      "Large Nebulae",
+      "Milky Way Mosaics",
+      "Widefield Astrophotography"
+    ],
+    "commonMistakes": [
+      "Rotating the integrated 360° camera rotator counter-clockwise without securing the assembly, which can accidentally unscrew rear components and alter the required 55mm backfocus distance.",
+      "Attempting to shoot small, distant deep-sky objects or planets; at 180mm, it is designed specifically for expansive nebulae complexes (like the Heart & Soul, North America, or Veil Nebulae) and wide fields."
+    ],
+    "reviews": [
+      {
+        "source": "Cloudy Nights Astrophotography Community",
+        "sourceUrl": "https://www.cloudynights.com/forums/topic/955361-askar-fma180-or-the-pro-version/",
+        "quote": "The FMA180 Pro delivers a flat, well-corrected field with virtually zero chromatic aberration and round stars right to the edges, serving as an exceptional compact astrograph for widefield imaging.",
+        "useCaseMatch": "Deep-Sky",
+        "rating": 4.8
+      }
+    ],
+    "brand": "Askar"
+  },
+{
+    "name": "Askar ACL200 200mm f/4 APO",
+    "mount": [
+      "M48 Thread Adapter (Fits DSLR/Mirrorless via T-Ring, Dedicated Astronomy Cameras)"
+    ],
+    "focalLength": "200mm",
+    "maxAperture": 4,
+    "price": 802,
+    "comaRating": 5,
+    "cornerSharpness": 5,
+    "manualFocusQuality": "Dual-speed manual focusing system featuring coarse and micro-focus (1mm travel) control rings, complete with individual lock screws for exact focal retention.",
+    "idealUseCase": [
+      "Deep-Sky",
+      "Large Nebulae & Star Clusters",
+      "Tracked Widefield DSO"
+    ],
+    "commonMistakes": [
+      "Underestimating the substantial 1.8kg (4.0 lbs) weight, which can overload lightweight entry-level star trackers if not properly counterweighted on an equatorial mount.",
+      "Failing to tighten both coarse and micro-focus lock screws after acquiring infinity focus, risking micro-shifts when slewing between celestial targets."
+    ],
+    "reviews": [
+      {
+        "source": "Cloudy Nights Astrophotography Community",
+        "sourceUrl": "https://www.cloudynights.com/articles/user-reviews/sharpstar-askar-acl200-200-mm-f4-astrographic-telephoto-lens-r3307/",
+        "quote": "The ACL200 is strikingly easy to use for astrophotography. The optical performance is exceptional, delivering tack-sharp and round stars all the way into the corners with a built-in flattener.",
+        "useCaseMatch": "Deep-Sky",
+        "rating": 4.8
+      }
+    ],
+    "brand": "Askar"
+  },
+{
+    "name": "Askar FRA400 400mm f/5.6 Quintuplet Petzval Astrograph",
+    "mount": [
+      "M48/M68 Thread Adapters (Fits DSLR/Mirrorless with T-Ring, Dedicated Astronomy Cameras)"
+    ],
+    "focalLength": "400mm",
+    "maxAperture": 5.6,
+    "price": 1149,
+    "comaRating": 5,
+    "cornerSharpness": 5,
+    "manualFocusQuality": "Heavy-duty 3-inch rack-and-pinion dual-speed focuser (1:10 micro-tuning) with smooth internal travel, a focus lock screw, and an integrated 360° field rotator.",
+    "idealUseCase": [
+      "Deep-Sky",
+      "Nebulae & Galaxies",
+      "Large Celestial Fields"
+    ],
+    "commonMistakes": [
+      "Adding an unnecessary external field flattener; the built-in quintuplet Petzval optical design already provides an intrinsically flat 44mm image circle directly out of the box.",
+      "Mounting on lightweight entry-level star trackers without proper counterweight balancing; at ~3.2 kg (7.0 lbs) with tube rings and dovetail, it requires a sturdy equatorial mount to prevent tracking errors."
+    ],
+    "reviews": [
+      {
+        "source": "Cloudy Nights Astrophotography Community",
+        "sourceUrl": "https://www.cloudynights.com/topic/757271-askar-fra400-review-and-first-impressions/",
+        "quote": "The Petzval quintuplet design delivers pinpoint, round stars right out to the edges of a full-frame sensor with zero backfocus calculation headaches. Color correction is superb with no detectable chromatic aberration.",
+        "useCaseMatch": "Deep-Sky",
+        "rating": 4.9
+      }
+    ],
+    "brand": "Askar"
+  }

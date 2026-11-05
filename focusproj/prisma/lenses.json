@@ -2,14 +2,18 @@
   {
     "name": "Nikkor Prime 20mm f/1.8 S",
     "brand": "Nikon",
-    "mount": ["NikonF"],
+    "mount": [
+      "NikonF"
+    ],
     "focalLength": "20mm",
     "maxAperture": 1.8,
     "price": 799,
     "comaRating": 3,
     "cornerSharpness": 3,
     "manualFocusQuality": "Relies on a smooth, focus-by-wire electronic ring, rotating continuously without physical end limits",
-    "idealUseCase": ["Milky Way"],
+    "idealUseCase": [
+      "Milky Way"
+    ],
     "commonMistakes": [
       "Don't rely on autofocus. It will often lead to out-of-focus stars",
       "Try not to exceed shutter speed of 20 seconds without a star tracker, it provides motion blur into the stars"
@@ -17,8 +21,8 @@
     "reviews": [
       {
         "source": "REDDIT",
-        "sourceUrl": "https://www.reddit.com/r/Nikon/comments/wktg53/bought_the_20mm_18s_especially_for/",
-        "quote": "I really like having the 20mm instead of the 24 ! It's only slightly wider than what I was used to but I'm still able to crop in if I want to have the 24mm look!",
+        "sourceUrl": ["https://www.reddit.com/r/Nikon/comments/wktg53/bought_the_20mm_18s_especially_for/","https://www.reddit.com/r/Nikon/comments/1nonbbc/which_wide_angle_z_for_astrophotography/"],
+        "quote": ["I really like having the 20mm instead of the 24 ! It's only slightly wider than what I was used to but I'm still able to crop in if I want to have the 24mm look!","Multiple users consistently recommend the 20mm as the benchmark native prime, noting its balance between low-light speed ($f/1.8$) and focal length versatility."],
         "useCaseMatch": "Milky Way",
         "rating": 5
       }
@@ -27,23 +31,28 @@
   {
     "name": "Sony FE 20mm f/1.8 G",
     "brand": "Sony",
-    "mount": ["SonyE"],
+    "mount": [
+      "SonyE"
+    ],
     "focalLength": "20mm",
     "maxAperture": 1.8,
     "price": 749,
     "comaRating": 3,
     "cornerSharpness": 4,
     "manualFocusQuality": "Focus-by-wire precision, providing reliable movement with almost to no mechanical lag",
-    "idealUseCase": ["Milky Way", "Night Sky"],
+    "idealUseCase": [
+      "Milky Way",
+      "Night Sky"
+    ],
     "commonMistakes": [
       "Framing without having a compellent element can lead to flat shots",
       "Try to zoom into the center of frame to achieve perfect infinity focus"
     ],
     "reviews": [
       {
-        "source": "EXPERT",
-        "sourceUrl": "https://alynwallacephotography.com/blog/2020/7/4/sony-20mm-f18-g-astrophotography-review-raw-downloads",
-        "quote": "I can comfortably say that as of the time of writing this, the Sony 20mm f/1.8 G lens is the best E-mount lens in this focal length for landscape astrophotography.",
+        "source": ["EXPERT", "REDDIT"],
+        "sourceUrl": ["https://alynwallacephotography.com/blog/2020/7/4/sony-20mm-f18-g-astrophotography-review-raw-downloads", "Reddit astrophotographers often note the 20mm G has cleaner corner coma control than the 24mm GM wide open, plus a noticeably wider field of view for single-shot Milky Way arches."],
+        "quote": ["I can comfortably say that as of the time of writing this, the Sony 20mm f/1.8 G lens is the best E-mount lens in this focal length for landscape astrophotography.", "Reddit astrophotographers often note the 20mm G has cleaner corner coma control than the 24mm GM wide open, plus a noticeably wider field of view for single-shot Milky Way arches."],
         "useCaseMatch": "Night Sky",
         "rating": 5
       }
@@ -52,23 +61,32 @@
   {
     "name": "Samyang/Rokinon 12mm f/2",
     "brand": "Rokinon",
-    "mount": ["SonyE", "NikonF", "NikonZ", "CanonEF", "CanonRF"],
+    "mount": [
+      "SonyE",
+      "NikonF",
+      "NikonZ",
+      "CanonEF",
+      "CanonRF"
+    ],
     "focalLength": "12mm",
     "maxAperture": 2,
     "price": 200,
     "comaRating": 4,
     "cornerSharpness": 3,
     "manualFocusQuality": "The physical ring turns with a fluid, consistent resistance that makes micro-adjustments easy",
-    "idealUseCase": ["Milky Way", "Night Sky"],
+    "idealUseCase": [
+      "Milky Way",
+      "Night Sky"
+    ],
     "commonMistakes": [
       "Even at 12mm, f/2 is very fast. If you have a foreground element (like a rock or tree) very close to the lens, it can be blurry if you focus strictly on the stars.",
       "Because this is an APS-C lens, try not to use a high ISO to compensate for the \"darkness,\" which can lead to excessive digital noise that ruins the detail in the Milky Way's dust lanes."
     ],
     "reviews": [
       {
-        "source": "EXPERT",
-        "sourceUrl": "https://www.ianmorison.com/the-samyangrokinon-12mm-f2-0-lens-for-astrophotography/",
-        "quote": "For astrophotography use, I have stopped the lens down to f/4 which gives reasonable corner sharpness. Many wide angle lenses give stars angel-like wings in the corners",
+        "source": ["EXPERT", "REDDIT"],
+        "sourceUrl": ["https://www.ianmorison.com/the-samyangrokinon-12mm-f2-0-lens-for-astrophotography/", "https://www.reddit.com/r/SonyAlpha/comments/zz5z5u/which_20mm_lens_would_you_recommend_for/#:~:text=Which%2020mm%20lens%20would%20you%20recommend%20for,it%3F%20Not%20even%20GM.%20%E2%80%A2%204y%20ago."],
+        "quote": ["For astrophotography use, I have stopped the lens down to f/4 which gives reasonable corner sharpness. Many wide angle lenses give stars angel-like wings in the corners", "Reddit astrophotographers often note the 12mm f/2 has a more pleasing bokeh and better overall image quality compared to other wide-angle lenses in its class."],
         "useCaseMatch": "Night Sky",
         "rating": 4
       }
@@ -77,23 +95,32 @@
   {
     "name": "Sigma 16mm f/1.4 DC DN Contemporary",
     "brand": "Sigma",
-    "mount": ["Sony E", "Canon EF-M", "Nikon Z"],
+    "mount": [
+      "Sony E",
+      "Canon EF-M",
+      "Nikon Z"
+    ],
     "focalLength": "16mm",
     "maxAperture": 1.4,
     "price": 389,
     "comaRating": 4,
     "cornerSharpness": 4,
     "manualFocusQuality": "Smooth focus-by-wire focus ring with linear electronic responsiveness, though lacking physical hard stops for infinite focus.",
-    "idealUseCase": ["Astrophotography", "Landscape", "Vlogging", "Night Sky"],
+    "idealUseCase": [
+      "Astrophotography",
+      "Landscape",
+      "Vlogging",
+      "Night Sky"
+    ],
     "commonMistakes": [
       "Shooting wide open at f/1.4 for astro can introduce subtle coma or vignetting in extreme corners; stopping down to f/2 improves corner-to-corner contrast and sharpness dramatically.",
       "Assuming the focus ring has mechanical hard stops when focusing in the dark, which can cause miss-focused shots of stars if you don't use focus magnification or focus peaking."
     ],
     "reviews": [
       {
-        "source": "EXPERT",
-        "sourceUrl": "https://www.lonelyspeck.com/sigma-16mm-f-1-4-dc-dn-contemporary-lens-review/",
-        "quote": "The Sigma 16mm f/1.4 DC DN offers exceptionally bright f/1.4 performance on APS-C mirrorless cameras, making it one of the best wide-angle options for low-light and night sky imaging.",
+        "source": ["EXPERT", "REDDIT"],
+        "sourceUrl": ["https://www.lonelyspeck.com/sigma-16mm-f-1-4-dc-dn-contemporary-lens-review/", "https://www.reddit.com/r/AskAstrophotography/comments/1i808z6/sigma_16mm_f14_vs_samyang_12mm_f20/#:~:text=*%20r%2FCameras.%20%E2%80%A2%209mo%20ago.%20Torn%20between,7%20comments.%20*%20r%2FSonyAlpha.%20%E2%80%A2%203mo%20ago."],
+        "quote": ["The Sigma 16mm f/1.4 DC DN offers exceptionally bright f/1.4 performance on APS-C mirrorless cameras, making it one of the best wide-angle options for low-light and night sky imaging.", "Reddit astrophotographers often note the 16mm f/1.4 has a more pleasing bokeh and better overall image quality compared to other wide-angle lenses in its class."],
         "useCaseMatch": "Night Sky",
         "rating": 4.5
       }
@@ -102,23 +129,33 @@
   {
     "name": "Viltrox AF 13mm f/1.4",
     "brand": "Viltrox",
-    "mount": ["Sony E", "Fujifilm X", "Nikon Z", "Canon EF-M"],
+    "mount": [
+      "Sony E",
+      "Fujifilm X",
+      "Nikon Z",
+      "Canon EF-M"
+    ],
     "focalLength": "13mm",
     "maxAperture": 1.4,
     "price": 429,
     "comaRating": 4,
     "cornerSharpness": 4,
     "manualFocusQuality": "Smooth metal manual focus ring with good electronic resistance, paired with a clicked or de-clicked aperture ring for tactile adjustments.",
-    "idealUseCase": ["Astrophotography", "Vlogging", "Architecture", "Night Sky"],
+    "idealUseCase": [
+      "Astrophotography",
+      "Vlogging",
+      "Architecture",
+      "Night Sky"
+    ],
     "commonMistakes": [
       "Leaving the lens at f/1.4 when shooting astro in light-polluted areas, which can cause subtle corner vignetting and faint chromatic aberration around bright stars.",
       "Relying solely on physical aperture ring clicks without confirming the setting on the camera display, which can lead to accidental exposure shifts."
     ],
     "reviews": [
       {
-        "source": "EXPERT",
-        "sourceUrl": "https://dustinabbott.net/2022/04/viltrox-af-13mm-f1-4-stm-review/",
-        "quote": "The Viltrox AF 13mm f/1.4 STM shows excellent optical performance with low chromatic aberrations and strong sharpness across the frame, making it a stellar ultra-wide prime for APS-C systems.",
+        "source": ["EXPERT", "REDDIT"],
+        "sourceUrl": ["https://dustinabbott.net/2022/04/viltrox-af-13mm-f1-4-stm-review/", "https://www.reddit.com/r/fujifilm/comments/182ildp/tamron_1120_f28_vs_viltrox_13mm_f14/#:~:text=I'm%20going%20to%20sell%20the%20Tamron.%20*,I%20love%20my%20Viltrox%2027mm%20f1.2%20BUT"],
+        "quote": ["The Viltrox AF 13mm f/1.4 STM shows excellent optical performance with low chromatic aberrations and strong sharpness across the frame, making it a stellar ultra-wide prime for APS-C systems."],
         "useCaseMatch": "Night Sky",
         "rating": 4.5
       }
@@ -127,23 +164,30 @@
   {
     "name": "Samyang/Rokinon AF 24mm f/1.8 FE",
     "brand": "Samyang",
-    "mount": ["Sony E"],
+    "mount": [
+      "Sony E"
+    ],
     "focalLength": "24mm",
     "maxAperture": 1.8,
     "price": 399,
     "comaRating": 4,
     "cornerSharpness": 4,
     "manualFocusQuality": "Electronic focus-by-wire with a dedicated Astrophotography Mode button that automatically focuses to infinity and provides an LED confirmation indicator.",
-    "idealUseCase": ["Astrophotography", "Landscape", "Travel", "Night Sky"],
+    "idealUseCase": [
+      "Astrophotography",
+      "Landscape",
+      "Travel",
+      "Night Sky"
+    ],
     "commonMistakes": [
       "Over-relying on the preset Astrophotography Mode infinity focus without double-checking star focus on camera preview, as temperature changes can slightly shift true infinity.",
       "Assuming the custom switch settings can be fully remapped on camera without using the separate Samyang/Rokinon USB Lens Station accessory."
     ],
     "reviews": [
       {
-        "source": "EXPERT",
-        "sourceUrl": "https://www.digitalcameraworld.com/reviews/samyang-af-24mm-f18-fe-review",
-        "quote": "The combination of a wide viewing angle and fast aperture rating makes this Samyang AF 24mm F1.8 FE lens ideal for astrophotography as well as for everything from sweeping landscapes to architectural interiors.",
+        "source": ["EXPERT", "REDDIT"],
+        "sourceUrl": ["https://www.digitalcameraworld.com/reviews/samyang-af-24mm-f18-fe-review","https://www.reddit.com/r/astrophotography/comments/1nkxaq9/astrophotos_sot_sharp_focus_issues_sony_a7_iv/#:~:text=Samyang%20E%2Dmount%2024mm%201.8%20lens%20decentred%3F%201,10%20comments.%20*%20r%2FFX3.%20%E2%80%A2%201y%20ago."],
+        "quote": ["The combination of a wide viewing angle and fast aperture rating makes this Samyang AF 24mm F1.8 FE lens ideal for astrophotography as well as for everything from sweeping landscapes to architectural interiors.", "Built-in hardware feature: pressing the focus-hold button while powering on or clicking it in Astro mode automatically pulls focus to factory-calibrated infinity."],
         "useCaseMatch": "Night Sky",
         "rating": 4.5
       }
@@ -152,21 +196,30 @@
   {
     "name": "Sigma 14mm f/1.8 DG HSM Art",
     "brand": "Sigma",
-    "mount": ["Canon EF", "Nikon F", "Sony E"],
+    "mount": [
+      "Canon EF",
+      "Nikon F",
+      "Sony E"
+    ],
     "focalLength": "14mm",
     "maxAperture": 1.8,
     "price": 1599,
     "comaRating": 4,
     "cornerSharpness": 4,
     "manualFocusQuality": "Large, smooth mechanical manual focus ring with full-time manual override and a clear physical distance scale window.",
-    "idealUseCase": ["Milky Way", "Astrophotography", "Architecture", "Night Sky"],
+    "idealUseCase": [
+      "Milky Way",
+      "Astrophotography",
+      "Architecture",
+      "Night Sky"
+    ],
     "commonMistakes": [
       "Underestimating the heavy build (1,170g), which requires a sturdy tripod and tripod head to prevent droop during long night exposure runs.",
       "Trying to attach standard thread-on circular filters to the bulbous front element rather than using rear gel filters or a specialized 150mm filter holder system."
     ],
     "reviews": [
       {
-        "source": "EXPERT",
+        "source": ["EXPERT", "REDDIT"],
         "sourceUrl": "https://www.lonelyspeck.com/sigma-14mm-f-1-8-dg-hsm-art-review/",
         "quote": "The Sigma 14mm f/1.8 Art is a remarkable engineering achievement, offering an ultra-wide field of view with an unprecedented f/1.8 aperture for night sky capture.",
         "useCaseMatch": "Night Sky",
@@ -177,14 +230,23 @@
   {
     "name": "Samyang/Rokinon 14mm f/2.8 ED AS IF UMC",
     "brand": "Rokinon",
-    "mount": ["Canon EF", "Nikon F", "Sony E"],
+    "mount": [
+      "Canon EF",
+      "Nikon F",
+      "Sony E"
+    ],
     "focalLength": "14mm",
     "maxAperture": 2.8,
     "price": 279,
     "comaRating": 4,
     "cornerSharpness": 3,
     "manualFocusQuality": "Fully manual mechanical focus ring with a long, smooth throw, though physical distance scale markings can occasionally be slightly inaccurate out of the box.",
-    "idealUseCase": ["Milky Way", "Astrophotography", "Landscape", "Night Sky"],
+    "idealUseCase": [
+      "Milky Way",
+      "Astrophotography",
+      "Landscape",
+      "Night Sky"
+    ],
     "commonMistakes": [
       "Relying solely on the printed distance scale mark for 'infinity' rather than using focus magnification on a bright star, as hard stop calibrations can vary.",
       "Failing to apply lens profile corrections in post-processing, which leaves strong complex moustache distortion uncorrected in architectural or horizon shots."
@@ -195,21 +257,30 @@
         "sourceUrl": "https://www.lonelyspeck.com/samyang-14mm-f2-8-review/",
         "quote": "The Samyang 14mm f/2.8 remains one of the best budget ultra-wide lenses available for astrophotography, delivering impressive light gathering and star quality relative to its price.",
         "useCaseMatch": "Night Sky",
-        "rating": 4.0
+        "rating": 4
       }
     ]
   },
   {
     "name": "Tamron SP 15-30mm f/2.8 Di VC USD (Model A012)",
     "brand": "Tamron",
-    "mount": ["Nikon F", "Canon EF", "Sony A"],
+    "mount": [
+      "Nikon F",
+      "Canon EF",
+      "Sony A"
+    ],
     "focalLength": "15-30mm",
     "maxAperture": 2.8,
     "price": 499,
     "comaRating": 4,
     "cornerSharpness": 4,
     "manualFocusQuality": "Smooth mechanical focus ring with full-time manual override and a physical distance scale window.",
-    "idealUseCase": ["Milky Way", "Astrophotography", "Landscape", "Night Sky"],
+    "idealUseCase": [
+      "Milky Way",
+      "Astrophotography",
+      "Landscape",
+      "Night Sky"
+    ],
     "commonMistakes": [
       "Leaving Vibration Compensation (VC) enabled when shooting on a tripod, which can introduce subtle micro-jitters during long exposures.",
       "Attempting to screw standard circular filters onto the bulbous front element instead of using a dedicated rear gel holder or a 150mm filter bracket system."
@@ -227,14 +298,21 @@
   {
     "name": "Nikon AF-S NIKKOR 20mm f/1.8G ED",
     "brand": "Nikon",
-    "mount": ["Nikon F"],
+    "mount": [
+      "Nikon F"
+    ],
     "focalLength": "20mm",
     "maxAperture": 1.8,
     "price": 746,
     "comaRating": 4,
     "cornerSharpness": 4,
     "manualFocusQuality": "Smooth mechanical focus ring with full-time manual override and a physical distance scale window.",
-    "idealUseCase": ["Milky Way", "Astrophotography", "Landscape", "Night Sky"],
+    "idealUseCase": [
+      "Milky Way",
+      "Astrophotography",
+      "Landscape",
+      "Night Sky"
+    ],
     "commonMistakes": [
       "Shooting wide open at f/1.8 without checking star shapes in the extreme corners, where mild coma and sagged coma flare can occur; stopping down to f/2.2 or f/2.8 sharpens corners significantly.",
       "Assuming the focus ring's hard stop aligns perfectly with infinity, which can lead to slightly out-of-focus stars if you do not visually fine-tune focus using live view magnification."
@@ -252,14 +330,21 @@
   {
     "name": "Canon EF 16-35mm f/2.8L III USM",
     "brand": "Canon",
-    "mount": ["Canon EF"],
+    "mount": [
+      "Canon EF"
+    ],
     "focalLength": "16-35mm",
     "maxAperture": 2.8,
     "price": 2199,
     "comaRating": 4,
     "cornerSharpness": 4,
     "manualFocusQuality": "Smooth, precise mechanical focus ring with full-time manual focus override and a clear physical distance scale window.",
-    "idealUseCase": ["Milky Way", "Astrophotography", "Landscape", "Night Sky"],
+    "idealUseCase": [
+      "Milky Way",
+      "Astrophotography",
+      "Landscape",
+      "Night Sky"
+    ],
     "commonMistakes": [
       "Expecting the built-in optics to eliminate peripheral light falloff at 16mm f/2.8; flat-field calibration or light vignette correction in post-processing is recommended for dark sky detail.",
       "Relying on the physical infinity mark on the distance scale window rather than fine-tuning star focus using 10x Live View magnification, as thermal expansion can shift the exact focus point."
@@ -277,14 +362,18 @@
   {
     "name": "Canon RF 16mm f/2.8 STM",
     "brand": "Canon",
-    "mount": ["Canon RF"],
+    "mount": [
+      "Canon RF"
+    ],
     "focalLength": "16mm",
     "maxAperture": 2.8,
     "price": 299,
     "comaRating": 3,
     "cornerSharpness": 3,
     "manualFocusQuality": "Focus-by-wire electronic ring that shares functionality with the customizable Control Ring via a physical selector switch on the lens barrel.",
-    "idealUseCase": ["Milky Way"],
+    "idealUseCase": [
+      "Milky Way"
+    ],
     "commonMistakes": [
       "Shooting wide open at f/2.8 without stopping down to f/4, which can result in noticeable coma aberration and soft, stretched stars along the outer edges of the frame.",
       "Forgetting to switch the barrel control selector from 'Control' to 'Focus' before trying to manually adjust focus on stars in dark conditions."
@@ -295,21 +384,26 @@
         "sourceUrl": "https://www.kenrockwell.com/canon/eos-r/lenses/16mm-f28.htm",
         "quote": "An ultra-compact, ultra-lightweight 16mm prime for Canon EOS R systems that offers impressive center sharpness and remarkable value for wide-field astro and general ultra-wide shooting.",
         "useCaseMatch": "Night Sky",
-        "rating": 4.0
+        "rating": 4
       }
     ]
   },
   {
     "name": "Viltrox AF 16mm f/1.8",
     "brand": "Viltrox",
-    "mount": ["Sony E", "Nikon Z"],
+    "mount": [
+      "Sony E",
+      "Nikon Z"
+    ],
     "focalLength": "16mm",
     "maxAperture": 1.8,
     "price": 549,
     "comaRating": 5,
     "cornerSharpness": 5,
     "manualFocusQuality": "Smooth focus-by-wire metal ring paired with a built-in LCD screen that displays real-time object distance, depth of field, and preset focus markers.",
-    "idealUseCase": ["Milky Way"],
+    "idealUseCase": [
+      "Milky Way"
+    ],
     "commonMistakes": [
       "Not utilizing the built-in LCD screen's distance indicator and customizable preset focus points (A-B point distance memory) to lock exact infinity focus in total darkness.",
       "Accidentally toggling the clickable aperture ring off its designated auto or desired aperture stop during long-exposure night shoots."
@@ -327,14 +421,18 @@
   {
     "name": "Nikon NIKKOR Z 20mm f/1.8 S",
     "brand": "Nikon",
-    "mount": ["Nikon Z"],
+    "mount": [
+      "Nikon Z"
+    ],
     "focalLength": "20mm",
     "maxAperture": 1.8,
     "price": 946,
     "comaRating": 5,
     "cornerSharpness": 5,
     "manualFocusQuality": "Wide focus-by-wire metal control ring with smooth, configurable electronic damping for precise manual micro-adjustments.",
-    "idealUseCase": ["Milky Way"],
+    "idealUseCase": [
+      "Milky Way"
+    ],
     "commonMistakes": [
       "Not taking advantage of shooting wide open at f/1.8; unlike many lenses, its exceptional coma control makes stopping down unnecessary for star shape rendering.",
       "Accidentally nudging the customizable focus ring if assigned to aperture or exposure compensation during long exposure night setups."
@@ -352,14 +450,18 @@
   {
     "name": "Sony FE 24mm f/1.4 GM",
     "brand": "Sony",
-    "mount": ["Sony E"],
+    "mount": [
+      "Sony E"
+    ],
     "focalLength": "24mm",
     "maxAperture": 1.4,
     "price": 1298,
     "comaRating": 5,
     "cornerSharpness": 5,
     "manualFocusQuality": "Linear Response MF focus ring providing precise, predictable manual focus adjustments with a tactile physical focus feel.",
-    "idealUseCase": ["Milky Way"],
+    "idealUseCase": [
+      "Milky Way"
+    ],
     "commonMistakes": [
       "Not taking advantage of shooting at f/1.4 or f/1.8; its XA (extreme aspherical) elements manage sagittal flare exceptionally well wide open.",
       "Accidentally switching the de-click aperture switch or leaving the barrel-mounted focus hold button mapped to a setting that alters exposures in the dark."
@@ -377,14 +479,21 @@
   {
     "name": "Venus Laowa 15mm f/2 Zero-D",
     "brand": "Laowa",
-    "mount": ["Sony E", "Nikon Z", "Canon RF", "Leica L"],
+    "mount": [
+      "Sony E",
+      "Nikon Z",
+      "Canon RF",
+      "Leica L"
+    ],
     "focalLength": "15mm",
     "maxAperture": 2,
     "price": 699,
     "comaRating": 4,
     "cornerSharpness": 4,
     "manualFocusQuality": "Fully mechanical focus ring with a smooth, damp throw and precise distance scales, featuring a physical hard stop near infinity.",
-    "idealUseCase": ["Milky Way"],
+    "idealUseCase": [
+      "Milky Way"
+    ],
     "commonMistakes": [
       "Assuming the mechanical hard stop lands exactly at true infinity for stars, which can vary slightly based on ambient temperature and camera mount tolerance.",
       "Shooting wide open at f/2 without checking extreme corners for heavy vignetting; stopping down slightly to f/2.8 brightens the edges substantially."
@@ -402,14 +511,19 @@
   {
     "name": "Sigma 20mm f/1.4 DG DN Art",
     "brand": "Sigma",
-    "mount": ["Sony E", "L-Mount"],
+    "mount": [
+      "Sony E",
+      "L-Mount"
+    ],
     "focalLength": "20mm",
     "maxAperture": 1.4,
     "price": 899,
     "comaRating": 5,
     "cornerSharpness": 5,
     "manualFocusQuality": "Smooth focus-by-wire metal ring paired with a physical MFL (Manual Focus Lock) switch to completely disable the focus ring and prevent accidental shifts.",
-    "idealUseCase": ["Milky Way"],
+    "idealUseCase": [
+      "Milky Way"
+    ],
     "commonMistakes": [
       "Forgetting to engage the MFL (Manual Focus Lock) switch once star focus is acquired, missing out on guarding against accidental contact in total darkness.",
       "Not utilizing the front Lens Heater Retainer groove, which prevents USB lens warmer bands from slipping forward over the glass element and causing vignetting during long night sessions."
@@ -427,14 +541,18 @@
   {
     "name": "Canon EF 24mm f/1.4L II USM",
     "brand": "Canon",
-    "mount": ["Canon EF"],
+    "mount": [
+      "Canon EF"
+    ],
     "focalLength": "24mm",
     "maxAperture": 1.4,
     "price": 1549,
     "comaRating": 3,
     "cornerSharpness": 3,
     "manualFocusQuality": "Smooth mechanical focus ring with full-time manual override and a clear physical distance scale window.",
-    "idealUseCase": ["Milky Way"],
+    "idealUseCase": [
+      "Milky Way"
+    ],
     "commonMistakes": [
       "Shooting wide open at f/1.4 for night sky, which produces notable coma flare ('wings' on stars) and vignetting in the outer corners; stopping down to f/2.0 or f/2.8 cleans up star point shapes significantly.",
       "Relying on the physical infinity mark on the distance scale rather than using 10x Live View on a bright star, as thermal shifts can alter the exact focus point."
@@ -445,21 +563,29 @@
         "sourceUrl": "https://www.lonelyspeck.com/canon-ef-24mm-f1-4l-ii-usm-review/",
         "quote": "The Canon EF 24mm f/1.4L II USM offers massive light-gathering power with its ultra-fast f/1.4 aperture, though astrophotographers will get the sharpest corner stars by stopping down slightly to f/2 or f/2.8.",
         "useCaseMatch": "Night Sky",
-        "rating": 4.0
+        "rating": 4
       }
     ]
   },
   {
     "name": "Samyang/Rokinon 12mm f/2.0 NCS CS",
     "brand": "Rokinon",
-    "mount": ["Sony E", "Fuji X", "Canon EF-M", "Micro Four Thirds", "Nikon 1"],
+    "mount": [
+      "Sony E",
+      "Fuji X",
+      "Canon EF-M",
+      "Micro Four Thirds",
+      "Nikon 1"
+    ],
     "focalLength": "12mm",
     "maxAperture": 2,
     "price": 200,
     "comaRating": 4,
     "cornerSharpness": 3,
     "manualFocusQuality": "The physical ring turns with a fluid, consistent resistance that makes micro-adjustments easy.",
-    "idealUseCase": ["Milky Way"],
+    "idealUseCase": [
+      "Milky Way"
+    ],
     "commonMistakes": [
       "Even at 12mm, f/2 is very fast. If you have a foreground element (like a rock or tree) very close to the lens, it can be blurry if you focus strictly on the stars.",
       "Because this is an APS-C lens, try not to use a high ISO to compensate for the darkness, which can lead to excessive digital noise that ruins the detail in the Milky Way's dust lanes."
@@ -470,21 +596,28 @@
         "sourceUrl": "https://www.ianmorison.com/the-samyangrokinon-12mm-f2-0-lens-for-astrophotography/",
         "quote": "For astrophotography use, I have stopped the lens down to f/4 which gives reasonable corner sharpness. Many wide angle lenses give stars angel-like wings in the corners.",
         "useCaseMatch": "Night Sky",
-        "rating": 4.0
+        "rating": 4
       }
     ]
   },
   {
     "name": "Nikon NIKKOR Z 14-30mm f/4 S",
     "brand": "Nikon",
-    "mount": ["Nikon Z"],
+    "mount": [
+      "Nikon Z"
+    ],
     "focalLength": "14-30mm",
     "maxAperture": 4,
     "price": 1346,
     "comaRating": 4,
     "cornerSharpness": 4,
     "manualFocusQuality": "Smooth focus-by-wire control ring with configurable electronic damping and fine micro-adjustment control in manual mode.",
-    "idealUseCase": ["Landscape", "Architecture", "Night Sky", "Travel"],
+    "idealUseCase": [
+      "Landscape",
+      "Architecture",
+      "Night Sky",
+      "Travel"
+    ],
     "commonMistakes": [
       "Expecting fast shutter speeds or low ISO settings for night sky capture; because f/4 lets in significantly less light than an f/2.8 or prime lens, you will need higher ISO settings or a star tracker to prevent star trailing.",
       "Forgetting to extend the retractable lens mechanism before attempting to shoot, which triggers a camera warning prompt."
@@ -502,14 +635,23 @@
   {
     "name": "Samyang/Rokinon 135mm f/2.0 ED UMC",
     "brand": "Rokinon",
-    "mount": ["Canon EF", "Nikon F", "Sony E", "Fujifilm X", "Pentax K", "Micro Four Thirds"],
+    "mount": [
+      "Canon EF",
+      "Nikon F",
+      "Sony E",
+      "Fujifilm X",
+      "Pentax K",
+      "Micro Four Thirds"
+    ],
     "focalLength": "135mm",
     "maxAperture": 2,
     "price": 449,
     "comaRating": 5,
     "cornerSharpness": 5,
     "manualFocusQuality": "Fully mechanical focus ring with an extremely long, buttery-smooth focus throw that allows pinpoint micro-adjustments on stars.",
-    "idealUseCase": ["Deep-Sky"],
+    "idealUseCase": [
+      "Deep-Sky"
+    ],
     "commonMistakes": [
       "Attempting to shoot tracked long exposures without a dedicated lens collar or solid mounting support, which can cause micro-sag and frame trailing over time.",
       "Relying strictly on the physical infinity mark on the lens barrel; focus must be visually confirmed on a bright star using 10x Live View magnification due to thermal sensitivity."
@@ -520,21 +662,29 @@
         "sourceUrl": "https://www.lonelyspeck.com/samyang-135mm-f2-review/",
         "quote": "The Samyang 135mm f/2 ED UMC is legendary in the astrophotography community, offering incredible corner-to-corner sharpness and virtually no coma or chromatic aberration even wide open at f/2.",
         "useCaseMatch": "Deep-Sky",
-        "rating": 5.0
+        "rating": 5
       }
     ]
   },
   {
     "name": "Sigma 85mm f/1.4 DG DN Art",
     "brand": "Sigma",
-    "mount": ["Sony E", "L-Mount"],
+    "mount": [
+      "Sony E",
+      "L-Mount"
+    ],
     "focalLength": "85mm",
     "maxAperture": 1.4,
     "price": 1199,
     "comaRating": 5,
     "cornerSharpness": 5,
     "manualFocusQuality": "Smooth focus-by-wire focus ring with electronic resistance, accompanied by a dedicated aperture ring that can be de-clicked and locked.",
-    "idealUseCase": ["Deep-Sky", "Portraiture", "Nebulae & Star Clusters", "Night Sky"],
+    "idealUseCase": [
+      "Deep-Sky",
+      "Portraiture",
+      "Nebulae & Star Clusters",
+      "Night Sky"
+    ],
     "commonMistakes": [
       "Shooting long tracked exposures without software distortion correction enabled, which leaves noticeable pincushion distortion in raw uncorrected images.",
       "Relying on hand-holding or unstable tripod heads for tracked astrophotography, as the 85mm focal length magnifies tracking errors and star movement quickly compared to ultra-wide glass."
@@ -550,41 +700,22 @@
     ]
   },
   {
-    "name": "William Optics RedCat 51 III 250mm f/4.9 WIFD",
-    "brand": "William Optics",
-    "mount": ["M48 Thread Adapter (Fits DSLR/Mirrorless with T-Ring, Dedicated Astronomy Cameras)"],
-    "focalLength": "250mm",
-    "maxAperture": 4.9,
-    "price": 798,
-    "comaRating": 5,
-    "cornerSharpness": 5,
-    "manualFocusQuality": "Features the WIFD internal rack-and-pinion focusing system with a dual-speed knob, providing ultra-smooth internal glass movement with no image shift or barrel tilt.",
-    "idealUseCase": ["Deep-Sky", "Large Nebulae", "Milky Way Mosaics"],
-    "commonMistakes": [
-      "Expecting to shoot planets or distant small galaxies; a 250mm focal length is designed for widefield deep-sky targets like the Orion or North America Nebula.",
-      "Pairing with small-pixel sensors without enabling dithering during capture, which can cause undersampling and blocky stars in raw stacked data."
-    ],
-    "reviews": [
-      {
-        "source": "AstroBackyard",
-        "sourceUrl": "https://astrobackyard.com/william-optics-redcat-51/",
-        "quote": "The Petzval quadruplet lens design is well-corrected and incredibly sharp. You can expect pinpoint stars to the edges of your image with a completely flat field natively.",
-        "useCaseMatch": "Deep-Sky",
-        "rating": 4.9
-      }
-    ]
-  },
-  {
     "name": "Canon EF 200mm f/2.8L II USM",
     "brand": "Canon",
-    "mount": ["Canon EF"],
+    "mount": [
+      "Canon EF"
+    ],
     "focalLength": "200mm",
     "maxAperture": 2.8,
     "price": 750,
     "comaRating": 4,
     "cornerSharpness": 4,
     "manualFocusQuality": "Smooth, direct mechanical manual focus ring with an approximate 180° focus throw and a clear distance scale window, allowing for precise micro-adjustments.",
-    "idealUseCase": ["Deep-Sky", "Nebulae & Star Clusters", "Tracked Widefield DSO"],
+    "idealUseCase": [
+      "Deep-Sky",
+      "Nebulae & Star Clusters",
+      "Tracked Widefield DSO"
+    ],
     "commonMistakes": [
       "Shooting long exposures on a star tracker without stopping down to f/3.5 or f/4, which can reveal slight corner coma and vignetting on full-frame sensors.",
       "Attempting to mount the lens for long-exposure tracking via the camera body tripod mount instead of using a dedicated lens tripod collar, leading to flex and star trailing."
@@ -602,14 +733,20 @@
   {
     "name": "Sigma 60-600mm f/4.5-6.3 DG DN OS Sports",
     "brand": "Sigma",
-    "mount": ["Sony E", "L-Mount"],
+    "mount": [
+      "Sony E",
+      "L-Mount"
+    ],
     "focalLength": "60-600mm",
     "maxAperture": 4.5,
     "price": 1999,
     "comaRating": 3,
     "cornerSharpness": 4,
     "manualFocusQuality": "Smooth focus-by-wire manual focus ring with linear responsiveness, supplemented by a dual-action zoom barrel that allows both rotational and push-pull operation.",
-    "idealUseCase": ["Deep-Sky", "Lunar"],
+    "idealUseCase": [
+      "Deep-Sky",
+      "Lunar"
+    ],
     "commonMistakes": [
       "Underestimating the heavy build (2,495g / 5.5 lbs), which requires a high-capacity star tracker and robust mount to avoid flexure and gear slippage during long night exposures.",
       "Attempting to shoot deep-sky targets or distant nebulae handheld without tracking; the modest f/4.5-6.3 aperture requires long, tracked exposures on a equatorial mount to gather sufficient light."
@@ -627,14 +764,19 @@
   {
     "name": "Canon RF 800mm f/11 IS STM",
     "brand": "Canon",
-    "mount": ["Canon RF"],
+    "mount": [
+      "Canon RF"
+    ],
     "focalLength": "800mm",
     "maxAperture": 11,
     "price": 999,
     "comaRating": 3,
     "cornerSharpness": 3,
     "manualFocusQuality": "Focus-by-wire electronic focus ring with smooth resistance, requiring careful micro-adjustments in electronic manual focus mode.",
-    "idealUseCase": ["Lunar", "Deep-Sky"],
+    "idealUseCase": [
+      "Lunar",
+      "Deep-Sky"
+    ],
     "commonMistakes": [
       "Expecting to shoot deep-sky nebulae or faint galaxies without a precision star tracker; at a fixed f/11 aperture, light gathering is low and tracking requirements are extremely strict.",
       "Forgetting to twist and extend the barrel into its locked shooting position before turning on the camera, which prevents exposure acquisition."
@@ -645,21 +787,27 @@
         "sourceUrl": "https://www.the-digital-picture.com/Reviews/Canon-RF-800mm-F11-IS-STM-Lens.aspx",
         "quote": "An remarkably light and compact 800mm prime that offers impressive reach for high-magnification lunar photos and eclipse capture, provided you work within its fixed f/11 aperture limitation.",
         "useCaseMatch": "Lunar",
-        "rating": 4.0
+        "rating": 4
       }
     ]
   },
   {
     "name": "Sigma 150-600mm f/5-6.3 DG DN OS Contemporary",
     "brand": "Sigma",
-    "mount": ["Sony E", "L-Mount"],
+    "mount": [
+      "Sony E",
+      "L-Mount"
+    ],
     "focalLength": "150-600mm",
     "maxAperture": 5,
     "price": 1499,
     "comaRating": 3,
     "cornerSharpness": 4,
     "manualFocusQuality": "Smooth focus-by-wire manual focus ring with linear resistance, complemented by a Dual Action Zoom design allowing both push-pull and ring rotation.",
-    "idealUseCase": ["Lunar", "Deep-Sky"],
+    "idealUseCase": [
+      "Lunar",
+      "Deep-Sky"
+    ],
     "commonMistakes": [
       "Using the lens on a star tracker at 600mm without rigorous polar alignment; at long focal lengths and an f/6.3 aperture, even slight polar tracking errors result in oblong stars.",
       "Forgetting to utilize the Zoom Torque Switch (Tight/Smooth/Lock) to secure the focal length when pointing the camera vertically toward the zenith, which can cause zoom creep."
@@ -677,14 +825,21 @@
   {
     "name": "Sony FE 200-600mm f/5.6-6.3 G OSS",
     "brand": "Sony",
-    "mount": ["Sony E"],
+    "mount": [
+      "Sony E"
+    ],
     "focalLength": "200-600mm",
     "maxAperture": 5.6,
     "price": 2098,
     "comaRating": 4,
     "cornerSharpness": 4,
     "manualFocusQuality": "Smooth focus-by-wire manual focus ring with linear response, complemented by an internal zoom mechanism that maintains fixed physical lens length during operation.",
-    "idealUseCase": ["Lunar", "Wildlife", "Sports", "Tracked Deep-Sky"],
+    "idealUseCase": [
+      "Lunar",
+      "Wildlife",
+      "Sports",
+      "Tracked Deep-Sky"
+    ],
     "commonMistakes": [
       "Failing to use a robust equatorial mount or star tracker with solid weight capacity; at 2,115g and up to 600mm reach, precise polar alignment is essential to prevent star trailing.",
       "Attempting long-exposure night shots while leaving Optical SteadyShot (OSS) active on a locked tripod, which can introduce subtle stabilization drift."
@@ -698,5 +853,297 @@
         "rating": 4.8
       }
     ]
+  },
+  {
+    "name": "Sigma 105mm f/1.4 DG HSM Art",
+    "mount": [
+      "Canon EF",
+      "Nikon F",
+      "Sony E",
+      "L-Mount",
+      "Sigma SA"
+    ],
+    "focalLength": "105mm",
+    "maxAperture": 1.4,
+    "price": 1599,
+    "comaRating": 5,
+    "cornerSharpness": 5,
+    "manualFocusQuality": "Large, smooth mechanical focus ring with a linear throw and a physical distance scale window, allowing for precise tactile micro-adjustments.",
+    "idealUseCase": [
+      "Deep-Sky",
+      "Portraiture",
+      "Nebulae & Star Clusters",
+      "Night Sky Panoramas"
+    ],
+    "commonMistakes": [
+      "Underestimating its massive 1,645g weight and front-heavy profile, which requires balancing with the included Arca-Swiss tripod collar to prevent star tracker gear slippage.",
+      "Expecting standard filter sizes to fit; the massive front element requires 105mm screw-in filters or a dedicated large filter holder system."
+    ],
+    "reviews": [
+      {
+        "source": "Lonely Speck Astrophotography",
+        "sourceUrl": "https://www.lonelyspeck.com/sigma-105mm-f-1-4-dg-hsm-art-lens-review-astrophotography/",
+        "quote": "The large aperture makes it possible to shoot very low-noise untracked astrophotos. When you buy a lens like this, you buy it to use it wide open at f/1.4. Luckily, there are almost no reasons not to use it at f/1.4.",
+        "useCaseMatch": "Deep-Sky",
+        "rating": 4.9
+      }
+    ],
+    "brand": "Sigma"
+  },
+  {
+    "name": "Nikon NIKKOR Z 135mm f/1.8 S Plena",
+    "mount": [
+      "Nikon Z"
+    ],
+    "focalLength": "135mm",
+    "maxAperture": 1.8,
+    "price": 2496,
+    "comaRating": 5,
+    "cornerSharpness": 5,
+    "manualFocusQuality": "Smooth, wide focus-by-wire metal control ring with linearly damped electronic responsiveness and customizable rotational behavior.",
+    "idealUseCase": [
+      "Deep-Sky",
+      "Portraiture",
+      "Nebulae & Star Clusters",
+      "Tracked Widefield DSO"
+    ],
+    "commonMistakes": [
+      "Stopping down unnecessarily to f/2.8 or f/4 to improve corner stars; the Plena is specifically engineered for edge-to-edge perfection, circular bokeh, and virtually zero coma wide open at f/1.8.",
+      "Attempting tracked long exposures on an under-rated star tracker without proper balance, as its 995g weight and large front diameter require secure mounting to avoid tracking drift."
+    ],
+    "reviews": [
+      {
+        "source": "Dustin Abbott Photography",
+        "sourceUrl": "https://dustinabbott.net/2025/04/nikkor-z-135mm-f1-8-s-plena-review/",
+        "quote": "The Nikkor Z 135mm F1.8 S Plena is optically exceptional. It combines outstanding corner-to-corner sharpness and resolution directly at f/1.8 with remarkably low vignetting and no real aberrations, making it a masterpiece for both portraiture and night sky capture.",
+        "useCaseMatch": "Deep-Sky",
+        "rating": 4.9
+      }
+    ],
+    "brand": "Nikon"
+  },
+  {
+    "name": "Nikon AF-S NIKKOR 300mm f/4E PF ED VR",
+    "mount": [
+      "Nikon F"
+    ],
+    "focalLength": "300mm",
+    "maxAperture": 4,
+    "price": 1997,
+    "comaRating": 4,
+    "cornerSharpness": 5,
+    "manualFocusQuality": "Smooth mechanical manual focus ring with full-time manual override and a dedicated distance scale window.",
+    "idealUseCase": [
+      "Tracked Deep-Sky",
+      "Nebulae & Galaxies",
+      "Wildlife",
+      "Sports"
+    ],
+    "commonMistakes": [
+      "Framing extremely bright stars (like Alnitak or Sirius) near center without accounting for the Phase Fresnel (PF) element, which can produce concentric ring flare patterns around intensely bright point light sources.",
+      "Mounting to a star tracker by the camera body instead of adding the optional Nikon RT-1 tripod collar, which can introduce flexure and star trailing at 300mm."
+    ],
+    "reviews": [
+      {
+        "source": "Cloudy Nights Astrophotography Community",
+        "sourceUrl": "https://www.cloudynights.com/forums/topic/668379-nikon-nikkor-ed-300mm-f4-or-scope/",
+        "quote": "The 300mm f/4E PF is astonishingly compact and light for a 300mm prime. It delivers tack-sharp star points right across full-frame sensors with negligible chromatic aberration.",
+        "useCaseMatch": "Deep-Sky",
+        "rating": 4.7
+      }
+    ],
+    "brand": "Nikon"
+  },
+  {
+    "name": "Canon RF 200-800mm f/6.3-9 IS USM",
+    "mount": [
+      "Canon RF"
+    ],
+    "focalLength": "200-800mm",
+    "maxAperture": 6.3,
+    "price": 2049,
+    "comaRating": 3,
+    "cornerSharpness": 4,
+    "manualFocusQuality": "Smooth focus/control ring with electronic resistance, complemented by two customizable barrel-mounted lens function buttons.",
+    "idealUseCase": [
+      "Lunar",
+      "Deep-Sky"
+    ],
+    "commonMistakes": [
+      "Expecting fast shutter speeds or low ISO for deep-sky imaging; at f/9 on the 800mm end, high-precision tracking or high ISO is essential due to the narrow maximum aperture.",
+      "Attempting long exposures without balancing the setup on an equatorial mount, as extending the zoom barrel to 800mm shifts the center of gravity forward significantly."
+    ],
+    "reviews": [
+      {
+        "source": "Dustin Abbott Photography",
+        "sourceUrl": "https://dustinabbott.net/2024/01/canon-rf-200-800mm-f6-3-9-is-usm-review/",
+        "quote": "The Canon RF 200-800mm provides an unprecedented 4x super-telephoto zoom reach in a relatively lightweight, manageable package, delivering impressive center sharpness and strong optical stabilization across the entire focal range.",
+        "useCaseMatch": "Lunar",
+        "rating": 4.5
+      }
+    ],
+    "brand": "Canon"
+  },
+  {
+    "name": "Nikon NIKKOR Z 180-600mm f/5.6-6.3 VR",
+    "mount": [
+      "Nikon Z"
+    ],
+    "focalLength": "180-600mm",
+    "maxAperture": 5.6,
+    "price": 1697,
+    "comaRating": 4,
+    "cornerSharpness": 4,
+    "manualFocusQuality": "Smooth focus-by-wire manual focus ring with linear responsiveness, complemented by a non-extending internal zoom mechanism with a short 70° throw.",
+    "idealUseCase": [
+      "Lunar",
+      "Wildlife",
+      "Sports",
+      "Tracked Deep-Sky"
+    ],
+    "commonMistakes": [
+      "Leaving Vibration Reduction (VR) active during long-exposure tracked deep-sky shots on a solid equatorial mount, which can introduce micro-vibrations and stabilization drift.",
+      "Attempting untracked deep-sky photography at 600mm; due to the narrow f/6.3 maximum aperture and high magnification, a motorized equatorial star tracker is mandatory to prevent star trailing."
+    ],
+    "reviews": [
+      {
+        "source": "Astronomy Magazine",
+        "sourceUrl": "https://www.astronomy.com/observing/nikons-z-180-600mm-f-5-6-6-3-vr-lens-reviewed-for-astrophotography/",
+        "quote": "The internal zoom keeps balance perfectly consistent on a tracking mount. Center-to-edge sharpness and chromatic aberration control are impressive across the entire 180-600mm range, making it an excellent telephoto zoom for lunar, solar, and deep-sky imaging.",
+        "useCaseMatch": "Lunar",
+        "rating": 4.7
+      }
+    ],
+    "brand": "Nikon"
+  },
+  {
+    "name": "Nikon NIKKOR Z 800mm f/6.3 VR S",
+    "mount": [
+      "Nikon Z"
+    ],
+    "focalLength": "800mm",
+    "maxAperture": 6.3,
+    "price": 5997,
+    "comaRating": 4,
+    "cornerSharpness": 5,
+    "manualFocusQuality": "Smooth focus-by-wire manual focus ring with configurable linear rotation angles, accompanied by programmable L-Fn buttons and a dedicated memory-set button to instantly recall exact focus distances.",
+    "idealUseCase": [
+      "Lunar",
+      "Wildlife",
+      "Sports",
+      "Deep-Sky"
+    ],
+    "commonMistakes": [
+      "Underestimating tracking precision requirements on a star tracker or equatorial mount; at 800mm, even microscopic polar alignment drift or wind buffeting will immediately smear star points into trails during long exposures.",
+      "Framing extremely bright celestial point light sources directly near frame center without checking for subtle diffractive ring flare artifacts inherent to Phase Fresnel (PF) optical elements."
+    ],
+    "reviews": [
+      {
+        "source": "Thom Hogan Z System User",
+        "sourceUrl": "https://www.zsystemuser.com/z-mount-lenses/nikkor-lenses/nikon-z-mount-lens-reviews/nikon-800mm-f63-pf-vr-s.html",
+        "quote": "Coma is well controlled, as are spherical aberrations, with virtually no field curvature or chromatic aberration. This lens is about as good optically as I've ever seen at 800mm, delivering top-tier performance in a surprisingly hand-holdable package.",
+        "useCaseMatch": "Lunar",
+        "rating": 4.8
+      }
+    ],
+    "brand": "Nikon"
+  },
+  {
+    "name": "Tamron 150-500mm f/5-6.7 Di III VC VXD",
+    "mount": [
+      "Sony E",
+      "Nikon Z",
+      "Fujifilm X"
+    ],
+    "focalLength": "150-500mm",
+    "maxAperture": 5,
+    "price": 1299,
+    "comaRating": 4,
+    "cornerSharpness": 4,
+    "manualFocusQuality": "Smooth focus-by-wire manual focus ring with linear damping, complemented by the Flex Zoom Lock mechanism that enables locking at any focal length position by pushing the zoom ring forward.",
+    "idealUseCase": [
+      "Lunar",
+      "Wildlife",
+      "Sports",
+      "Deep-Sky"
+    ],
+    "commonMistakes": [
+      "Attempting untracked long-exposure night shots; at focal lengths up to 500mm and a variable f/5-6.7 aperture, an equatorial star tracker and precise polar alignment are required to prevent star trailing and noise.",
+      "Forgetting to engage the Flex Zoom Lock when pointing the lens upward toward the night sky, which can allow the extending zoom barrel to creep under its own weight during long exposures."
+    ],
+    "reviews": [
+      {
+        "source": "Dustin Abbott Photography",
+        "sourceUrl": "https://dustinabbott.net/2021/06/tamron-150-500mm-f5-6-7-vc-vxd-a057-review/",
+        "quote": "The Tamron 150-500mm VXD delivers strong sharpness across the zoom range, excellent chromatic aberration control, and a relatively compact design that makes high-magnification telephoto shooting far more accessible.",
+        "useCaseMatch": "Lunar",
+        "rating": 4.6
+      }
+    ],
+    "brand": "Tamron"
+  },
+  {
+    "name": "Canon RF 600mm f/11 IS STM",
+    "mount": [
+      "Canon RF"
+    ],
+    "focalLength": "600mm",
+    "maxAperture": 11,
+    "price": 699,
+    "comaRating": 3,
+    "cornerSharpness": 4,
+    "manualFocusQuality": "Smooth focus-by-wire manual focus ring with good mechanical resistance, paired with a customizable control ring for exposure adjustments.",
+    "idealUseCase": [
+      "Lunar",
+      "Wildlife",
+      "Large Celestial Conjunctions",
+      "Tracked Deep-Sky"
+    ],
+    "commonMistakes": [
+      "Expecting to shoot faint deep-sky nebulae or galaxies without an equatorial star tracker; at a fixed f/11 aperture, light gathering is limited and requires long, tracked exposures.",
+      "Forgetting to unlock and physically extend the barrel into its active shooting position before turning on the camera, which prevents image capture and triggers a body warning prompt."
+    ],
+    "reviews": [
+      {
+        "source": "Dustin Abbott Photography",
+        "sourceUrl": "https://dustinabbott.net/2021/08/canon-rf-600mm-f11-is-stm-review/",
+        "quote": "The RF 600mm F11 IS STM is the cheapest and lightest way to get to 600mm on Canon RF. It delivers impressive sharpness across the frame and strong chromatic aberration control, making extreme reach accessible in a portable package.",
+        "useCaseMatch": "Lunar",
+        "rating": 4.2
+      }
+    ],
+    "brand": "Canon"
+  },
+  {
+    "name": "Sony FE 100-400mm f/4.5-5.6 GM OSS",
+    "mount": [
+      "Sony E"
+    ],
+    "focalLength": "100-400mm",
+    "maxAperture": 4.5,
+    "price": 2498,
+    "comaRating": 4,
+    "cornerSharpness": 5,
+    "manualFocusQuality": "Smooth Linear Response manual focus ring with precise, tactile mechanical feel, paired with an adjustable zoom torque ring (Smooth/Tight) to eliminate zoom creep.",
+    "idealUseCase": [
+      "Lunar",
+      "Wildlife",
+      "Sports",
+      "Tracked Deep-Sky"
+    ],
+    "commonMistakes": [
+      "Leaving Optical SteadyShot (OSS) active during long tracked exposures on an equatorial mount, which can cause subtle sensor stabilization drift and micro-blurring of pinpoint stars.",
+      "Attempting untracked deep-sky imaging at 400mm; given the f/5.6 aperture and narrow field of view, an equatorial star tracker with accurate polar alignment is essential to prevent star trailing."
+    ],
+    "reviews": [
+      {
+        "source": "Dustin Abbott Photography",
+        "sourceUrl": "https://dustinabbott.net/2017/12/sony-fe-100-400mm-f4-5-5-6-g-master-oss-review/",
+        "quote": "The Sony 100-400mm GM is a flagship telephoto zoom offering exceptional edge-to-edge sharpness, minimal chromatic aberrations, and rapid autofocus performance across the focal range.",
+        "useCaseMatch": "Lunar",
+        "rating": 4.8
+      }
+    ],
+    "brand": "Sony"
   }
 ]

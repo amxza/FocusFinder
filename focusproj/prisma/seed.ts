@@ -12,15 +12,15 @@ const connectionString = `${process.env.DATABASE_URL}`;
 const adapter = new PrismaPg({ connectionString });
 const prisma = new PrismaClient({ adapter });
 
-type Mount = "NIKONF" | "CANONEF" | "SONYE";
+type Mount = "NIKONF" | "NIKONZ" | "CANONEF" | "SONYE";
 type AstroType = "MILKYWAY" | "DEEPSKY" | "PLANETS" | "LUNAR";
 type Source = "REDDIT" | "ASTROBACKYARD" | "REVIEW_SITE";
 
 interface LensReview {
-  source: string;
-  sourceUrl: string;
+  source: string | string[];
+  sourceUrl: string | string[];
   authorReputation?: string;
-  quote: string;
+  quote: string | string[];
   useCaseMatch: string;
   rating: number;
 }
@@ -40,15 +40,18 @@ interface LensData {
   reviews: LensReview[];
 }
 
-// Phase 1 only supports these three mounts (matches the questionnaire form's
-// "Nikon F / Canon EF/RF / Sony E" options -- see the sprint plan, Week 4).
-// prisma/lenses.json also contains real mounts we don't model yet (Nikon Z,
-// Fujifilm X, Sony A, Leica L, Micro Four Thirds, Pentax K, even a telescope
-// M48 thread adapter) -- rather than silently mislabeling those as one of
-// the three we do support, lenses with no supported mount are skipped.
+// Phase 1 supports these four mounts (the questionnaire form's "Nikon F /
+// Canon EF/RF / Sony E" options from the sprint plan, Week 4, plus Nikon Z).
+// prisma/lenses.json also lists real mounts we don't model yet (Fujifilm X,
+// Sony A, Leica L, Micro Four Thirds, Pentax K) -- rather than silently
+// mislabeling those as one we do support, lenses with no supported mount are
+// skipped. Telescope astrographs (M48 thread) live in
+// prisma/telescopes-deferred.txt, not here.
 const MOUNT_MAP: Record<string, Mount> = {
   "nikon f": "NIKONF",
   nikonf: "NIKONF",
+  "nikon z": "NIKONZ",
+  nikonz: "NIKONZ",
   "canon ef": "CANONEF",
   canonef: "CANONEF",
   "canon rf": "CANONEF", // grouped with EF per the app's own "Canon EF/RF" dropdown option
@@ -106,6 +109,26 @@ function mapSource(source: string): Source {
   // Anything else (e.g. "Lonely Speck Astrophotography", "SLR Lounge",
   // "Dustin Abbott Photography") is a named review site -> REVIEW_SITE.
   return sourceMap[source.trim().toLowerCase()] || "REVIEW_SITE";
+}
+
+// Some lenses.json reviews bundle several quotes/URLs/sources (e.g. an expert
+// review plus a Reddit thread) into one entry as parallel arrays, but
+// Review.quote, sourceUrl and source are single values. Each quote becomes its
+// own Review row, paired with the URL/source at the same index (falling back
+// to the last one when an array is shorter).
+function expandReview(
+  review: LensReview
+): { quote: string; sourceUrl: string; source: string }[] {
+  const toList = (v: string | string[]) => (Array.isArray(v) ? v : [v]);
+  const pick = (list: string[], i: number) => list[Math.min(i, list.length - 1)] ?? "";
+  const quotes = toList(review.quote);
+  const urls = toList(review.sourceUrl);
+  const sources = toList(review.source);
+  return quotes.map((quote, i) => ({
+    quote,
+    sourceUrl: pick(urls, i),
+    source: pick(sources, i),
+  }));
 }
 
 function calculateAverageReviewScore(reviews: LensReview[]): number {
@@ -202,21 +225,26 @@ async function main() {
           for (const reviewData of lensData.reviews) {
             const [reviewAstroType] = mapAstroTypes([reviewData.useCaseMatch]);
 
-            await prisma.review.create({
-              data: {
-                lensId: lens.id,
-                source: mapSource(reviewData.source),
-                sourceUrl: reviewData.sourceUrl,
-                quote: reviewData.quote,
-                authorReputation: reviewData.authorReputation || null,
-                rating: reviewData.rating,
-                useCaseMatch: reviewAstroType ?? null,
-              },
-            });
+            for (const { quote, sourceUrl, source } of expandReview(reviewData)) {
+              await prisma.review.create({
+                data: {
+                  lensId: lens.id,
+                  source: mapSource(source),
+                  sourceUrl,
+                  quote,
+                  authorReputation: reviewData.authorReputation || null,
+                  // Review.rating is an Int (1-5 per docs/openapi.yaml), but the
+                  // JSON has half-star ratings like 4.5 -- round per review;
+                  // averageReviewScore above still uses the exact values.
+                  rating: Math.round(reviewData.rating),
+                  useCaseMatch: reviewAstroType ?? null,
+                },
+              });
 
-            console.log(
-              `   📝 Review added: ${reviewData.source} (${reviewData.rating}/5)`
-            );
+              console.log(
+                `   📝 Review added: ${source} (${reviewData.rating}/5)`
+              );
+            }
           }
         } else {
           console.log(`   ⚠️  No reviews found for this lens`);

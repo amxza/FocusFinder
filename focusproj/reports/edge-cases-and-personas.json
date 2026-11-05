@@ -11,7 +11,7 @@
         {
           "rank": 1,
           "name": "Samyang/Rokinon 14mm f/2.8 ED AS IF UMC",
-          "mount": "CANONEF",
+          "mount": "NIKONF",
           "price": 279,
           "idealUseCase": [
             "Milky Way"
@@ -29,7 +29,7 @@
         {
           "rank": 2,
           "name": "Samyang/Rokinon 14mm f/2.8 ED AS IF UMC",
-          "mount": "NIKONF",
+          "mount": "SONYE",
           "price": 279,
           "idealUseCase": [
             "Milky Way"
@@ -47,7 +47,7 @@
         {
           "rank": 3,
           "name": "Samyang/Rokinon 14mm f/2.8 ED AS IF UMC",
-          "mount": "SONYE",
+          "mount": "CANONEF",
           "price": 279,
           "idealUseCase": [
             "Milky Way"
@@ -183,7 +183,7 @@
         {
           "rank": 5,
           "name": "Samyang/Rokinon 14mm f/2.8 ED AS IF UMC",
-          "mount": "CANONEF",
+          "mount": "NIKONF",
           "price": 279,
           "idealUseCase": [
             "Milky Way"
@@ -282,21 +282,21 @@
         },
         {
           "rank": 5,
-          "name": "Canon RF 800mm f/11 IS STM",
+          "name": "Canon RF 600mm f/11 IS STM",
           "mount": "CANONEF",
-          "price": 999,
+          "price": 699,
           "idealUseCase": [
             "Lunar",
             "Deep Sky"
           ],
           "comaRating": 3,
-          "focalLength": "800mm",
-          "score": 85.2,
+          "focalLength": "600mm",
+          "score": 89.8,
           "breakdown": {
-            "budget": 24.5,
-            "astroFit": 26.4,
+            "budget": 27.7,
+            "astroFit": 27.3,
             "experience": 20,
-            "credibility": 14.3
+            "credibility": 14.9
           }
         }
       ]
@@ -311,6 +311,25 @@
       "results": [
         {
           "rank": 1,
+          "name": "Canon RF 600mm f/11 IS STM",
+          "mount": "CANONEF",
+          "price": 699,
+          "idealUseCase": [
+            "Lunar",
+            "Deep Sky"
+          ],
+          "comaRating": 3,
+          "focalLength": "600mm",
+          "score": 83.5,
+          "breakdown": {
+            "budget": 27.7,
+            "astroFit": 21,
+            "experience": 20,
+            "credibility": 14.9
+          }
+        },
+        {
+          "rank": 2,
           "name": "Canon RF 800mm f/11 IS STM",
           "mount": "CANONEF",
           "price": 999,
@@ -329,27 +348,9 @@
           }
         },
         {
-          "rank": 2,
-          "name": "Samyang/Rokinon 12mm f/2",
-          "mount": "SONYE",
-          "price": 200,
-          "idealUseCase": [
-            "Milky Way"
-          ],
-          "comaRating": 4,
-          "focalLength": "12mm",
-          "score": 73.2,
-          "breakdown": {
-            "budget": 32.9,
-            "astroFit": 6,
-            "experience": 20,
-            "credibility": 14.3
-          }
-        },
-        {
           "rank": 3,
           "name": "Samyang/Rokinon 12mm f/2",
-          "mount": "NIKONF",
+          "mount": "SONYE",
           "price": 200,
           "idealUseCase": [
             "Milky Way"
@@ -367,7 +368,7 @@
         {
           "rank": 4,
           "name": "Samyang/Rokinon 12mm f/2",
-          "mount": "CANONEF",
+          "mount": "NIKONF",
           "price": 200,
           "idealUseCase": [
             "Milky Way"
@@ -384,8 +385,8 @@
         },
         {
           "rank": 5,
-          "name": "Samyang/Rokinon 12mm f/2.0 NCS CS",
-          "mount": "SONYE",
+          "name": "Samyang/Rokinon 12mm f/2",
+          "mount": "CANONEF",
           "price": 200,
           "idealUseCase": [
             "Milky Way"
@@ -602,6 +603,25 @@
         },
         {
           "rank": 3,
+          "name": "Canon RF 600mm f/11 IS STM",
+          "mount": "CANONEF",
+          "price": 699,
+          "idealUseCase": [
+            "Lunar",
+            "Deep Sky"
+          ],
+          "comaRating": 3,
+          "focalLength": "600mm",
+          "score": 92.3,
+          "breakdown": {
+            "budget": 30.1,
+            "astroFit": 27.3,
+            "experience": 20,
+            "credibility": 14.9
+          }
+        },
+        {
+          "rank": 4,
           "name": "Canon RF 800mm f/11 IS STM",
           "mount": "CANONEF",
           "price": 999,
@@ -620,39 +640,21 @@
           }
         },
         {
-          "rank": 4,
-          "name": "Samyang/Rokinon 12mm f/2",
-          "mount": "CANONEF",
-          "price": 200,
-          "idealUseCase": [
-            "Milky Way"
-          ],
-          "comaRating": 4,
-          "focalLength": "12mm",
-          "score": 73.9,
-          "breakdown": {
-            "budget": 33.6,
-            "astroFit": 6,
-            "experience": 20,
-            "credibility": 14.3
-          }
-        },
-        {
           "rank": 5,
-          "name": "Samyang/Rokinon 14mm f/2.8 ED AS IF UMC",
+          "name": "Sigma 105mm f/1.4 DG HSM Art",
           "mount": "CANONEF",
-          "price": 279,
+          "price": 1599,
           "idealUseCase": [
-            "Milky Way"
+            "Deep Sky"
           ],
-          "comaRating": 4,
-          "focalLength": "14mm",
-          "score": 73.3,
+          "comaRating": 5,
+          "focalLength": "105mm",
+          "score": 81.4,
           "breakdown": {
-            "budget": 33,
-            "astroFit": 6,
+            "budget": 16.4,
+            "astroFit": 30,
             "experience": 20,
-            "credibility": 14.3
+            "credibility": 15
           }
         }
       ]
@@ -667,24 +669,6 @@
       "results": [
         {
           "rank": 1,
-          "name": "Samyang/Rokinon 14mm f/2.8 ED AS IF UMC",
-          "mount": "CANONEF",
-          "price": 279,
-          "idealUseCase": [
-            "Milky Way"
-          ],
-          "comaRating": 4,
-          "focalLength": "14mm",
-          "score": 84.5,
-          "breakdown": {
-            "budget": 25.2,
-            "astroFit": 30,
-            "experience": 15,
-            "credibility": 14.3
-          }
-        },
-        {
-          "rank": 2,
           "name": "Samyang/Rokinon 14mm f/2.8 ED AS IF UMC",
           "mount": "NIKONF",
           "price": 279,
@@ -702,9 +686,27 @@
           }
         },
         {
-          "rank": 3,
+          "rank": 2,
           "name": "Samyang/Rokinon 14mm f/2.8 ED AS IF UMC",
           "mount": "SONYE",
+          "price": 279,
+          "idealUseCase": [
+            "Milky Way"
+          ],
+          "comaRating": 4,
+          "focalLength": "14mm",
+          "score": 84.5,
+          "breakdown": {
+            "budget": 25.2,
+            "astroFit": 30,
+            "experience": 15,
+            "credibility": 14.3
+          }
+        },
+        {
+          "rank": 3,
+          "name": "Samyang/Rokinon 14mm f/2.8 ED AS IF UMC",
+          "mount": "CANONEF",
           "price": 279,
           "idealUseCase": [
             "Milky Way"
@@ -871,6 +873,25 @@
       "results": [
         {
           "rank": 1,
+          "name": "Canon RF 600mm f/11 IS STM",
+          "mount": "CANONEF",
+          "price": 699,
+          "idealUseCase": [
+            "Lunar",
+            "Deep Sky"
+          ],
+          "comaRating": 3,
+          "focalLength": "600mm",
+          "score": 86,
+          "breakdown": {
+            "budget": 30.1,
+            "astroFit": 21,
+            "experience": 20,
+            "credibility": 14.9
+          }
+        },
+        {
+          "rank": 2,
           "name": "Canon RF 800mm f/11 IS STM",
           "mount": "CANONEF",
           "price": 999,
@@ -889,7 +910,7 @@
           }
         },
         {
-          "rank": 2,
+          "rank": 3,
           "name": "Samyang/Rokinon 12mm f/2",
           "mount": "CANONEF",
           "price": 200,
@@ -907,7 +928,7 @@
           }
         },
         {
-          "rank": 3,
+          "rank": 4,
           "name": "Samyang/Rokinon 14mm f/2.8 ED AS IF UMC",
           "mount": "CANONEF",
           "price": 279,
@@ -925,7 +946,7 @@
           }
         },
         {
-          "rank": 4,
+          "rank": 5,
           "name": "Canon RF 16mm f/2.8 STM",
           "mount": "CANONEF",
           "price": 299,
@@ -940,24 +961,6 @@
             "astroFit": 6,
             "experience": 20,
             "credibility": 14.3
-          }
-        },
-        {
-          "rank": 5,
-          "name": "Samyang/Rokinon 135mm f/2.0 ED UMC",
-          "mount": "CANONEF",
-          "price": 449,
-          "idealUseCase": [
-            "Deep Sky"
-          ],
-          "comaRating": 5,
-          "focalLength": "135mm",
-          "score": 72.9,
-          "breakdown": {
-            "budget": 31.9,
-            "astroFit": 6,
-            "experience": 20,
-            "credibility": 15
           }
         }
       ]
@@ -1044,7 +1047,7 @@
         {
           "rank": 5,
           "name": "Samyang/Rokinon 14mm f/2.8 ED AS IF UMC",
-          "mount": "CANONEF",
+          "mount": "NIKONF",
           "price": 279,
           "idealUseCase": [
             "Milky Way"

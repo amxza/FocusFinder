@@ -1,11 +1,11 @@
 {
   "summary": {
-    "totalCombosRun": 240,
-    "expectedCombos": 240,
+    "totalCombosRun": 300,
+    "expectedCombos": 300,
     "resultCountDistribution": {
       "zero": 0,
-      "oneOrTwo": 15,
-      "threeToFive": 225,
+      "oneOrTwo": 30,
+      "threeToFive": 270,
       "overFive": 0
     },
     "mountFilterViolations": 0,
@@ -22,11 +22,11 @@
       "experienceLevel": "unspecified",
       "resultCount": 5,
       "scores": [
-        91.8,
-        91.8,
-        91.8,
-        91.8,
-        88.8
+        92.5,
+        92.5,
+        92.5,
+        92.5,
+        91.8
       ],
       "topLensName": "Samyang/Rokinon 12mm f/2",
       "topLensMatchesAstroType": null,
@@ -43,13 +43,13 @@
       "experienceLevel": "BEGINNER",
       "resultCount": 5,
       "scores": [
-        83.8,
-        83.8,
-        83.8,
-        83.8,
+        84.5,
+        84.5,
+        84.5,
+        84.5,
         83.8
       ],
-      "topLensName": "Samyang/Rokinon 14mm f/2.8 ED AS IF UMC",
+      "topLensName": "Samyang/Rokinon 12mm f/2",
       "topLensMatchesAstroType": null,
       "matchingLensWasAvailableButNotTop": false,
       "allWithinMount": true,
@@ -64,11 +64,11 @@
       "experienceLevel": "INTERMEDIATE",
       "resultCount": 5,
       "scores": [
-        91.8,
-        91.8,
-        91.8,
-        91.8,
-        88.8
+        92.5,
+        92.5,
+        92.5,
+        92.5,
+        91.8
       ],
       "topLensName": "Samyang/Rokinon 12mm f/2",
       "topLensMatchesAstroType": null,
@@ -85,11 +85,11 @@
       "experienceLevel": "unspecified",
       "resultCount": 5,
       "scores": [
-        95.1,
-        95.1,
-        95.1,
-        95.1,
-        93.4
+        95.8,
+        95.8,
+        95.8,
+        95.8,
+        95.1
       ],
       "topLensName": "Samyang/Rokinon 12mm f/2",
       "topLensMatchesAstroType": null,
@@ -109,8 +109,8 @@
         88.4,
         88.4,
         88.4,
-        87.1,
-        87.1
+        87.8,
+        87.8
       ],
       "topLensName": "Samyang/Rokinon 14mm f/2.8 ED AS IF UMC",
       "topLensMatchesAstroType": null,
@@ -127,11 +127,11 @@
       "experienceLevel": "INTERMEDIATE",
       "resultCount": 5,
       "scores": [
-        95.1,
-        95.1,
-        95.1,
-        95.1,
-        93.4
+        95.8,
+        95.8,
+        95.8,
+        95.8,
+        95.1
       ],
       "topLensName": "Samyang/Rokinon 12mm f/2",
       "topLensMatchesAstroType": null,
@@ -148,11 +148,11 @@
       "experienceLevel": "unspecified",
       "resultCount": 5,
       "scores": [
-        96.8,
-        96.8,
-        96.8,
-        96.8,
-        95.8
+        97.5,
+        97.5,
+        97.5,
+        97.5,
+        96.8
       ],
       "topLensName": "Samyang/Rokinon 12mm f/2",
       "topLensMatchesAstroType": null,
@@ -172,8 +172,8 @@
         90.8,
         90.8,
         90.8,
-        88.8,
-        88.8
+        89.5,
+        89.5
       ],
       "topLensName": "Samyang/Rokinon 14mm f/2.8 ED AS IF UMC",
       "topLensMatchesAstroType": null,
@@ -190,11 +190,11 @@
       "experienceLevel": "INTERMEDIATE",
       "resultCount": 5,
       "scores": [
-        96.8,
-        96.8,
-        96.8,
-        96.8,
-        95.8
+        97.5,
+        97.5,
+        97.5,
+        97.5,
+        96.8
       ],
       "topLensName": "Samyang/Rokinon 12mm f/2",
       "topLensMatchesAstroType": null,
@@ -211,11 +211,11 @@
       "experienceLevel": "unspecified",
       "resultCount": 5,
       "scores": [
-        97.9,
-        97.9,
-        97.9,
-        97.9,
-        97.3
+        98.6,
+        98.6,
+        98.6,
+        98.6,
+        97.9
       ],
       "topLensName": "Samyang/Rokinon 12mm f/2",
       "topLensMatchesAstroType": null,
@@ -253,11 +253,11 @@
       "experienceLevel": "INTERMEDIATE",
       "resultCount": 5,
       "scores": [
-        97.9,
-        97.9,
-        97.9,
-        97.9,
-        97.3
+        98.6,
+        98.6,
+        98.6,
+        98.6,
+        97.9
       ],
       "topLensName": "Samyang/Rokinon 12mm f/2",
       "topLensMatchesAstroType": null,
@@ -274,11 +274,11 @@
       "experienceLevel": "unspecified",
       "resultCount": 5,
       "scores": [
-        89.1,
-        89.1,
-        89.1,
-        89.1,
-        86.1
+        89.8,
+        89.8,
+        89.8,
+        89.8,
+        89.1
       ],
       "topLensName": "Samyang/Rokinon 12mm f/2",
       "topLensMatchesAstroType": true,
@@ -295,13 +295,13 @@
       "experienceLevel": "BEGINNER",
       "resultCount": 5,
       "scores": [
-        81.1,
-        81.1,
-        81.1,
-        81.1,
+        81.8,
+        81.8,
+        81.8,
+        81.8,
         81.1
       ],
-      "topLensName": "Samyang/Rokinon 14mm f/2.8 ED AS IF UMC",
+      "topLensName": "Samyang/Rokinon 12mm f/2",
       "topLensMatchesAstroType": true,
       "matchingLensWasAvailableButNotTop": false,
       "allWithinMount": true,
@@ -316,11 +316,11 @@
       "experienceLevel": "INTERMEDIATE",
       "resultCount": 5,
       "scores": [
-        89.1,
-        89.1,
-        89.1,
-        89.1,
-        86.1
+        89.8,
+        89.8,
+        89.8,
+        89.8,
+        89.1
       ],
       "topLensName": "Samyang/Rokinon 12mm f/2",
       "topLensMatchesAstroType": true,
@@ -337,11 +337,11 @@
       "experienceLevel": "unspecified",
       "resultCount": 5,
       "scores": [
-        92.4,
-        92.4,
-        92.4,
-        92.4,
-        90.7
+        93.1,
+        93.1,
+        93.1,
+        93.1,
+        92.4
       ],
       "topLensName": "Samyang/Rokinon 12mm f/2",
       "topLensMatchesAstroType": true,
@@ -361,8 +361,8 @@
         85.7,
         85.7,
         85.7,
-        84.4,
-        84.4
+        85.1,
+        85.1
       ],
       "topLensName": "Samyang/Rokinon 14mm f/2.8 ED AS IF UMC",
       "topLensMatchesAstroType": true,
@@ -379,11 +379,11 @@
       "experienceLevel": "INTERMEDIATE",
       "resultCount": 5,
       "scores": [
-        92.4,
-        92.4,
-        92.4,
-        92.4,
-        90.7
+        93.1,
+        93.1,
+        93.1,
+        93.1,
+        92.4
       ],
       "topLensName": "Samyang/Rokinon 12mm f/2",
       "topLensMatchesAstroType": true,
@@ -400,11 +400,11 @@
       "experienceLevel": "unspecified",
       "resultCount": 5,
       "scores": [
-        94.1,
-        94.1,
-        94.1,
-        94.1,
-        93.4
+        94.8,
+        94.8,
+        94.8,
+        94.8,
+        94.1
       ],
       "topLensName": "Samyang/Rokinon 12mm f/2",
       "topLensMatchesAstroType": true,
@@ -442,11 +442,11 @@
       "experienceLevel": "INTERMEDIATE",
       "resultCount": 5,
       "scores": [
-        94.1,
-        94.1,
-        94.1,
-        94.1,
-        93.4
+        94.8,
+        94.8,
+        94.8,
+        94.8,
+        94.1
       ],
       "topLensName": "Samyang/Rokinon 12mm f/2",
       "topLensMatchesAstroType": true,
@@ -464,10 +464,10 @@
       "resultCount": 5,
       "scores": [
         96.2,
-        95.5,
-        95.4,
-        95.2,
-        95.1
+        96.2,
+        95.9,
+        95.9,
+        95.9
       ],
       "topLensName": "Viltrox AF 16mm f/1.8",
       "topLensMatchesAstroType": true,
@@ -506,10 +506,10 @@
       "resultCount": 5,
       "scores": [
         96.2,
-        95.5,
-        95.4,
-        95.2,
-        95.1
+        96.2,
+        95.9,
+        95.9,
+        95.9
       ],
       "topLensName": "Viltrox AF 16mm f/1.8",
       "topLensMatchesAstroType": true,
@@ -526,11 +526,11 @@
       "experienceLevel": "unspecified",
       "resultCount": 5,
       "scores": [
-        67.8,
-        67.8,
-        67.8,
-        67.8,
-        64.8
+        68.5,
+        68.5,
+        68.5,
+        68.5,
+        67.8
       ],
       "topLensName": "Samyang/Rokinon 12mm f/2",
       "topLensMatchesAstroType": false,
@@ -547,13 +547,13 @@
       "experienceLevel": "BEGINNER",
       "resultCount": 5,
       "scores": [
-        59.8,
-        59.8,
-        59.8,
-        59.8,
+        60.5,
+        60.5,
+        60.5,
+        60.5,
         59.8
       ],
-      "topLensName": "Samyang/Rokinon 14mm f/2.8 ED AS IF UMC",
+      "topLensName": "Samyang/Rokinon 12mm f/2",
       "topLensMatchesAstroType": false,
       "matchingLensWasAvailableButNotTop": false,
       "allWithinMount": true,
@@ -568,11 +568,11 @@
       "experienceLevel": "INTERMEDIATE",
       "resultCount": 5,
       "scores": [
-        67.8,
-        67.8,
-        67.8,
-        67.8,
-        64.8
+        68.5,
+        68.5,
+        68.5,
+        68.5,
+        67.8
       ],
       "topLensName": "Samyang/Rokinon 12mm f/2",
       "topLensMatchesAstroType": false,
@@ -592,8 +592,8 @@
         90.6,
         90.6,
         90.6,
-        71.1,
-        71.1
+        71.8,
+        71.8
       ],
       "topLensName": "Samyang/Rokinon 135mm f/2.0 ED UMC",
       "topLensMatchesAstroType": true,
@@ -634,8 +634,8 @@
         90.6,
         90.6,
         90.6,
-        71.1,
-        71.1
+        71.8,
+        71.8
       ],
       "topLensName": "Samyang/Rokinon 135mm f/2.0 ED UMC",
       "topLensMatchesAstroType": true,
@@ -656,7 +656,7 @@
         94.5,
         94.5,
         88.9,
-        72.8
+        88.5
       ],
       "topLensName": "Samyang/Rokinon 135mm f/2.0 ED UMC",
       "topLensMatchesAstroType": true,
@@ -677,7 +677,7 @@
         86.5,
         86.5,
         83.9,
-        66.8
+        79.5
       ],
       "topLensName": "Samyang/Rokinon 135mm f/2.0 ED UMC",
       "topLensMatchesAstroType": true,
@@ -698,7 +698,7 @@
         94.5,
         94.5,
         88.9,
-        72.8
+        88.5
       ],
       "topLensName": "Samyang/Rokinon 135mm f/2.0 ED UMC",
       "topLensMatchesAstroType": true,
@@ -719,7 +719,7 @@
         96.9,
         96.9,
         92.9,
-        91.6
+        92.3
       ],
       "topLensName": "Samyang/Rokinon 135mm f/2.0 ED UMC",
       "topLensMatchesAstroType": true,
@@ -740,7 +740,7 @@
         88.9,
         88.9,
         87.9,
-        79.7
+        83.3
       ],
       "topLensName": "Samyang/Rokinon 135mm f/2.0 ED UMC",
       "topLensMatchesAstroType": true,
@@ -761,7 +761,7 @@
         96.9,
         96.9,
         92.9,
-        91.6
+        92.3
       ],
       "topLensName": "Samyang/Rokinon 135mm f/2.0 ED UMC",
       "topLensMatchesAstroType": true,
@@ -778,11 +778,11 @@
       "experienceLevel": "unspecified",
       "resultCount": 5,
       "scores": [
-        67.8,
-        67.8,
-        67.8,
-        67.8,
-        64.8
+        68.5,
+        68.5,
+        68.5,
+        68.5,
+        67.8
       ],
       "topLensName": "Samyang/Rokinon 12mm f/2",
       "topLensMatchesAstroType": false,
@@ -799,13 +799,13 @@
       "experienceLevel": "BEGINNER",
       "resultCount": 5,
       "scores": [
-        59.8,
-        59.8,
-        59.8,
-        59.8,
+        60.5,
+        60.5,
+        60.5,
+        60.5,
         59.8
       ],
-      "topLensName": "Samyang/Rokinon 14mm f/2.8 ED AS IF UMC",
+      "topLensName": "Samyang/Rokinon 12mm f/2",
       "topLensMatchesAstroType": false,
       "matchingLensWasAvailableButNotTop": false,
       "allWithinMount": true,
@@ -820,11 +820,11 @@
       "experienceLevel": "INTERMEDIATE",
       "resultCount": 5,
       "scores": [
-        67.8,
-        67.8,
-        67.8,
-        67.8,
-        64.8
+        68.5,
+        68.5,
+        68.5,
+        68.5,
+        67.8
       ],
       "topLensName": "Samyang/Rokinon 12mm f/2",
       "topLensMatchesAstroType": false,
@@ -841,11 +841,11 @@
       "experienceLevel": "unspecified",
       "resultCount": 5,
       "scores": [
-        71.1,
-        71.1,
-        71.1,
-        71.1,
-        69.4
+        71.8,
+        71.8,
+        71.8,
+        71.8,
+        71.1
       ],
       "topLensName": "Samyang/Rokinon 12mm f/2",
       "topLensMatchesAstroType": false,
@@ -865,8 +865,8 @@
         64.4,
         64.4,
         64.4,
-        63.1,
-        63.1
+        63.8,
+        63.8
       ],
       "topLensName": "Samyang/Rokinon 14mm f/2.8 ED AS IF UMC",
       "topLensMatchesAstroType": false,
@@ -883,11 +883,11 @@
       "experienceLevel": "INTERMEDIATE",
       "resultCount": 5,
       "scores": [
-        71.1,
-        71.1,
-        71.1,
-        71.1,
-        69.4
+        71.8,
+        71.8,
+        71.8,
+        71.8,
+        71.1
       ],
       "topLensName": "Samyang/Rokinon 12mm f/2",
       "topLensMatchesAstroType": false,
@@ -904,13 +904,13 @@
       "experienceLevel": "unspecified",
       "resultCount": 5,
       "scores": [
-        72.8,
-        72.8,
-        72.8,
-        72.8,
-        71.8
+        82.2,
+        73.5,
+        73.5,
+        73.5,
+        73.5
       ],
-      "topLensName": "Samyang/Rokinon 12mm f/2",
+      "topLensName": "Canon RF 600mm f/11 IS STM",
       "topLensMatchesAstroType": false,
       "matchingLensWasAvailableButNotTop": false,
       "allWithinMount": true,
@@ -925,13 +925,13 @@
       "experienceLevel": "BEGINNER",
       "resultCount": 5,
       "scores": [
+        73.2,
         66.8,
         66.8,
         66.8,
-        64.8,
-        64.8
+        65.5
       ],
-      "topLensName": "Samyang/Rokinon 14mm f/2.8 ED AS IF UMC",
+      "topLensName": "Canon RF 600mm f/11 IS STM",
       "topLensMatchesAstroType": false,
       "matchingLensWasAvailableButNotTop": false,
       "allWithinMount": true,
@@ -946,13 +946,13 @@
       "experienceLevel": "INTERMEDIATE",
       "resultCount": 5,
       "scores": [
-        72.8,
-        72.8,
-        72.8,
-        72.8,
-        71.8
+        82.2,
+        73.5,
+        73.5,
+        73.5,
+        73.5
       ],
-      "topLensName": "Samyang/Rokinon 12mm f/2",
+      "topLensName": "Canon RF 600mm f/11 IS STM",
       "topLensMatchesAstroType": false,
       "matchingLensWasAvailableButNotTop": false,
       "allWithinMount": true,
@@ -967,13 +967,13 @@
       "experienceLevel": "unspecified",
       "resultCount": 5,
       "scores": [
+        86,
         83.3,
         82.6,
-        80.5,
-        73.9,
-        73.9
+        81.9,
+        81.9
       ],
-      "topLensName": "Canon RF 800mm f/11 IS STM",
+      "topLensName": "Canon RF 600mm f/11 IS STM",
       "topLensMatchesAstroType": false,
       "matchingLensWasAvailableButNotTop": false,
       "allWithinMount": true,
@@ -988,13 +988,13 @@
       "experienceLevel": "BEGINNER",
       "resultCount": 5,
       "scores": [
+        77,
         74.3,
-        71.5,
-        70.6,
-        68.3,
-        68.3
+        72.9,
+        72.9,
+        71.5
       ],
-      "topLensName": "Canon RF 800mm f/11 IS STM",
+      "topLensName": "Canon RF 600mm f/11 IS STM",
       "topLensMatchesAstroType": false,
       "matchingLensWasAvailableButNotTop": false,
       "allWithinMount": true,
@@ -1009,13 +1009,13 @@
       "experienceLevel": "INTERMEDIATE",
       "resultCount": 5,
       "scores": [
+        86,
         83.3,
         82.6,
-        80.5,
-        73.9,
-        73.9
+        81.9,
+        81.9
       ],
-      "topLensName": "Canon RF 800mm f/11 IS STM",
+      "topLensName": "Canon RF 600mm f/11 IS STM",
       "topLensMatchesAstroType": false,
       "matchingLensWasAvailableButNotTop": false,
       "allWithinMount": true,
@@ -1030,11 +1030,11 @@
       "experienceLevel": "unspecified",
       "resultCount": 5,
       "scores": [
-        67.8,
-        67.8,
-        67.8,
-        67.8,
-        64.8
+        68.5,
+        68.5,
+        68.5,
+        68.5,
+        67.8
       ],
       "topLensName": "Samyang/Rokinon 12mm f/2",
       "topLensMatchesAstroType": false,
@@ -1051,13 +1051,13 @@
       "experienceLevel": "BEGINNER",
       "resultCount": 5,
       "scores": [
-        59.8,
-        59.8,
-        59.8,
-        59.8,
+        60.5,
+        60.5,
+        60.5,
+        60.5,
         59.8
       ],
-      "topLensName": "Samyang/Rokinon 14mm f/2.8 ED AS IF UMC",
+      "topLensName": "Samyang/Rokinon 12mm f/2",
       "topLensMatchesAstroType": false,
       "matchingLensWasAvailableButNotTop": false,
       "allWithinMount": true,
@@ -1072,11 +1072,11 @@
       "experienceLevel": "INTERMEDIATE",
       "resultCount": 5,
       "scores": [
-        67.8,
-        67.8,
-        67.8,
-        67.8,
-        64.8
+        68.5,
+        68.5,
+        68.5,
+        68.5,
+        67.8
       ],
       "topLensName": "Samyang/Rokinon 12mm f/2",
       "topLensMatchesAstroType": false,
@@ -1093,11 +1093,11 @@
       "experienceLevel": "unspecified",
       "resultCount": 5,
       "scores": [
-        71.1,
-        71.1,
-        71.1,
-        71.1,
-        69.4
+        71.8,
+        71.8,
+        71.8,
+        71.8,
+        71.1
       ],
       "topLensName": "Samyang/Rokinon 12mm f/2",
       "topLensMatchesAstroType": false,
@@ -1117,8 +1117,8 @@
         64.4,
         64.4,
         64.4,
-        63.1,
-        63.1
+        63.8,
+        63.8
       ],
       "topLensName": "Samyang/Rokinon 14mm f/2.8 ED AS IF UMC",
       "topLensMatchesAstroType": false,
@@ -1135,11 +1135,11 @@
       "experienceLevel": "INTERMEDIATE",
       "resultCount": 5,
       "scores": [
-        71.1,
-        71.1,
-        71.1,
-        71.1,
-        69.4
+        71.8,
+        71.8,
+        71.8,
+        71.8,
+        71.1
       ],
       "topLensName": "Samyang/Rokinon 12mm f/2",
       "topLensMatchesAstroType": false,
@@ -1156,14 +1156,14 @@
       "experienceLevel": "unspecified",
       "resultCount": 5,
       "scores": [
-        72.8,
-        72.8,
-        72.8,
-        72.8,
-        71.8
+        88.5,
+        73.5,
+        73.5,
+        73.5,
+        73.5
       ],
-      "topLensName": "Samyang/Rokinon 12mm f/2",
-      "topLensMatchesAstroType": false,
+      "topLensName": "Canon RF 600mm f/11 IS STM",
+      "topLensMatchesAstroType": true,
       "matchingLensWasAvailableButNotTop": false,
       "allWithinMount": true,
       "allWithinBudgetAllowance": true,
@@ -1177,14 +1177,14 @@
       "experienceLevel": "BEGINNER",
       "resultCount": 5,
       "scores": [
+        79.5,
         66.8,
         66.8,
         66.8,
-        64.8,
-        64.8
+        65.5
       ],
-      "topLensName": "Samyang/Rokinon 14mm f/2.8 ED AS IF UMC",
-      "topLensMatchesAstroType": false,
+      "topLensName": "Canon RF 600mm f/11 IS STM",
+      "topLensMatchesAstroType": true,
       "matchingLensWasAvailableButNotTop": false,
       "allWithinMount": true,
       "allWithinBudgetAllowance": true,
@@ -1198,14 +1198,14 @@
       "experienceLevel": "INTERMEDIATE",
       "resultCount": 5,
       "scores": [
-        72.8,
-        72.8,
-        72.8,
-        72.8,
-        71.8
+        88.5,
+        73.5,
+        73.5,
+        73.5,
+        73.5
       ],
-      "topLensName": "Samyang/Rokinon 12mm f/2",
-      "topLensMatchesAstroType": false,
+      "topLensName": "Canon RF 600mm f/11 IS STM",
+      "topLensMatchesAstroType": true,
       "matchingLensWasAvailableButNotTop": false,
       "allWithinMount": true,
       "allWithinBudgetAllowance": true,
@@ -1219,13 +1219,13 @@
       "experienceLevel": "unspecified",
       "resultCount": 5,
       "scores": [
+        92.3,
+        89.1,
+        89.1,
         88.7,
-        86.8,
-        82.6,
-        73.9,
-        73.9
+        86.8
       ],
-      "topLensName": "Canon RF 800mm f/11 IS STM",
+      "topLensName": "Canon RF 600mm f/11 IS STM",
       "topLensMatchesAstroType": true,
       "matchingLensWasAvailableButNotTop": false,
       "allWithinMount": true,
@@ -1240,13 +1240,13 @@
       "experienceLevel": "BEGINNER",
       "resultCount": 5,
       "scores": [
+        83.3,
+        80.1,
+        80.1,
         79.7,
-        77.8,
-        70.6,
-        68.3,
-        68.3
+        77.8
       ],
-      "topLensName": "Canon RF 800mm f/11 IS STM",
+      "topLensName": "Canon RF 600mm f/11 IS STM",
       "topLensMatchesAstroType": true,
       "matchingLensWasAvailableButNotTop": false,
       "allWithinMount": true,
@@ -1261,13 +1261,13 @@
       "experienceLevel": "INTERMEDIATE",
       "resultCount": 5,
       "scores": [
+        92.3,
+        89.1,
+        89.1,
         88.7,
-        86.8,
-        82.6,
-        73.9,
-        73.9
+        86.8
       ],
-      "topLensName": "Canon RF 800mm f/11 IS STM",
+      "topLensName": "Canon RF 600mm f/11 IS STM",
       "topLensMatchesAstroType": true,
       "matchingLensWasAvailableButNotTop": false,
       "allWithinMount": true,
@@ -1282,7 +1282,7 @@
       "experienceLevel": "unspecified",
       "resultCount": 2,
       "scores": [
-        91.8,
+        92.5,
         88.8
       ],
       "topLensName": "Samyang/Rokinon 12mm f/2",
@@ -1300,10 +1300,10 @@
       "experienceLevel": "BEGINNER",
       "resultCount": 2,
       "scores": [
-        83.8,
+        84.5,
         83.8
       ],
-      "topLensName": "Samyang/Rokinon 14mm f/2.8 ED AS IF UMC",
+      "topLensName": "Samyang/Rokinon 12mm f/2",
       "topLensMatchesAstroType": null,
       "matchingLensWasAvailableButNotTop": false,
       "allWithinMount": true,
@@ -1318,7 +1318,7 @@
       "experienceLevel": "INTERMEDIATE",
       "resultCount": 2,
       "scores": [
-        91.8,
+        92.5,
         88.8
       ],
       "topLensName": "Samyang/Rokinon 12mm f/2",
@@ -1336,7 +1336,7 @@
       "experienceLevel": "unspecified",
       "resultCount": 4,
       "scores": [
-        95.1,
+        95.8,
         93.4,
         90.6,
         89.5
@@ -1357,7 +1357,7 @@
       "resultCount": 4,
       "scores": [
         88.4,
-        87.1,
+        87.8,
         84.5,
         82.6
       ],
@@ -1376,7 +1376,7 @@
       "experienceLevel": "INTERMEDIATE",
       "resultCount": 4,
       "scores": [
-        95.1,
+        95.8,
         93.4,
         90.6,
         89.5
@@ -1396,7 +1396,7 @@
       "experienceLevel": "unspecified",
       "resultCount": 5,
       "scores": [
-        96.8,
+        97.5,
         95.8,
         94.5,
         93.8,
@@ -1418,7 +1418,7 @@
       "resultCount": 5,
       "scores": [
         90.8,
-        88.8,
+        89.5,
         88.8,
         86.5,
         82.8
@@ -1438,7 +1438,7 @@
       "experienceLevel": "INTERMEDIATE",
       "resultCount": 5,
       "scores": [
-        96.8,
+        97.5,
         95.8,
         94.5,
         93.8,
@@ -1459,7 +1459,7 @@
       "experienceLevel": "unspecified",
       "resultCount": 5,
       "scores": [
-        97.9,
+        98.6,
         97.3,
         96.9,
         96.5,
@@ -1482,7 +1482,7 @@
       "scores": [
         92.3,
         91.5,
-        89.9,
+        90.6,
         88.9,
         86.8
       ],
@@ -1501,7 +1501,7 @@
       "experienceLevel": "INTERMEDIATE",
       "resultCount": 5,
       "scores": [
-        97.9,
+        98.6,
         97.3,
         96.9,
         96.5,
@@ -1522,7 +1522,7 @@
       "experienceLevel": "unspecified",
       "resultCount": 2,
       "scores": [
-        89.1,
+        89.8,
         86.1
       ],
       "topLensName": "Samyang/Rokinon 12mm f/2",
@@ -1540,10 +1540,10 @@
       "experienceLevel": "BEGINNER",
       "resultCount": 2,
       "scores": [
-        81.1,
+        81.8,
         81.1
       ],
-      "topLensName": "Samyang/Rokinon 14mm f/2.8 ED AS IF UMC",
+      "topLensName": "Samyang/Rokinon 12mm f/2",
       "topLensMatchesAstroType": true,
       "matchingLensWasAvailableButNotTop": false,
       "allWithinMount": true,
@@ -1558,7 +1558,7 @@
       "experienceLevel": "INTERMEDIATE",
       "resultCount": 2,
       "scores": [
-        89.1,
+        89.8,
         86.1
       ],
       "topLensName": "Samyang/Rokinon 12mm f/2",
@@ -1576,7 +1576,7 @@
       "experienceLevel": "unspecified",
       "resultCount": 4,
       "scores": [
-        92.4,
+        93.1,
         90.7,
         87.7,
         66.6
@@ -1597,7 +1597,7 @@
       "resultCount": 4,
       "scores": [
         85.7,
-        84.4,
+        85.1,
         82.7,
         58.6
       ],
@@ -1616,7 +1616,7 @@
       "experienceLevel": "INTERMEDIATE",
       "resultCount": 4,
       "scores": [
-        92.4,
+        93.1,
         90.7,
         87.7,
         66.6
@@ -1636,7 +1636,7 @@
       "experienceLevel": "unspecified",
       "resultCount": 5,
       "scores": [
-        94.1,
+        94.8,
         93.1,
         92,
         89,
@@ -1659,7 +1659,7 @@
       "scores": [
         88.1,
         87,
-        86.1,
+        86.8,
         81,
         74.5
       ],
@@ -1678,7 +1678,7 @@
       "experienceLevel": "INTERMEDIATE",
       "resultCount": 5,
       "scores": [
-        94.1,
+        94.8,
         93.1,
         92,
         89,
@@ -1699,7 +1699,7 @@
       "experienceLevel": "unspecified",
       "resultCount": 5,
       "scores": [
-        95.1,
+        95.9,
         94.7,
         94.6,
         93,
@@ -1722,7 +1722,7 @@
       "scores": [
         89.7,
         89.6,
-        87.1,
+        87.9,
         85,
         78.8
       ],
@@ -1741,7 +1741,7 @@
       "experienceLevel": "INTERMEDIATE",
       "resultCount": 5,
       "scores": [
-        95.1,
+        95.9,
         94.7,
         94.6,
         93,
@@ -1762,7 +1762,7 @@
       "experienceLevel": "unspecified",
       "resultCount": 2,
       "scores": [
-        67.8,
+        68.5,
         64.8
       ],
       "topLensName": "Samyang/Rokinon 12mm f/2",
@@ -1780,10 +1780,10 @@
       "experienceLevel": "BEGINNER",
       "resultCount": 2,
       "scores": [
-        59.8,
+        60.5,
         59.8
       ],
-      "topLensName": "Samyang/Rokinon 14mm f/2.8 ED AS IF UMC",
+      "topLensName": "Samyang/Rokinon 12mm f/2",
       "topLensMatchesAstroType": false,
       "matchingLensWasAvailableButNotTop": false,
       "allWithinMount": true,
@@ -1798,7 +1798,7 @@
       "experienceLevel": "INTERMEDIATE",
       "resultCount": 2,
       "scores": [
-        67.8,
+        68.5,
         64.8
       ],
       "topLensName": "Samyang/Rokinon 12mm f/2",
@@ -1817,7 +1817,7 @@
       "resultCount": 4,
       "scores": [
         90.6,
-        71.1,
+        71.8,
         69.4,
         65.5
       ],
@@ -1838,7 +1838,7 @@
       "scores": [
         82.6,
         64.4,
-        63.1,
+        63.8,
         60.5
       ],
       "topLensName": "Samyang/Rokinon 135mm f/2.0 ED UMC",
@@ -1857,7 +1857,7 @@
       "resultCount": 4,
       "scores": [
         90.6,
-        71.1,
+        71.8,
         69.4,
         65.5
       ],
@@ -1877,7 +1877,7 @@
       "resultCount": 5,
       "scores": [
         94.5,
-        72.8,
+        73.5,
         71.8,
         69.8,
         66.8
@@ -1899,7 +1899,7 @@
       "scores": [
         86.5,
         66.8,
-        64.8,
+        65.5,
         64.8,
         58.8
       ],
@@ -1919,7 +1919,7 @@
       "resultCount": 5,
       "scores": [
         94.5,
-        72.8,
+        73.5,
         71.8,
         69.8,
         66.8
@@ -1940,10 +1940,10 @@
       "resultCount": 5,
       "scores": [
         96.9,
-        73.9,
+        81.4,
+        74.6,
         73.3,
-        72.5,
-        70.8
+        72.5
       ],
       "topLensName": "Samyang/Rokinon 135mm f/2.0 ED UMC",
       "topLensMatchesAstroType": true,
@@ -1961,10 +1961,10 @@
       "resultCount": 5,
       "scores": [
         88.9,
+        73.4,
         68.3,
         67.5,
-        65.9,
-        62.8
+        66.6
       ],
       "topLensName": "Samyang/Rokinon 135mm f/2.0 ED UMC",
       "topLensMatchesAstroType": true,
@@ -1982,10 +1982,10 @@
       "resultCount": 5,
       "scores": [
         96.9,
-        73.9,
+        81.4,
+        74.6,
         73.3,
-        72.5,
-        70.8
+        72.5
       ],
       "topLensName": "Samyang/Rokinon 135mm f/2.0 ED UMC",
       "topLensMatchesAstroType": true,
@@ -2002,7 +2002,7 @@
       "experienceLevel": "unspecified",
       "resultCount": 2,
       "scores": [
-        67.8,
+        68.5,
         64.8
       ],
       "topLensName": "Samyang/Rokinon 12mm f/2",
@@ -2020,10 +2020,10 @@
       "experienceLevel": "BEGINNER",
       "resultCount": 2,
       "scores": [
-        59.8,
+        60.5,
         59.8
       ],
-      "topLensName": "Samyang/Rokinon 14mm f/2.8 ED AS IF UMC",
+      "topLensName": "Samyang/Rokinon 12mm f/2",
       "topLensMatchesAstroType": false,
       "matchingLensWasAvailableButNotTop": false,
       "allWithinMount": true,
@@ -2038,7 +2038,7 @@
       "experienceLevel": "INTERMEDIATE",
       "resultCount": 2,
       "scores": [
-        67.8,
+        68.5,
         64.8
       ],
       "topLensName": "Samyang/Rokinon 12mm f/2",
@@ -2056,7 +2056,7 @@
       "experienceLevel": "unspecified",
       "resultCount": 4,
       "scores": [
-        71.1,
+        71.8,
         69.4,
         66.6,
         65.5
@@ -2077,7 +2077,7 @@
       "resultCount": 4,
       "scores": [
         64.4,
-        63.1,
+        63.8,
         60.5,
         58.6
       ],
@@ -2096,7 +2096,7 @@
       "experienceLevel": "INTERMEDIATE",
       "resultCount": 4,
       "scores": [
-        71.1,
+        71.8,
         69.4,
         66.6,
         65.5
@@ -2116,7 +2116,7 @@
       "experienceLevel": "unspecified",
       "resultCount": 5,
       "scores": [
-        72.8,
+        73.5,
         71.8,
         70.5,
         69.8,
@@ -2138,7 +2138,7 @@
       "resultCount": 5,
       "scores": [
         66.8,
-        64.8,
+        65.5,
         64.8,
         62.5,
         58.8
@@ -2158,7 +2158,7 @@
       "experienceLevel": "INTERMEDIATE",
       "resultCount": 5,
       "scores": [
-        72.8,
+        73.5,
         71.8,
         70.5,
         69.8,
@@ -2179,7 +2179,7 @@
       "experienceLevel": "unspecified",
       "resultCount": 5,
       "scores": [
-        73.9,
+        74.6,
         73.3,
         72.9,
         72.5,
@@ -2202,7 +2202,7 @@
       "scores": [
         68.3,
         67.5,
-        65.9,
+        66.6,
         64.9,
         62.8
       ],
@@ -2221,7 +2221,7 @@
       "experienceLevel": "INTERMEDIATE",
       "resultCount": 5,
       "scores": [
-        73.9,
+        74.6,
         73.3,
         72.9,
         72.5,
@@ -2242,7 +2242,7 @@
       "experienceLevel": "unspecified",
       "resultCount": 2,
       "scores": [
-        67.8,
+        68.5,
         64.8
       ],
       "topLensName": "Samyang/Rokinon 12mm f/2",
@@ -2260,10 +2260,10 @@
       "experienceLevel": "BEGINNER",
       "resultCount": 2,
       "scores": [
-        59.8,
+        60.5,
         59.8
       ],
-      "topLensName": "Samyang/Rokinon 14mm f/2.8 ED AS IF UMC",
+      "topLensName": "Samyang/Rokinon 12mm f/2",
       "topLensMatchesAstroType": false,
       "matchingLensWasAvailableButNotTop": false,
       "allWithinMount": true,
@@ -2278,7 +2278,7 @@
       "experienceLevel": "INTERMEDIATE",
       "resultCount": 2,
       "scores": [
-        67.8,
+        68.5,
         64.8
       ],
       "topLensName": "Samyang/Rokinon 12mm f/2",
@@ -2296,7 +2296,7 @@
       "experienceLevel": "unspecified",
       "resultCount": 4,
       "scores": [
-        71.1,
+        71.8,
         69.4,
         66.6,
         65.5
@@ -2317,7 +2317,7 @@
       "resultCount": 4,
       "scores": [
         64.4,
-        63.1,
+        63.8,
         60.5,
         58.6
       ],
@@ -2336,7 +2336,7 @@
       "experienceLevel": "INTERMEDIATE",
       "resultCount": 4,
       "scores": [
-        71.1,
+        71.8,
         69.4,
         66.6,
         65.5
@@ -2356,7 +2356,7 @@
       "experienceLevel": "unspecified",
       "resultCount": 5,
       "scores": [
-        72.8,
+        73.5,
         71.8,
         70.5,
         69.8,
@@ -2378,7 +2378,7 @@
       "resultCount": 5,
       "scores": [
         66.8,
-        64.8,
+        65.5,
         64.8,
         62.5,
         58.8
@@ -2398,7 +2398,7 @@
       "experienceLevel": "INTERMEDIATE",
       "resultCount": 5,
       "scores": [
-        72.8,
+        73.5,
         71.8,
         70.5,
         69.8,
@@ -2419,7 +2419,7 @@
       "experienceLevel": "unspecified",
       "resultCount": 5,
       "scores": [
-        73.9,
+        74.6,
         73.3,
         72.9,
         72.5,
@@ -2442,7 +2442,7 @@
       "scores": [
         68.3,
         67.5,
-        65.9,
+        66.6,
         64.9,
         62.8
       ],
@@ -2461,7 +2461,7 @@
       "experienceLevel": "INTERMEDIATE",
       "resultCount": 5,
       "scores": [
-        73.9,
+        74.6,
         73.3,
         72.9,
         72.5,
@@ -2469,6 +2469,1191 @@
       ],
       "topLensName": "Samyang/Rokinon 12mm f/2",
       "topLensMatchesAstroType": false,
+      "matchingLensWasAvailableButNotTop": false,
+      "allWithinMount": true,
+      "allWithinBudgetAllowance": true,
+      "scoreBoundsOk": true
+    },
+    {
+      "mount": "NIKONZ",
+      "astroType": "unspecified",
+      "budgetLabel": "under $300",
+      "budget": 280,
+      "experienceLevel": "unspecified",
+      "resultCount": 1,
+      "scores": [
+        92.5
+      ],
+      "topLensName": "Samyang/Rokinon 12mm f/2",
+      "topLensMatchesAstroType": null,
+      "matchingLensWasAvailableButNotTop": false,
+      "allWithinMount": true,
+      "allWithinBudgetAllowance": true,
+      "scoreBoundsOk": true
+    },
+    {
+      "mount": "NIKONZ",
+      "astroType": "unspecified",
+      "budgetLabel": "under $300",
+      "budget": 280,
+      "experienceLevel": "BEGINNER",
+      "resultCount": 1,
+      "scores": [
+        84.5
+      ],
+      "topLensName": "Samyang/Rokinon 12mm f/2",
+      "topLensMatchesAstroType": null,
+      "matchingLensWasAvailableButNotTop": false,
+      "allWithinMount": true,
+      "allWithinBudgetAllowance": true,
+      "scoreBoundsOk": true
+    },
+    {
+      "mount": "NIKONZ",
+      "astroType": "unspecified",
+      "budgetLabel": "under $300",
+      "budget": 280,
+      "experienceLevel": "INTERMEDIATE",
+      "resultCount": 1,
+      "scores": [
+        92.5
+      ],
+      "topLensName": "Samyang/Rokinon 12mm f/2",
+      "topLensMatchesAstroType": null,
+      "matchingLensWasAvailableButNotTop": false,
+      "allWithinMount": true,
+      "allWithinBudgetAllowance": true,
+      "scoreBoundsOk": true
+    },
+    {
+      "mount": "NIKONZ",
+      "astroType": "unspecified",
+      "budgetLabel": "$300-600",
+      "budget": 500,
+      "experienceLevel": "unspecified",
+      "resultCount": 4,
+      "scores": [
+        95.8,
+        91.8,
+        91,
+        80.9
+      ],
+      "topLensName": "Samyang/Rokinon 12mm f/2",
+      "topLensMatchesAstroType": null,
+      "matchingLensWasAvailableButNotTop": false,
+      "allWithinMount": true,
+      "allWithinBudgetAllowance": true,
+      "scoreBoundsOk": true
+    },
+    {
+      "mount": "NIKONZ",
+      "astroType": "unspecified",
+      "budgetLabel": "$300-600",
+      "budget": 500,
+      "experienceLevel": "BEGINNER",
+      "resultCount": 4,
+      "scores": [
+        87.8,
+        83.8,
+        83,
+        68.9
+      ],
+      "topLensName": "Samyang/Rokinon 12mm f/2",
+      "topLensMatchesAstroType": null,
+      "matchingLensWasAvailableButNotTop": false,
+      "allWithinMount": true,
+      "allWithinBudgetAllowance": true,
+      "scoreBoundsOk": true
+    },
+    {
+      "mount": "NIKONZ",
+      "astroType": "unspecified",
+      "budgetLabel": "$300-600",
+      "budget": 500,
+      "experienceLevel": "INTERMEDIATE",
+      "resultCount": 4,
+      "scores": [
+        95.8,
+        91.8,
+        91,
+        80.9
+      ],
+      "topLensName": "Samyang/Rokinon 12mm f/2",
+      "topLensMatchesAstroType": null,
+      "matchingLensWasAvailableButNotTop": false,
+      "allWithinMount": true,
+      "allWithinBudgetAllowance": true,
+      "scoreBoundsOk": true
+    },
+    {
+      "mount": "NIKONZ",
+      "astroType": "unspecified",
+      "budgetLabel": "$600-1000",
+      "budget": 850,
+      "experienceLevel": "unspecified",
+      "resultCount": 5,
+      "scores": [
+        97.5,
+        95.2,
+        94.7,
+        93.2,
+        91.4
+      ],
+      "topLensName": "Samyang/Rokinon 12mm f/2",
+      "topLensMatchesAstroType": null,
+      "matchingLensWasAvailableButNotTop": false,
+      "allWithinMount": true,
+      "allWithinBudgetAllowance": true,
+      "scoreBoundsOk": true
+    },
+    {
+      "mount": "NIKONZ",
+      "astroType": "unspecified",
+      "budgetLabel": "$600-1000",
+      "budget": 850,
+      "experienceLevel": "BEGINNER",
+      "resultCount": 5,
+      "scores": [
+        89.5,
+        87.2,
+        86.7,
+        83.4,
+        81.2
+      ],
+      "topLensName": "Samyang/Rokinon 12mm f/2",
+      "topLensMatchesAstroType": null,
+      "matchingLensWasAvailableButNotTop": false,
+      "allWithinMount": true,
+      "allWithinBudgetAllowance": true,
+      "scoreBoundsOk": true
+    },
+    {
+      "mount": "NIKONZ",
+      "astroType": "unspecified",
+      "budgetLabel": "$600-1000",
+      "budget": 850,
+      "experienceLevel": "INTERMEDIATE",
+      "resultCount": 5,
+      "scores": [
+        97.5,
+        95.2,
+        94.7,
+        93.2,
+        91.4
+      ],
+      "topLensName": "Samyang/Rokinon 12mm f/2",
+      "topLensMatchesAstroType": null,
+      "matchingLensWasAvailableButNotTop": false,
+      "allWithinMount": true,
+      "allWithinBudgetAllowance": true,
+      "scoreBoundsOk": true
+    },
+    {
+      "mount": "NIKONZ",
+      "astroType": "unspecified",
+      "budgetLabel": "$1000+",
+      "budget": 1500,
+      "experienceLevel": "unspecified",
+      "resultCount": 5,
+      "scores": [
+        98.6,
+        97.3,
+        97,
+        96.2,
+        95.1
+      ],
+      "topLensName": "Samyang/Rokinon 12mm f/2",
+      "topLensMatchesAstroType": null,
+      "matchingLensWasAvailableButNotTop": false,
+      "allWithinMount": true,
+      "allWithinBudgetAllowance": true,
+      "scoreBoundsOk": true
+    },
+    {
+      "mount": "NIKONZ",
+      "astroType": "unspecified",
+      "budgetLabel": "$1000+",
+      "budget": 1500,
+      "experienceLevel": "BEGINNER",
+      "resultCount": 5,
+      "scores": [
+        90.6,
+        89.3,
+        89,
+        87.1,
+        84.2
+      ],
+      "topLensName": "Samyang/Rokinon 12mm f/2",
+      "topLensMatchesAstroType": null,
+      "matchingLensWasAvailableButNotTop": false,
+      "allWithinMount": true,
+      "allWithinBudgetAllowance": true,
+      "scoreBoundsOk": true
+    },
+    {
+      "mount": "NIKONZ",
+      "astroType": "unspecified",
+      "budgetLabel": "$1000+",
+      "budget": 1500,
+      "experienceLevel": "INTERMEDIATE",
+      "resultCount": 5,
+      "scores": [
+        98.6,
+        97.3,
+        97,
+        96.2,
+        95.1
+      ],
+      "topLensName": "Samyang/Rokinon 12mm f/2",
+      "topLensMatchesAstroType": null,
+      "matchingLensWasAvailableButNotTop": false,
+      "allWithinMount": true,
+      "allWithinBudgetAllowance": true,
+      "scoreBoundsOk": true
+    },
+    {
+      "mount": "NIKONZ",
+      "astroType": "MILKYWAY",
+      "budgetLabel": "under $300",
+      "budget": 280,
+      "experienceLevel": "unspecified",
+      "resultCount": 1,
+      "scores": [
+        89.8
+      ],
+      "topLensName": "Samyang/Rokinon 12mm f/2",
+      "topLensMatchesAstroType": true,
+      "matchingLensWasAvailableButNotTop": false,
+      "allWithinMount": true,
+      "allWithinBudgetAllowance": true,
+      "scoreBoundsOk": true
+    },
+    {
+      "mount": "NIKONZ",
+      "astroType": "MILKYWAY",
+      "budgetLabel": "under $300",
+      "budget": 280,
+      "experienceLevel": "BEGINNER",
+      "resultCount": 1,
+      "scores": [
+        81.8
+      ],
+      "topLensName": "Samyang/Rokinon 12mm f/2",
+      "topLensMatchesAstroType": true,
+      "matchingLensWasAvailableButNotTop": false,
+      "allWithinMount": true,
+      "allWithinBudgetAllowance": true,
+      "scoreBoundsOk": true
+    },
+    {
+      "mount": "NIKONZ",
+      "astroType": "MILKYWAY",
+      "budgetLabel": "under $300",
+      "budget": 280,
+      "experienceLevel": "INTERMEDIATE",
+      "resultCount": 1,
+      "scores": [
+        89.8
+      ],
+      "topLensName": "Samyang/Rokinon 12mm f/2",
+      "topLensMatchesAstroType": true,
+      "matchingLensWasAvailableButNotTop": false,
+      "allWithinMount": true,
+      "allWithinBudgetAllowance": true,
+      "scoreBoundsOk": true
+    },
+    {
+      "mount": "NIKONZ",
+      "astroType": "MILKYWAY",
+      "budgetLabel": "$300-600",
+      "budget": 500,
+      "experienceLevel": "unspecified",
+      "resultCount": 4,
+      "scores": [
+        93.1,
+        90,
+        89.2,
+        80.9
+      ],
+      "topLensName": "Samyang/Rokinon 12mm f/2",
+      "topLensMatchesAstroType": true,
+      "matchingLensWasAvailableButNotTop": false,
+      "allWithinMount": true,
+      "allWithinBudgetAllowance": true,
+      "scoreBoundsOk": true
+    },
+    {
+      "mount": "NIKONZ",
+      "astroType": "MILKYWAY",
+      "budgetLabel": "$300-600",
+      "budget": 500,
+      "experienceLevel": "BEGINNER",
+      "resultCount": 4,
+      "scores": [
+        85.1,
+        82,
+        81.2,
+        68.9
+      ],
+      "topLensName": "Samyang/Rokinon 12mm f/2",
+      "topLensMatchesAstroType": true,
+      "matchingLensWasAvailableButNotTop": false,
+      "allWithinMount": true,
+      "allWithinBudgetAllowance": true,
+      "scoreBoundsOk": true
+    },
+    {
+      "mount": "NIKONZ",
+      "astroType": "MILKYWAY",
+      "budgetLabel": "$300-600",
+      "budget": 500,
+      "experienceLevel": "INTERMEDIATE",
+      "resultCount": 4,
+      "scores": [
+        93.1,
+        90,
+        89.2,
+        80.9
+      ],
+      "topLensName": "Samyang/Rokinon 12mm f/2",
+      "topLensMatchesAstroType": true,
+      "matchingLensWasAvailableButNotTop": false,
+      "allWithinMount": true,
+      "allWithinBudgetAllowance": true,
+      "scoreBoundsOk": true
+    },
+    {
+      "mount": "NIKONZ",
+      "astroType": "MILKYWAY",
+      "budgetLabel": "$600-1000",
+      "budget": 850,
+      "experienceLevel": "unspecified",
+      "resultCount": 5,
+      "scores": [
+        94.8,
+        93.4,
+        93.2,
+        92.9,
+        89.6
+      ],
+      "topLensName": "Samyang/Rokinon 12mm f/2",
+      "topLensMatchesAstroType": true,
+      "matchingLensWasAvailableButNotTop": false,
+      "allWithinMount": true,
+      "allWithinBudgetAllowance": true,
+      "scoreBoundsOk": true
+    },
+    {
+      "mount": "NIKONZ",
+      "astroType": "MILKYWAY",
+      "budgetLabel": "$600-1000",
+      "budget": 850,
+      "experienceLevel": "BEGINNER",
+      "resultCount": 5,
+      "scores": [
+        86.8,
+        85.4,
+        84.9,
+        81.6,
+        81.2
+      ],
+      "topLensName": "Samyang/Rokinon 12mm f/2",
+      "topLensMatchesAstroType": true,
+      "matchingLensWasAvailableButNotTop": false,
+      "allWithinMount": true,
+      "allWithinBudgetAllowance": true,
+      "scoreBoundsOk": true
+    },
+    {
+      "mount": "NIKONZ",
+      "astroType": "MILKYWAY",
+      "budgetLabel": "$600-1000",
+      "budget": 850,
+      "experienceLevel": "INTERMEDIATE",
+      "resultCount": 5,
+      "scores": [
+        94.8,
+        93.4,
+        93.2,
+        92.9,
+        89.6
+      ],
+      "topLensName": "Samyang/Rokinon 12mm f/2",
+      "topLensMatchesAstroType": true,
+      "matchingLensWasAvailableButNotTop": false,
+      "allWithinMount": true,
+      "allWithinBudgetAllowance": true,
+      "scoreBoundsOk": true
+    },
+    {
+      "mount": "NIKONZ",
+      "astroType": "MILKYWAY",
+      "budgetLabel": "$1000+",
+      "budget": 1500,
+      "experienceLevel": "unspecified",
+      "resultCount": 5,
+      "scores": [
+        96.2,
+        95.9,
+        95.5,
+        95.2,
+        93.4
+      ],
+      "topLensName": "Viltrox AF 16mm f/1.8",
+      "topLensMatchesAstroType": true,
+      "matchingLensWasAvailableButNotTop": false,
+      "allWithinMount": true,
+      "allWithinBudgetAllowance": true,
+      "scoreBoundsOk": true
+    },
+    {
+      "mount": "NIKONZ",
+      "astroType": "MILKYWAY",
+      "budgetLabel": "$1000+",
+      "budget": 1500,
+      "experienceLevel": "BEGINNER",
+      "resultCount": 5,
+      "scores": [
+        87.9,
+        87.5,
+        87.2,
+        85.3,
+        84.2
+      ],
+      "topLensName": "Samyang/Rokinon 12mm f/2",
+      "topLensMatchesAstroType": true,
+      "matchingLensWasAvailableButNotTop": false,
+      "allWithinMount": true,
+      "allWithinBudgetAllowance": true,
+      "scoreBoundsOk": true
+    },
+    {
+      "mount": "NIKONZ",
+      "astroType": "MILKYWAY",
+      "budgetLabel": "$1000+",
+      "budget": 1500,
+      "experienceLevel": "INTERMEDIATE",
+      "resultCount": 5,
+      "scores": [
+        96.2,
+        95.9,
+        95.5,
+        95.2,
+        93.4
+      ],
+      "topLensName": "Viltrox AF 16mm f/1.8",
+      "topLensMatchesAstroType": true,
+      "matchingLensWasAvailableButNotTop": false,
+      "allWithinMount": true,
+      "allWithinBudgetAllowance": true,
+      "scoreBoundsOk": true
+    },
+    {
+      "mount": "NIKONZ",
+      "astroType": "DEEPSKY",
+      "budgetLabel": "under $300",
+      "budget": 280,
+      "experienceLevel": "unspecified",
+      "resultCount": 1,
+      "scores": [
+        68.5
+      ],
+      "topLensName": "Samyang/Rokinon 12mm f/2",
+      "topLensMatchesAstroType": false,
+      "matchingLensWasAvailableButNotTop": false,
+      "allWithinMount": true,
+      "allWithinBudgetAllowance": true,
+      "scoreBoundsOk": true
+    },
+    {
+      "mount": "NIKONZ",
+      "astroType": "DEEPSKY",
+      "budgetLabel": "under $300",
+      "budget": 280,
+      "experienceLevel": "BEGINNER",
+      "resultCount": 1,
+      "scores": [
+        60.5
+      ],
+      "topLensName": "Samyang/Rokinon 12mm f/2",
+      "topLensMatchesAstroType": false,
+      "matchingLensWasAvailableButNotTop": false,
+      "allWithinMount": true,
+      "allWithinBudgetAllowance": true,
+      "scoreBoundsOk": true
+    },
+    {
+      "mount": "NIKONZ",
+      "astroType": "DEEPSKY",
+      "budgetLabel": "under $300",
+      "budget": 280,
+      "experienceLevel": "INTERMEDIATE",
+      "resultCount": 1,
+      "scores": [
+        68.5
+      ],
+      "topLensName": "Samyang/Rokinon 12mm f/2",
+      "topLensMatchesAstroType": false,
+      "matchingLensWasAvailableButNotTop": false,
+      "allWithinMount": true,
+      "allWithinBudgetAllowance": true,
+      "scoreBoundsOk": true
+    },
+    {
+      "mount": "NIKONZ",
+      "astroType": "DEEPSKY",
+      "budgetLabel": "$300-600",
+      "budget": 500,
+      "experienceLevel": "unspecified",
+      "resultCount": 4,
+      "scores": [
+        71.8,
+        67.8,
+        67,
+        56.9
+      ],
+      "topLensName": "Samyang/Rokinon 12mm f/2",
+      "topLensMatchesAstroType": false,
+      "matchingLensWasAvailableButNotTop": false,
+      "allWithinMount": true,
+      "allWithinBudgetAllowance": true,
+      "scoreBoundsOk": true
+    },
+    {
+      "mount": "NIKONZ",
+      "astroType": "DEEPSKY",
+      "budgetLabel": "$300-600",
+      "budget": 500,
+      "experienceLevel": "BEGINNER",
+      "resultCount": 4,
+      "scores": [
+        63.8,
+        59.8,
+        59,
+        44.9
+      ],
+      "topLensName": "Samyang/Rokinon 12mm f/2",
+      "topLensMatchesAstroType": false,
+      "matchingLensWasAvailableButNotTop": false,
+      "allWithinMount": true,
+      "allWithinBudgetAllowance": true,
+      "scoreBoundsOk": true
+    },
+    {
+      "mount": "NIKONZ",
+      "astroType": "DEEPSKY",
+      "budgetLabel": "$300-600",
+      "budget": 500,
+      "experienceLevel": "INTERMEDIATE",
+      "resultCount": 4,
+      "scores": [
+        71.8,
+        67.8,
+        67,
+        56.9
+      ],
+      "topLensName": "Samyang/Rokinon 12mm f/2",
+      "topLensMatchesAstroType": false,
+      "matchingLensWasAvailableButNotTop": false,
+      "allWithinMount": true,
+      "allWithinBudgetAllowance": true,
+      "scoreBoundsOk": true
+    },
+    {
+      "mount": "NIKONZ",
+      "astroType": "DEEPSKY",
+      "budgetLabel": "$600-1000",
+      "budget": 850,
+      "experienceLevel": "unspecified",
+      "resultCount": 5,
+      "scores": [
+        73.5,
+        71.2,
+        70.7,
+        69.2,
+        67.4
+      ],
+      "topLensName": "Samyang/Rokinon 12mm f/2",
+      "topLensMatchesAstroType": false,
+      "matchingLensWasAvailableButNotTop": false,
+      "allWithinMount": true,
+      "allWithinBudgetAllowance": true,
+      "scoreBoundsOk": true
+    },
+    {
+      "mount": "NIKONZ",
+      "astroType": "DEEPSKY",
+      "budgetLabel": "$600-1000",
+      "budget": 850,
+      "experienceLevel": "BEGINNER",
+      "resultCount": 5,
+      "scores": [
+        65.5,
+        63.2,
+        62.7,
+        59.4,
+        57.2
+      ],
+      "topLensName": "Samyang/Rokinon 12mm f/2",
+      "topLensMatchesAstroType": false,
+      "matchingLensWasAvailableButNotTop": false,
+      "allWithinMount": true,
+      "allWithinBudgetAllowance": true,
+      "scoreBoundsOk": true
+    },
+    {
+      "mount": "NIKONZ",
+      "astroType": "DEEPSKY",
+      "budgetLabel": "$600-1000",
+      "budget": 850,
+      "experienceLevel": "INTERMEDIATE",
+      "resultCount": 5,
+      "scores": [
+        73.5,
+        71.2,
+        70.7,
+        69.2,
+        67.4
+      ],
+      "topLensName": "Samyang/Rokinon 12mm f/2",
+      "topLensMatchesAstroType": false,
+      "matchingLensWasAvailableButNotTop": false,
+      "allWithinMount": true,
+      "allWithinBudgetAllowance": true,
+      "scoreBoundsOk": true
+    },
+    {
+      "mount": "NIKONZ",
+      "astroType": "DEEPSKY",
+      "budgetLabel": "$1000+",
+      "budget": 1500,
+      "experienceLevel": "unspecified",
+      "resultCount": 5,
+      "scores": [
+        89.1,
+        74.6,
+        73.3,
+        73,
+        72.2
+      ],
+      "topLensName": "Tamron 150-500mm f/5-6.7 Di III VC VXD",
+      "topLensMatchesAstroType": true,
+      "matchingLensWasAvailableButNotTop": false,
+      "allWithinMount": true,
+      "allWithinBudgetAllowance": true,
+      "scoreBoundsOk": true
+    },
+    {
+      "mount": "NIKONZ",
+      "astroType": "DEEPSKY",
+      "budgetLabel": "$1000+",
+      "budget": 1500,
+      "experienceLevel": "BEGINNER",
+      "resultCount": 5,
+      "scores": [
+        80.1,
+        66.6,
+        65.3,
+        65,
+        63.1
+      ],
+      "topLensName": "Tamron 150-500mm f/5-6.7 Di III VC VXD",
+      "topLensMatchesAstroType": true,
+      "matchingLensWasAvailableButNotTop": false,
+      "allWithinMount": true,
+      "allWithinBudgetAllowance": true,
+      "scoreBoundsOk": true
+    },
+    {
+      "mount": "NIKONZ",
+      "astroType": "DEEPSKY",
+      "budgetLabel": "$1000+",
+      "budget": 1500,
+      "experienceLevel": "INTERMEDIATE",
+      "resultCount": 5,
+      "scores": [
+        89.1,
+        74.6,
+        73.3,
+        73,
+        72.2
+      ],
+      "topLensName": "Tamron 150-500mm f/5-6.7 Di III VC VXD",
+      "topLensMatchesAstroType": true,
+      "matchingLensWasAvailableButNotTop": false,
+      "allWithinMount": true,
+      "allWithinBudgetAllowance": true,
+      "scoreBoundsOk": true
+    },
+    {
+      "mount": "NIKONZ",
+      "astroType": "PLANETS",
+      "budgetLabel": "under $300",
+      "budget": 280,
+      "experienceLevel": "unspecified",
+      "resultCount": 1,
+      "scores": [
+        68.5
+      ],
+      "topLensName": "Samyang/Rokinon 12mm f/2",
+      "topLensMatchesAstroType": false,
+      "matchingLensWasAvailableButNotTop": false,
+      "allWithinMount": true,
+      "allWithinBudgetAllowance": true,
+      "scoreBoundsOk": true
+    },
+    {
+      "mount": "NIKONZ",
+      "astroType": "PLANETS",
+      "budgetLabel": "under $300",
+      "budget": 280,
+      "experienceLevel": "BEGINNER",
+      "resultCount": 1,
+      "scores": [
+        60.5
+      ],
+      "topLensName": "Samyang/Rokinon 12mm f/2",
+      "topLensMatchesAstroType": false,
+      "matchingLensWasAvailableButNotTop": false,
+      "allWithinMount": true,
+      "allWithinBudgetAllowance": true,
+      "scoreBoundsOk": true
+    },
+    {
+      "mount": "NIKONZ",
+      "astroType": "PLANETS",
+      "budgetLabel": "under $300",
+      "budget": 280,
+      "experienceLevel": "INTERMEDIATE",
+      "resultCount": 1,
+      "scores": [
+        68.5
+      ],
+      "topLensName": "Samyang/Rokinon 12mm f/2",
+      "topLensMatchesAstroType": false,
+      "matchingLensWasAvailableButNotTop": false,
+      "allWithinMount": true,
+      "allWithinBudgetAllowance": true,
+      "scoreBoundsOk": true
+    },
+    {
+      "mount": "NIKONZ",
+      "astroType": "PLANETS",
+      "budgetLabel": "$300-600",
+      "budget": 500,
+      "experienceLevel": "unspecified",
+      "resultCount": 4,
+      "scores": [
+        71.8,
+        67.8,
+        67,
+        56.9
+      ],
+      "topLensName": "Samyang/Rokinon 12mm f/2",
+      "topLensMatchesAstroType": false,
+      "matchingLensWasAvailableButNotTop": false,
+      "allWithinMount": true,
+      "allWithinBudgetAllowance": true,
+      "scoreBoundsOk": true
+    },
+    {
+      "mount": "NIKONZ",
+      "astroType": "PLANETS",
+      "budgetLabel": "$300-600",
+      "budget": 500,
+      "experienceLevel": "BEGINNER",
+      "resultCount": 4,
+      "scores": [
+        63.8,
+        59.8,
+        59,
+        44.9
+      ],
+      "topLensName": "Samyang/Rokinon 12mm f/2",
+      "topLensMatchesAstroType": false,
+      "matchingLensWasAvailableButNotTop": false,
+      "allWithinMount": true,
+      "allWithinBudgetAllowance": true,
+      "scoreBoundsOk": true
+    },
+    {
+      "mount": "NIKONZ",
+      "astroType": "PLANETS",
+      "budgetLabel": "$300-600",
+      "budget": 500,
+      "experienceLevel": "INTERMEDIATE",
+      "resultCount": 4,
+      "scores": [
+        71.8,
+        67.8,
+        67,
+        56.9
+      ],
+      "topLensName": "Samyang/Rokinon 12mm f/2",
+      "topLensMatchesAstroType": false,
+      "matchingLensWasAvailableButNotTop": false,
+      "allWithinMount": true,
+      "allWithinBudgetAllowance": true,
+      "scoreBoundsOk": true
+    },
+    {
+      "mount": "NIKONZ",
+      "astroType": "PLANETS",
+      "budgetLabel": "$600-1000",
+      "budget": 850,
+      "experienceLevel": "unspecified",
+      "resultCount": 5,
+      "scores": [
+        73.5,
+        71.2,
+        70.7,
+        69.2,
+        67.4
+      ],
+      "topLensName": "Samyang/Rokinon 12mm f/2",
+      "topLensMatchesAstroType": false,
+      "matchingLensWasAvailableButNotTop": false,
+      "allWithinMount": true,
+      "allWithinBudgetAllowance": true,
+      "scoreBoundsOk": true
+    },
+    {
+      "mount": "NIKONZ",
+      "astroType": "PLANETS",
+      "budgetLabel": "$600-1000",
+      "budget": 850,
+      "experienceLevel": "BEGINNER",
+      "resultCount": 5,
+      "scores": [
+        65.5,
+        63.2,
+        62.7,
+        59.4,
+        57.2
+      ],
+      "topLensName": "Samyang/Rokinon 12mm f/2",
+      "topLensMatchesAstroType": false,
+      "matchingLensWasAvailableButNotTop": false,
+      "allWithinMount": true,
+      "allWithinBudgetAllowance": true,
+      "scoreBoundsOk": true
+    },
+    {
+      "mount": "NIKONZ",
+      "astroType": "PLANETS",
+      "budgetLabel": "$600-1000",
+      "budget": 850,
+      "experienceLevel": "INTERMEDIATE",
+      "resultCount": 5,
+      "scores": [
+        73.5,
+        71.2,
+        70.7,
+        69.2,
+        67.4
+      ],
+      "topLensName": "Samyang/Rokinon 12mm f/2",
+      "topLensMatchesAstroType": false,
+      "matchingLensWasAvailableButNotTop": false,
+      "allWithinMount": true,
+      "allWithinBudgetAllowance": true,
+      "scoreBoundsOk": true
+    },
+    {
+      "mount": "NIKONZ",
+      "astroType": "PLANETS",
+      "budgetLabel": "$1000+",
+      "budget": 1500,
+      "experienceLevel": "unspecified",
+      "resultCount": 5,
+      "scores": [
+        81.9,
+        74.6,
+        73.3,
+        73,
+        72.2
+      ],
+      "topLensName": "Tamron 150-500mm f/5-6.7 Di III VC VXD",
+      "topLensMatchesAstroType": false,
+      "matchingLensWasAvailableButNotTop": false,
+      "allWithinMount": true,
+      "allWithinBudgetAllowance": true,
+      "scoreBoundsOk": true
+    },
+    {
+      "mount": "NIKONZ",
+      "astroType": "PLANETS",
+      "budgetLabel": "$1000+",
+      "budget": 1500,
+      "experienceLevel": "BEGINNER",
+      "resultCount": 5,
+      "scores": [
+        72.9,
+        66.6,
+        65.3,
+        65,
+        63.1
+      ],
+      "topLensName": "Tamron 150-500mm f/5-6.7 Di III VC VXD",
+      "topLensMatchesAstroType": false,
+      "matchingLensWasAvailableButNotTop": false,
+      "allWithinMount": true,
+      "allWithinBudgetAllowance": true,
+      "scoreBoundsOk": true
+    },
+    {
+      "mount": "NIKONZ",
+      "astroType": "PLANETS",
+      "budgetLabel": "$1000+",
+      "budget": 1500,
+      "experienceLevel": "INTERMEDIATE",
+      "resultCount": 5,
+      "scores": [
+        81.9,
+        74.6,
+        73.3,
+        73,
+        72.2
+      ],
+      "topLensName": "Tamron 150-500mm f/5-6.7 Di III VC VXD",
+      "topLensMatchesAstroType": false,
+      "matchingLensWasAvailableButNotTop": false,
+      "allWithinMount": true,
+      "allWithinBudgetAllowance": true,
+      "scoreBoundsOk": true
+    },
+    {
+      "mount": "NIKONZ",
+      "astroType": "LUNAR",
+      "budgetLabel": "under $300",
+      "budget": 280,
+      "experienceLevel": "unspecified",
+      "resultCount": 1,
+      "scores": [
+        68.5
+      ],
+      "topLensName": "Samyang/Rokinon 12mm f/2",
+      "topLensMatchesAstroType": false,
+      "matchingLensWasAvailableButNotTop": false,
+      "allWithinMount": true,
+      "allWithinBudgetAllowance": true,
+      "scoreBoundsOk": true
+    },
+    {
+      "mount": "NIKONZ",
+      "astroType": "LUNAR",
+      "budgetLabel": "under $300",
+      "budget": 280,
+      "experienceLevel": "BEGINNER",
+      "resultCount": 1,
+      "scores": [
+        60.5
+      ],
+      "topLensName": "Samyang/Rokinon 12mm f/2",
+      "topLensMatchesAstroType": false,
+      "matchingLensWasAvailableButNotTop": false,
+      "allWithinMount": true,
+      "allWithinBudgetAllowance": true,
+      "scoreBoundsOk": true
+    },
+    {
+      "mount": "NIKONZ",
+      "astroType": "LUNAR",
+      "budgetLabel": "under $300",
+      "budget": 280,
+      "experienceLevel": "INTERMEDIATE",
+      "resultCount": 1,
+      "scores": [
+        68.5
+      ],
+      "topLensName": "Samyang/Rokinon 12mm f/2",
+      "topLensMatchesAstroType": false,
+      "matchingLensWasAvailableButNotTop": false,
+      "allWithinMount": true,
+      "allWithinBudgetAllowance": true,
+      "scoreBoundsOk": true
+    },
+    {
+      "mount": "NIKONZ",
+      "astroType": "LUNAR",
+      "budgetLabel": "$300-600",
+      "budget": 500,
+      "experienceLevel": "unspecified",
+      "resultCount": 4,
+      "scores": [
+        71.8,
+        67.8,
+        67,
+        56.9
+      ],
+      "topLensName": "Samyang/Rokinon 12mm f/2",
+      "topLensMatchesAstroType": false,
+      "matchingLensWasAvailableButNotTop": false,
+      "allWithinMount": true,
+      "allWithinBudgetAllowance": true,
+      "scoreBoundsOk": true
+    },
+    {
+      "mount": "NIKONZ",
+      "astroType": "LUNAR",
+      "budgetLabel": "$300-600",
+      "budget": 500,
+      "experienceLevel": "BEGINNER",
+      "resultCount": 4,
+      "scores": [
+        63.8,
+        59.8,
+        59,
+        44.9
+      ],
+      "topLensName": "Samyang/Rokinon 12mm f/2",
+      "topLensMatchesAstroType": false,
+      "matchingLensWasAvailableButNotTop": false,
+      "allWithinMount": true,
+      "allWithinBudgetAllowance": true,
+      "scoreBoundsOk": true
+    },
+    {
+      "mount": "NIKONZ",
+      "astroType": "LUNAR",
+      "budgetLabel": "$300-600",
+      "budget": 500,
+      "experienceLevel": "INTERMEDIATE",
+      "resultCount": 4,
+      "scores": [
+        71.8,
+        67.8,
+        67,
+        56.9
+      ],
+      "topLensName": "Samyang/Rokinon 12mm f/2",
+      "topLensMatchesAstroType": false,
+      "matchingLensWasAvailableButNotTop": false,
+      "allWithinMount": true,
+      "allWithinBudgetAllowance": true,
+      "scoreBoundsOk": true
+    },
+    {
+      "mount": "NIKONZ",
+      "astroType": "LUNAR",
+      "budgetLabel": "$600-1000",
+      "budget": 850,
+      "experienceLevel": "unspecified",
+      "resultCount": 5,
+      "scores": [
+        73.5,
+        71.2,
+        70.7,
+        69.2,
+        67.4
+      ],
+      "topLensName": "Samyang/Rokinon 12mm f/2",
+      "topLensMatchesAstroType": false,
+      "matchingLensWasAvailableButNotTop": false,
+      "allWithinMount": true,
+      "allWithinBudgetAllowance": true,
+      "scoreBoundsOk": true
+    },
+    {
+      "mount": "NIKONZ",
+      "astroType": "LUNAR",
+      "budgetLabel": "$600-1000",
+      "budget": 850,
+      "experienceLevel": "BEGINNER",
+      "resultCount": 5,
+      "scores": [
+        65.5,
+        63.2,
+        62.7,
+        59.4,
+        57.2
+      ],
+      "topLensName": "Samyang/Rokinon 12mm f/2",
+      "topLensMatchesAstroType": false,
+      "matchingLensWasAvailableButNotTop": false,
+      "allWithinMount": true,
+      "allWithinBudgetAllowance": true,
+      "scoreBoundsOk": true
+    },
+    {
+      "mount": "NIKONZ",
+      "astroType": "LUNAR",
+      "budgetLabel": "$600-1000",
+      "budget": 850,
+      "experienceLevel": "INTERMEDIATE",
+      "resultCount": 5,
+      "scores": [
+        73.5,
+        71.2,
+        70.7,
+        69.2,
+        67.4
+      ],
+      "topLensName": "Samyang/Rokinon 12mm f/2",
+      "topLensMatchesAstroType": false,
+      "matchingLensWasAvailableButNotTop": false,
+      "allWithinMount": true,
+      "allWithinBudgetAllowance": true,
+      "scoreBoundsOk": true
+    },
+    {
+      "mount": "NIKONZ",
+      "astroType": "LUNAR",
+      "budgetLabel": "$1000+",
+      "budget": 1500,
+      "experienceLevel": "unspecified",
+      "resultCount": 5,
+      "scores": [
+        89.1,
+        74.6,
+        73.3,
+        73,
+        72.2
+      ],
+      "topLensName": "Tamron 150-500mm f/5-6.7 Di III VC VXD",
+      "topLensMatchesAstroType": true,
+      "matchingLensWasAvailableButNotTop": false,
+      "allWithinMount": true,
+      "allWithinBudgetAllowance": true,
+      "scoreBoundsOk": true
+    },
+    {
+      "mount": "NIKONZ",
+      "astroType": "LUNAR",
+      "budgetLabel": "$1000+",
+      "budget": 1500,
+      "experienceLevel": "BEGINNER",
+      "resultCount": 5,
+      "scores": [
+        80.1,
+        66.6,
+        65.3,
+        65,
+        63.1
+      ],
+      "topLensName": "Tamron 150-500mm f/5-6.7 Di III VC VXD",
+      "topLensMatchesAstroType": true,
+      "matchingLensWasAvailableButNotTop": false,
+      "allWithinMount": true,
+      "allWithinBudgetAllowance": true,
+      "scoreBoundsOk": true
+    },
+    {
+      "mount": "NIKONZ",
+      "astroType": "LUNAR",
+      "budgetLabel": "$1000+",
+      "budget": 1500,
+      "experienceLevel": "INTERMEDIATE",
+      "resultCount": 5,
+      "scores": [
+        89.1,
+        74.6,
+        73.3,
+        73,
+        72.2
+      ],
+      "topLensName": "Tamron 150-500mm f/5-6.7 Di III VC VXD",
+      "topLensMatchesAstroType": true,
       "matchingLensWasAvailableButNotTop": false,
       "allWithinMount": true,
       "allWithinBudgetAllowance": true,
@@ -2482,7 +3667,7 @@
       "experienceLevel": "unspecified",
       "resultCount": 3,
       "scores": [
-        91.8,
+        92.5,
         88.8,
         80.6
       ],
@@ -2501,11 +3686,11 @@
       "experienceLevel": "BEGINNER",
       "resultCount": 3,
       "scores": [
-        83.8,
+        84.5,
         83.8,
         71.6
       ],
-      "topLensName": "Samyang/Rokinon 14mm f/2.8 ED AS IF UMC",
+      "topLensName": "Samyang/Rokinon 12mm f/2",
       "topLensMatchesAstroType": null,
       "matchingLensWasAvailableButNotTop": false,
       "allWithinMount": true,
@@ -2520,7 +3705,7 @@
       "experienceLevel": "INTERMEDIATE",
       "resultCount": 3,
       "scores": [
-        91.8,
+        92.5,
         88.8,
         80.6
       ],
@@ -2539,7 +3724,7 @@
       "experienceLevel": "unspecified",
       "resultCount": 5,
       "scores": [
-        95.1,
+        95.8,
         93.4,
         93,
         90.6,
@@ -2561,7 +3746,7 @@
       "resultCount": 5,
       "scores": [
         88.4,
-        87.1,
+        87.8,
         84.5,
         84,
         82.6
@@ -2581,7 +3766,7 @@
       "experienceLevel": "INTERMEDIATE",
       "resultCount": 5,
       "scores": [
-        95.1,
+        95.8,
         93.4,
         93,
         90.6,
@@ -2602,7 +3787,7 @@
       "experienceLevel": "unspecified",
       "resultCount": 5,
       "scores": [
-        96.8,
+        97.5,
         95.8,
         95.6,
         94.5,
@@ -2624,7 +3809,7 @@
       "resultCount": 5,
       "scores": [
         90.8,
-        88.8,
+        89.5,
         88.8,
         86.6,
         86.5
@@ -2644,7 +3829,7 @@
       "experienceLevel": "INTERMEDIATE",
       "resultCount": 5,
       "scores": [
-        96.8,
+        97.5,
         95.8,
         95.6,
         94.5,
@@ -2665,7 +3850,7 @@
       "experienceLevel": "unspecified",
       "resultCount": 5,
       "scores": [
-        97.9,
+        98.6,
         97.3,
         97.2,
         96.9,
@@ -2688,7 +3873,7 @@
       "scores": [
         92.3,
         91.5,
-        89.9,
+        90.6,
         89.8,
         88.9
       ],
@@ -2707,7 +3892,7 @@
       "experienceLevel": "INTERMEDIATE",
       "resultCount": 5,
       "scores": [
-        97.9,
+        98.6,
         97.3,
         97.2,
         96.9,
@@ -2728,7 +3913,7 @@
       "experienceLevel": "unspecified",
       "resultCount": 3,
       "scores": [
-        89.1,
+        89.8,
         86.1,
         77
       ],
@@ -2747,11 +3932,11 @@
       "experienceLevel": "BEGINNER",
       "resultCount": 3,
       "scores": [
-        81.1,
+        81.8,
         81.1,
         68
       ],
-      "topLensName": "Samyang/Rokinon 14mm f/2.8 ED AS IF UMC",
+      "topLensName": "Samyang/Rokinon 12mm f/2",
       "topLensMatchesAstroType": true,
       "matchingLensWasAvailableButNotTop": false,
       "allWithinMount": true,
@@ -2766,7 +3951,7 @@
       "experienceLevel": "INTERMEDIATE",
       "resultCount": 3,
       "scores": [
-        89.1,
+        89.8,
         86.1,
         77
       ],
@@ -2785,7 +3970,7 @@
       "experienceLevel": "unspecified",
       "resultCount": 5,
       "scores": [
-        92.4,
+        93.1,
         90.7,
         89.4,
         87.7,
@@ -2807,7 +3992,7 @@
       "resultCount": 5,
       "scores": [
         85.7,
-        84.4,
+        85.1,
         82.7,
         80.4,
         58.6
@@ -2827,7 +4012,7 @@
       "experienceLevel": "INTERMEDIATE",
       "resultCount": 5,
       "scores": [
-        92.4,
+        93.1,
         90.7,
         89.4,
         87.7,
@@ -2848,7 +4033,7 @@
       "experienceLevel": "unspecified",
       "resultCount": 5,
       "scores": [
-        94.1,
+        94.8,
         93.1,
         92,
         92,
@@ -2871,7 +4056,7 @@
       "scores": [
         88.1,
         87,
-        86.1,
+        86.8,
         83,
         81.6
       ],
@@ -2890,7 +4075,7 @@
       "experienceLevel": "INTERMEDIATE",
       "resultCount": 5,
       "scores": [
-        94.1,
+        94.8,
         93.1,
         92,
         92,
@@ -2911,7 +4096,7 @@
       "experienceLevel": "unspecified",
       "resultCount": 5,
       "scores": [
-        95.1,
+        95.9,
         94.7,
         94.6,
         93.6,
@@ -2934,7 +4119,7 @@
       "scores": [
         89.7,
         89.6,
-        87.1,
+        87.9,
         85.3,
         84.6
       ],
@@ -2953,7 +4138,7 @@
       "experienceLevel": "INTERMEDIATE",
       "resultCount": 5,
       "scores": [
-        95.1,
+        95.9,
         94.7,
         94.6,
         93.6,
@@ -2974,7 +4159,7 @@
       "experienceLevel": "unspecified",
       "resultCount": 3,
       "scores": [
-        67.8,
+        68.5,
         64.8,
         56.6
       ],
@@ -2993,11 +4178,11 @@
       "experienceLevel": "BEGINNER",
       "resultCount": 3,
       "scores": [
-        59.8,
+        60.5,
         59.8,
         47.6
       ],
-      "topLensName": "Samyang/Rokinon 14mm f/2.8 ED AS IF UMC",
+      "topLensName": "Samyang/Rokinon 12mm f/2",
       "topLensMatchesAstroType": false,
       "matchingLensWasAvailableButNotTop": false,
       "allWithinMount": true,
@@ -3012,7 +4197,7 @@
       "experienceLevel": "INTERMEDIATE",
       "resultCount": 3,
       "scores": [
-        67.8,
+        68.5,
         64.8,
         56.6
       ],
@@ -3032,7 +4217,7 @@
       "resultCount": 5,
       "scores": [
         90.6,
-        71.1,
+        71.8,
         69.4,
         69,
         65.5
@@ -3054,7 +4239,7 @@
       "scores": [
         82.6,
         64.4,
-        63.1,
+        63.8,
         60.5,
         60
       ],
@@ -3074,7 +4259,7 @@
       "resultCount": 5,
       "scores": [
         90.6,
-        71.1,
+        71.8,
         69.4,
         69,
         65.5
@@ -3096,9 +4281,9 @@
       "scores": [
         94.5,
         88.9,
-        72.8,
-        71.8,
-        71.6
+        88.5,
+        73.5,
+        71.8
       ],
       "topLensName": "Samyang/Rokinon 135mm f/2.0 ED UMC",
       "topLensMatchesAstroType": true,
@@ -3117,9 +4302,9 @@
       "scores": [
         86.5,
         83.9,
+        79.5,
         66.8,
-        64.8,
-        64.8
+        65.5
       ],
       "topLensName": "Samyang/Rokinon 135mm f/2.0 ED UMC",
       "topLensMatchesAstroType": true,
@@ -3138,9 +4323,9 @@
       "scores": [
         94.5,
         88.9,
-        72.8,
-        71.8,
-        71.6
+        88.5,
+        73.5,
+        71.8
       ],
       "topLensName": "Samyang/Rokinon 135mm f/2.0 ED UMC",
       "topLensMatchesAstroType": true,
@@ -3159,9 +4344,9 @@
       "scores": [
         96.9,
         92.9,
+        92.3,
         88.7,
-        73.9,
-        73.3
+        81.4
       ],
       "topLensName": "Samyang/Rokinon 135mm f/2.0 ED UMC",
       "topLensMatchesAstroType": true,
@@ -3180,9 +4365,9 @@
       "scores": [
         88.9,
         87.9,
+        83.3,
         79.7,
-        68.3,
-        67.5
+        73.4
       ],
       "topLensName": "Samyang/Rokinon 135mm f/2.0 ED UMC",
       "topLensMatchesAstroType": true,
@@ -3201,9 +4386,9 @@
       "scores": [
         96.9,
         92.9,
+        92.3,
         88.7,
-        73.9,
-        73.3
+        81.4
       ],
       "topLensName": "Samyang/Rokinon 135mm f/2.0 ED UMC",
       "topLensMatchesAstroType": true,
@@ -3220,7 +4405,7 @@
       "experienceLevel": "unspecified",
       "resultCount": 3,
       "scores": [
-        67.8,
+        68.5,
         64.8,
         56.6
       ],
@@ -3239,11 +4424,11 @@
       "experienceLevel": "BEGINNER",
       "resultCount": 3,
       "scores": [
-        59.8,
+        60.5,
         59.8,
         47.6
       ],
-      "topLensName": "Samyang/Rokinon 14mm f/2.8 ED AS IF UMC",
+      "topLensName": "Samyang/Rokinon 12mm f/2",
       "topLensMatchesAstroType": false,
       "matchingLensWasAvailableButNotTop": false,
       "allWithinMount": true,
@@ -3258,7 +4443,7 @@
       "experienceLevel": "INTERMEDIATE",
       "resultCount": 3,
       "scores": [
-        67.8,
+        68.5,
         64.8,
         56.6
       ],
@@ -3277,7 +4462,7 @@
       "experienceLevel": "unspecified",
       "resultCount": 5,
       "scores": [
-        71.1,
+        71.8,
         69.4,
         69,
         66.6,
@@ -3299,7 +4484,7 @@
       "resultCount": 5,
       "scores": [
         64.4,
-        63.1,
+        63.8,
         60.5,
         60,
         58.6
@@ -3319,7 +4504,7 @@
       "experienceLevel": "INTERMEDIATE",
       "resultCount": 5,
       "scores": [
-        71.1,
+        71.8,
         69.4,
         69,
         66.6,
@@ -3340,13 +4525,13 @@
       "experienceLevel": "unspecified",
       "resultCount": 5,
       "scores": [
-        72.8,
+        82.2,
+        73.5,
         71.8,
         71.6,
-        70.5,
-        69.8
+        70.5
       ],
-      "topLensName": "Samyang/Rokinon 12mm f/2",
+      "topLensName": "Canon RF 600mm f/11 IS STM",
       "topLensMatchesAstroType": false,
       "matchingLensWasAvailableButNotTop": false,
       "allWithinMount": true,
@@ -3361,13 +4546,13 @@
       "experienceLevel": "BEGINNER",
       "resultCount": 5,
       "scores": [
+        73.2,
         66.8,
+        65.5,
         64.8,
-        64.8,
-        62.6,
-        62.5
+        62.6
       ],
-      "topLensName": "Samyang/Rokinon 14mm f/2.8 ED AS IF UMC",
+      "topLensName": "Canon RF 600mm f/11 IS STM",
       "topLensMatchesAstroType": false,
       "matchingLensWasAvailableButNotTop": false,
       "allWithinMount": true,
@@ -3382,13 +4567,13 @@
       "experienceLevel": "INTERMEDIATE",
       "resultCount": 5,
       "scores": [
-        72.8,
+        82.2,
+        73.5,
         71.8,
         71.6,
-        70.5,
-        69.8
+        70.5
       ],
-      "topLensName": "Samyang/Rokinon 12mm f/2",
+      "topLensName": "Canon RF 600mm f/11 IS STM",
       "topLensMatchesAstroType": false,
       "matchingLensWasAvailableButNotTop": false,
       "allWithinMount": true,
@@ -3403,13 +4588,13 @@
       "experienceLevel": "unspecified",
       "resultCount": 5,
       "scores": [
+        86,
         83.3,
-        73.9,
+        74.6,
         73.3,
-        73.2,
-        72.9
+        73.2
       ],
-      "topLensName": "Canon RF 800mm f/11 IS STM",
+      "topLensName": "Canon RF 600mm f/11 IS STM",
       "topLensMatchesAstroType": false,
       "matchingLensWasAvailableButNotTop": false,
       "allWithinMount": true,
@@ -3424,13 +4609,13 @@
       "experienceLevel": "BEGINNER",
       "resultCount": 5,
       "scores": [
+        77,
         74.3,
         68.3,
         67.5,
-        65.9,
-        65.8
+        66.6
       ],
-      "topLensName": "Canon RF 800mm f/11 IS STM",
+      "topLensName": "Canon RF 600mm f/11 IS STM",
       "topLensMatchesAstroType": false,
       "matchingLensWasAvailableButNotTop": false,
       "allWithinMount": true,
@@ -3445,13 +4630,13 @@
       "experienceLevel": "INTERMEDIATE",
       "resultCount": 5,
       "scores": [
+        86,
         83.3,
-        73.9,
+        74.6,
         73.3,
-        73.2,
-        72.9
+        73.2
       ],
-      "topLensName": "Canon RF 800mm f/11 IS STM",
+      "topLensName": "Canon RF 600mm f/11 IS STM",
       "topLensMatchesAstroType": false,
       "matchingLensWasAvailableButNotTop": false,
       "allWithinMount": true,
@@ -3466,7 +4651,7 @@
       "experienceLevel": "unspecified",
       "resultCount": 3,
       "scores": [
-        67.8,
+        68.5,
         64.8,
         56.6
       ],
@@ -3485,11 +4670,11 @@
       "experienceLevel": "BEGINNER",
       "resultCount": 3,
       "scores": [
-        59.8,
+        60.5,
         59.8,
         47.6
       ],
-      "topLensName": "Samyang/Rokinon 14mm f/2.8 ED AS IF UMC",
+      "topLensName": "Samyang/Rokinon 12mm f/2",
       "topLensMatchesAstroType": false,
       "matchingLensWasAvailableButNotTop": false,
       "allWithinMount": true,
@@ -3504,7 +4689,7 @@
       "experienceLevel": "INTERMEDIATE",
       "resultCount": 3,
       "scores": [
-        67.8,
+        68.5,
         64.8,
         56.6
       ],
@@ -3523,7 +4708,7 @@
       "experienceLevel": "unspecified",
       "resultCount": 5,
       "scores": [
-        71.1,
+        71.8,
         69.4,
         69,
         66.6,
@@ -3545,7 +4730,7 @@
       "resultCount": 5,
       "scores": [
         64.4,
-        63.1,
+        63.8,
         60.5,
         60,
         58.6
@@ -3565,7 +4750,7 @@
       "experienceLevel": "INTERMEDIATE",
       "resultCount": 5,
       "scores": [
-        71.1,
+        71.8,
         69.4,
         69,
         66.6,
@@ -3586,14 +4771,14 @@
       "experienceLevel": "unspecified",
       "resultCount": 5,
       "scores": [
-        72.8,
+        88.5,
+        73.5,
         71.8,
         71.6,
-        70.5,
-        69.8
+        70.5
       ],
-      "topLensName": "Samyang/Rokinon 12mm f/2",
-      "topLensMatchesAstroType": false,
+      "topLensName": "Canon RF 600mm f/11 IS STM",
+      "topLensMatchesAstroType": true,
       "matchingLensWasAvailableButNotTop": false,
       "allWithinMount": true,
       "allWithinBudgetAllowance": true,
@@ -3607,14 +4792,14 @@
       "experienceLevel": "BEGINNER",
       "resultCount": 5,
       "scores": [
+        79.5,
         66.8,
+        65.5,
         64.8,
-        64.8,
-        62.6,
-        62.5
+        62.6
       ],
-      "topLensName": "Samyang/Rokinon 14mm f/2.8 ED AS IF UMC",
-      "topLensMatchesAstroType": false,
+      "topLensName": "Canon RF 600mm f/11 IS STM",
+      "topLensMatchesAstroType": true,
       "matchingLensWasAvailableButNotTop": false,
       "allWithinMount": true,
       "allWithinBudgetAllowance": true,
@@ -3628,14 +4813,14 @@
       "experienceLevel": "INTERMEDIATE",
       "resultCount": 5,
       "scores": [
-        72.8,
+        88.5,
+        73.5,
         71.8,
         71.6,
-        70.5,
-        69.8
+        70.5
       ],
-      "topLensName": "Samyang/Rokinon 12mm f/2",
-      "topLensMatchesAstroType": false,
+      "topLensName": "Canon RF 600mm f/11 IS STM",
+      "topLensMatchesAstroType": true,
       "matchingLensWasAvailableButNotTop": false,
       "allWithinMount": true,
       "allWithinBudgetAllowance": true,
@@ -3649,13 +4834,13 @@
       "experienceLevel": "unspecified",
       "resultCount": 5,
       "scores": [
+        92.3,
         88.7,
-        73.9,
+        74.6,
         73.3,
-        73.2,
-        72.9
+        73.2
       ],
-      "topLensName": "Canon RF 800mm f/11 IS STM",
+      "topLensName": "Canon RF 600mm f/11 IS STM",
       "topLensMatchesAstroType": true,
       "matchingLensWasAvailableButNotTop": false,
       "allWithinMount": true,
@@ -3670,13 +4855,13 @@
       "experienceLevel": "BEGINNER",
       "resultCount": 5,
       "scores": [
+        83.3,
         79.7,
         68.3,
         67.5,
-        65.9,
-        65.8
+        66.6
       ],
-      "topLensName": "Canon RF 800mm f/11 IS STM",
+      "topLensName": "Canon RF 600mm f/11 IS STM",
       "topLensMatchesAstroType": true,
       "matchingLensWasAvailableButNotTop": false,
       "allWithinMount": true,
@@ -3691,13 +4876,13 @@
       "experienceLevel": "INTERMEDIATE",
       "resultCount": 5,
       "scores": [
+        92.3,
         88.7,
-        73.9,
+        74.6,
         73.3,
-        73.2,
-        72.9
+        73.2
       ],
-      "topLensName": "Canon RF 800mm f/11 IS STM",
+      "topLensName": "Canon RF 600mm f/11 IS STM",
       "topLensMatchesAstroType": true,
       "matchingLensWasAvailableButNotTop": false,
       "allWithinMount": true,
@@ -3712,7 +4897,7 @@
       "experienceLevel": "unspecified",
       "resultCount": 3,
       "scores": [
-        91.8,
+        92.5,
         91.8,
         88.8
       ],
@@ -3731,11 +4916,11 @@
       "experienceLevel": "BEGINNER",
       "resultCount": 3,
       "scores": [
-        83.8,
+        84.5,
         83.8,
         83.8
       ],
-      "topLensName": "Samyang/Rokinon 14mm f/2.8 ED AS IF UMC",
+      "topLensName": "Samyang/Rokinon 12mm f/2",
       "topLensMatchesAstroType": null,
       "matchingLensWasAvailableButNotTop": false,
       "allWithinMount": true,
@@ -3750,7 +4935,7 @@
       "experienceLevel": "INTERMEDIATE",
       "resultCount": 3,
       "scores": [
-        91.8,
+        92.5,
         91.8,
         88.8
       ],
@@ -3769,7 +4954,7 @@
       "experienceLevel": "unspecified",
       "resultCount": 5,
       "scores": [
-        95.1,
+        95.8,
         95.1,
         93.4,
         91.8,
@@ -3791,7 +4976,7 @@
       "resultCount": 5,
       "scores": [
         88.4,
-        87.1,
+        87.8,
         87.1,
         83.8,
         83
@@ -3811,7 +4996,7 @@
       "experienceLevel": "INTERMEDIATE",
       "resultCount": 5,
       "scores": [
-        95.1,
+        95.8,
         95.1,
         93.4,
         91.8,
@@ -3832,7 +5017,7 @@
       "experienceLevel": "unspecified",
       "resultCount": 5,
       "scores": [
-        96.8,
+        97.5,
         96.8,
         95.8,
         95.2,
@@ -3854,7 +5039,7 @@
       "resultCount": 5,
       "scores": [
         90.8,
-        88.8,
+        89.5,
         88.8,
         87.2,
         86.7
@@ -3874,7 +5059,7 @@
       "experienceLevel": "INTERMEDIATE",
       "resultCount": 5,
       "scores": [
-        96.8,
+        97.5,
         96.8,
         95.8,
         95.2,
@@ -3895,7 +5080,7 @@
       "experienceLevel": "unspecified",
       "resultCount": 5,
       "scores": [
-        97.9,
+        98.6,
         97.9,
         97.3,
         97.3,
@@ -3917,7 +5102,7 @@
       "resultCount": 5,
       "scores": [
         92.3,
-        89.9,
+        90.6,
         89.9,
         89.3,
         89
@@ -3937,7 +5122,7 @@
       "experienceLevel": "INTERMEDIATE",
       "resultCount": 5,
       "scores": [
-        97.9,
+        98.6,
         97.9,
         97.3,
         97.3,
@@ -3958,7 +5143,7 @@
       "experienceLevel": "unspecified",
       "resultCount": 3,
       "scores": [
-        89.1,
+        89.8,
         89.1,
         86.1
       ],
@@ -3977,11 +5162,11 @@
       "experienceLevel": "BEGINNER",
       "resultCount": 3,
       "scores": [
-        81.1,
+        81.8,
         81.1,
         81.1
       ],
-      "topLensName": "Samyang/Rokinon 14mm f/2.8 ED AS IF UMC",
+      "topLensName": "Samyang/Rokinon 12mm f/2",
       "topLensMatchesAstroType": true,
       "matchingLensWasAvailableButNotTop": false,
       "allWithinMount": true,
@@ -3996,7 +5181,7 @@
       "experienceLevel": "INTERMEDIATE",
       "resultCount": 3,
       "scores": [
-        89.1,
+        89.8,
         89.1,
         86.1
       ],
@@ -4015,7 +5200,7 @@
       "experienceLevel": "unspecified",
       "resultCount": 5,
       "scores": [
-        92.4,
+        93.1,
         92.4,
         90.7,
         90,
@@ -4037,7 +5222,7 @@
       "resultCount": 5,
       "scores": [
         85.7,
-        84.4,
+        85.1,
         84.4,
         82,
         81.2
@@ -4057,7 +5242,7 @@
       "experienceLevel": "INTERMEDIATE",
       "resultCount": 5,
       "scores": [
-        92.4,
+        93.1,
         92.4,
         90.7,
         90,
@@ -4078,7 +5263,7 @@
       "experienceLevel": "unspecified",
       "resultCount": 5,
       "scores": [
-        94.1,
+        94.8,
         94.1,
         93.4,
         93.3,
@@ -4100,7 +5285,7 @@
       "resultCount": 5,
       "scores": [
         88.1,
-        86.1,
+        86.8,
         86.1,
         85.4,
         84.9
@@ -4120,7 +5305,7 @@
       "experienceLevel": "INTERMEDIATE",
       "resultCount": 5,
       "scores": [
-        94.1,
+        94.8,
         94.1,
         93.4,
         93.3,
@@ -4142,10 +5327,10 @@
       "resultCount": 5,
       "scores": [
         96.2,
+        95.9,
         95.5,
         95.4,
-        95.2,
-        95.1
+        95.2
       ],
       "topLensName": "Viltrox AF 16mm f/1.8",
       "topLensMatchesAstroType": true,
@@ -4163,9 +5348,9 @@
       "resultCount": 5,
       "scores": [
         89.6,
+        87.9,
         87.5,
         87.2,
-        87.1,
         87.1
       ],
       "topLensName": "Samyang/Rokinon 14mm f/2.8 ED AS IF UMC",
@@ -4184,10 +5369,10 @@
       "resultCount": 5,
       "scores": [
         96.2,
+        95.9,
         95.5,
         95.4,
-        95.2,
-        95.1
+        95.2
       ],
       "topLensName": "Viltrox AF 16mm f/1.8",
       "topLensMatchesAstroType": true,
@@ -4204,7 +5389,7 @@
       "experienceLevel": "unspecified",
       "resultCount": 3,
       "scores": [
-        67.8,
+        68.5,
         67.8,
         64.8
       ],
@@ -4223,11 +5408,11 @@
       "experienceLevel": "BEGINNER",
       "resultCount": 3,
       "scores": [
-        59.8,
+        60.5,
         59.8,
         59.8
       ],
-      "topLensName": "Samyang/Rokinon 14mm f/2.8 ED AS IF UMC",
+      "topLensName": "Samyang/Rokinon 12mm f/2",
       "topLensMatchesAstroType": false,
       "matchingLensWasAvailableButNotTop": false,
       "allWithinMount": true,
@@ -4242,7 +5427,7 @@
       "experienceLevel": "INTERMEDIATE",
       "resultCount": 3,
       "scores": [
-        67.8,
+        68.5,
         67.8,
         64.8
       ],
@@ -4262,7 +5447,7 @@
       "resultCount": 5,
       "scores": [
         90.6,
-        71.1,
+        71.8,
         71.1,
         69.4,
         67.8
@@ -4284,7 +5469,7 @@
       "scores": [
         82.6,
         64.4,
-        63.1,
+        63.8,
         63.1,
         59.8
       ],
@@ -4304,7 +5489,7 @@
       "resultCount": 5,
       "scores": [
         90.6,
-        71.1,
+        71.8,
         71.1,
         69.4,
         67.8
@@ -4325,7 +5510,7 @@
       "resultCount": 5,
       "scores": [
         94.5,
-        72.8,
+        73.5,
         72.8,
         71.8,
         71.2
@@ -4347,7 +5532,7 @@
       "scores": [
         86.5,
         66.8,
-        64.8,
+        65.5,
         64.8,
         63.2
       ],
@@ -4367,7 +5552,7 @@
       "resultCount": 5,
       "scores": [
         94.5,
-        72.8,
+        73.5,
         72.8,
         71.8,
         71.2
@@ -4389,9 +5574,9 @@
       "scores": [
         96.9,
         91.6,
+        89.1,
         86.8,
-        73.9,
-        73.9
+        81.4
       ],
       "topLensName": "Samyang/Rokinon 135mm f/2.0 ED UMC",
       "topLensMatchesAstroType": true,
@@ -4409,10 +5594,10 @@
       "resultCount": 5,
       "scores": [
         88.9,
+        80.1,
         79.6,
         77.8,
-        68.3,
-        65.9
+        73.4
       ],
       "topLensName": "Samyang/Rokinon 135mm f/2.0 ED UMC",
       "topLensMatchesAstroType": true,
@@ -4431,9 +5616,9 @@
       "scores": [
         96.9,
         91.6,
+        89.1,
         86.8,
-        73.9,
-        73.9
+        81.4
       ],
       "topLensName": "Samyang/Rokinon 135mm f/2.0 ED UMC",
       "topLensMatchesAstroType": true,
@@ -4450,7 +5635,7 @@
       "experienceLevel": "unspecified",
       "resultCount": 3,
       "scores": [
-        67.8,
+        68.5,
         67.8,
         64.8
       ],
@@ -4469,11 +5654,11 @@
       "experienceLevel": "BEGINNER",
       "resultCount": 3,
       "scores": [
-        59.8,
+        60.5,
         59.8,
         59.8
       ],
-      "topLensName": "Samyang/Rokinon 14mm f/2.8 ED AS IF UMC",
+      "topLensName": "Samyang/Rokinon 12mm f/2",
       "topLensMatchesAstroType": false,
       "matchingLensWasAvailableButNotTop": false,
       "allWithinMount": true,
@@ -4488,7 +5673,7 @@
       "experienceLevel": "INTERMEDIATE",
       "resultCount": 3,
       "scores": [
-        67.8,
+        68.5,
         67.8,
         64.8
       ],
@@ -4507,7 +5692,7 @@
       "experienceLevel": "unspecified",
       "resultCount": 5,
       "scores": [
-        71.1,
+        71.8,
         71.1,
         69.4,
         67.8,
@@ -4529,7 +5714,7 @@
       "resultCount": 5,
       "scores": [
         64.4,
-        63.1,
+        63.8,
         63.1,
         59.8,
         59
@@ -4549,7 +5734,7 @@
       "experienceLevel": "INTERMEDIATE",
       "resultCount": 5,
       "scores": [
-        71.1,
+        71.8,
         71.1,
         69.4,
         67.8,
@@ -4570,7 +5755,7 @@
       "experienceLevel": "unspecified",
       "resultCount": 5,
       "scores": [
-        72.8,
+        73.5,
         72.8,
         71.8,
         71.2,
@@ -4592,7 +5777,7 @@
       "resultCount": 5,
       "scores": [
         66.8,
-        64.8,
+        65.5,
         64.8,
         63.2,
         62.7
@@ -4612,7 +5797,7 @@
       "experienceLevel": "INTERMEDIATE",
       "resultCount": 5,
       "scores": [
-        72.8,
+        73.5,
         72.8,
         71.8,
         71.2,
@@ -4634,10 +5819,10 @@
       "resultCount": 5,
       "scores": [
         82.6,
+        81.9,
         80.5,
-        73.9,
-        73.9,
-        73.3
+        74.6,
+        73.9
       ],
       "topLensName": "Sigma 85mm f/1.4 DG DN Art",
       "topLensMatchesAstroType": false,
@@ -4654,13 +5839,13 @@
       "experienceLevel": "BEGINNER",
       "resultCount": 5,
       "scores": [
+        72.9,
         71.5,
         70.6,
         68.3,
-        65.9,
-        65.9
+        66.6
       ],
-      "topLensName": "Sigma 150-600mm f/5-6.3 DG DN OS Contemporary",
+      "topLensName": "Tamron 150-500mm f/5-6.7 Di III VC VXD",
       "topLensMatchesAstroType": false,
       "matchingLensWasAvailableButNotTop": false,
       "allWithinMount": true,
@@ -4676,10 +5861,10 @@
       "resultCount": 5,
       "scores": [
         82.6,
+        81.9,
         80.5,
-        73.9,
-        73.9,
-        73.3
+        74.6,
+        73.9
       ],
       "topLensName": "Sigma 85mm f/1.4 DG DN Art",
       "topLensMatchesAstroType": false,
@@ -4696,7 +5881,7 @@
       "experienceLevel": "unspecified",
       "resultCount": 3,
       "scores": [
-        67.8,
+        68.5,
         67.8,
         64.8
       ],
@@ -4715,11 +5900,11 @@
       "experienceLevel": "BEGINNER",
       "resultCount": 3,
       "scores": [
-        59.8,
+        60.5,
         59.8,
         59.8
       ],
-      "topLensName": "Samyang/Rokinon 14mm f/2.8 ED AS IF UMC",
+      "topLensName": "Samyang/Rokinon 12mm f/2",
       "topLensMatchesAstroType": false,
       "matchingLensWasAvailableButNotTop": false,
       "allWithinMount": true,
@@ -4734,7 +5919,7 @@
       "experienceLevel": "INTERMEDIATE",
       "resultCount": 3,
       "scores": [
-        67.8,
+        68.5,
         67.8,
         64.8
       ],
@@ -4753,7 +5938,7 @@
       "experienceLevel": "unspecified",
       "resultCount": 5,
       "scores": [
-        71.1,
+        71.8,
         71.1,
         69.4,
         67.8,
@@ -4775,7 +5960,7 @@
       "resultCount": 5,
       "scores": [
         64.4,
-        63.1,
+        63.8,
         63.1,
         59.8,
         59
@@ -4795,7 +5980,7 @@
       "experienceLevel": "INTERMEDIATE",
       "resultCount": 5,
       "scores": [
-        71.1,
+        71.8,
         71.1,
         69.4,
         67.8,
@@ -4816,7 +6001,7 @@
       "experienceLevel": "unspecified",
       "resultCount": 5,
       "scores": [
-        72.8,
+        73.5,
         72.8,
         71.8,
         71.2,
@@ -4838,7 +6023,7 @@
       "resultCount": 5,
       "scores": [
         66.8,
-        64.8,
+        65.5,
         64.8,
         63.2,
         62.7
@@ -4858,7 +6043,7 @@
       "experienceLevel": "INTERMEDIATE",
       "resultCount": 5,
       "scores": [
-        72.8,
+        73.5,
         72.8,
         71.8,
         71.2,
@@ -4879,13 +6064,13 @@
       "experienceLevel": "unspecified",
       "resultCount": 5,
       "scores": [
+        89.1,
         86.8,
         82.6,
-        73.9,
-        73.9,
-        73.3
+        74.6,
+        73.9
       ],
-      "topLensName": "Sigma 150-600mm f/5-6.3 DG DN OS Contemporary",
+      "topLensName": "Tamron 150-500mm f/5-6.7 Di III VC VXD",
       "topLensMatchesAstroType": true,
       "matchingLensWasAvailableButNotTop": false,
       "allWithinMount": true,
@@ -4900,13 +6085,13 @@
       "experienceLevel": "BEGINNER",
       "resultCount": 5,
       "scores": [
+        80.1,
         77.8,
         70.6,
         68.3,
-        65.9,
-        65.9
+        66.6
       ],
-      "topLensName": "Sigma 150-600mm f/5-6.3 DG DN OS Contemporary",
+      "topLensName": "Tamron 150-500mm f/5-6.7 Di III VC VXD",
       "topLensMatchesAstroType": true,
       "matchingLensWasAvailableButNotTop": false,
       "allWithinMount": true,
@@ -4921,13 +6106,13 @@
       "experienceLevel": "INTERMEDIATE",
       "resultCount": 5,
       "scores": [
+        89.1,
         86.8,
         82.6,
-        73.9,
-        73.9,
-        73.3
+        74.6,
+        73.9
       ],
-      "topLensName": "Sigma 150-600mm f/5-6.3 DG DN OS Contemporary",
+      "topLensName": "Tamron 150-500mm f/5-6.7 Di III VC VXD",
       "topLensMatchesAstroType": true,
       "matchingLensWasAvailableButNotTop": false,
       "allWithinMount": true,
